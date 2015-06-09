@@ -1,0 +1,124 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 21px;
+  font-weight: 200;
+  color: #111;
+  background-color: #eee;
+}
+
+p {
+  line-height: 30px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.5em;
+  text-align: center;
+  color: #444;
+}
+
+h1 a:hover {
+  color: #84596B;
+}
+
+h2 { 
+  font-size: 1.2em;
+  text-align: center;
+  color: #333;
+}
+
+a {
+  color: #777;
+  text-decoration: none;
+}
+
+a:hover, .current {
+  color: #84596B;
+}
+
+hr {
+  border-top: 0.25em solid #ddd;
+}
+
+#container {
+  width: 90%;
+  padding-bottom: 20px;
+  margin: 0 auto;
+}
+
+.video {
+  padding-top: 20px;
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px; height: 0; overflow: hidden;
+}
+
+.video iframe,
+.video object,
+.video embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#navigation {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+#avatar img {
+  width: 80px;
+  border-radius: 70px;
+
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 14px;
+}
+
+.icon img {
+  width: 40px;
+}
+
+#navigation {
+  margin: 20px 0 0 0;
+  font-size: 40px;
+}
+
+/* Talks page */
+h1.headline {
+  margin-bottom: 20px;
+}
+
+p.description {
+  margin-bottom: 10px;
+}
+
+article.talk {
+  margin-bottom: 120px;
+}
+
+/* Larger screens */
+@media (min-width: 710px) {
+  #container {
+    width: 700px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  #avatar img {
+    width: 140px;
+  }
+
+  .icon img {
+    width: 70px;
+  }
+
+  #navigation {
+    margin: 40px 0 0 0;
+    font-size: 70px;
+  }
+}
