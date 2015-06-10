@@ -21,7 +21,7 @@ h1 a:hover {
   color: #84596B;
 }
 
-h2 { 
+h2 {
   font-size: 1.2em;
   text-align: center;
   color: #333;
@@ -38,6 +38,16 @@ a:hover, .current {
 
 hr {
   border-top: 0.25em solid #ddd;
+}
+
+#footer {
+  height: 40px;
+  color: white;
+  text-align: center;
+  background: #2f2626;
+  width: 100%;
+  font: 12px Georgia, serif;
+  font-style: italic;
 }
 
 #container {
