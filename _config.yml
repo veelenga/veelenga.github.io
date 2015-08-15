@@ -1,9 +1,8 @@
 # Site wide configuration
 
-title:  My personal blog
+title: My personal blog
 locale: en_US
-url:    http://veelenga.com
-
+url: http://veelenga.com
 
 # Jekyll configuration
 
@@ -30,32 +29,27 @@ owner:
   avatar: bio-photo.jpg
   bio: "Describe your self."
   email: velenhaupt@gmail.com
-  disqus-shortname:
+  disqus-shortname: veelenga
   twitter: veelenga
-  facebook: #username
-  google:
-    plus: #username
-    analytics:
-    verify:
-    ad-client:
-    ad-slot:
-  bing-verify:
+  #facebook: #username
+  #google:
+  #bing-verify:
   github: veelenga
   stackoverflow: 1586762/vitalii-elenhaupt
-  linkedin: #username
-  xing: #username
-  instagram: #username
-  lastfm: #username
-  tumblr: #username
-  pinterest: #username
-  foursquare: #username
-  steam: #username
-  dribbble: #username
-  youtube: #username
-  soundcloud: #username
-  weibo: #username
-  flickr: #username
-  codepen: #username
+  #linkedin: #username
+  #xing: #username
+  #instagram: #username
+  #lastfm: #username
+  #tumblr: #username
+  #pinterest: #username
+  #foursquare: #username
+  #steam: #username
+  #dribbble: #username
+  #youtube: #username
+  #soundcloud: #username
+  #weibo: #username
+  #flickr: #username
+  #codepen: #username
 
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
