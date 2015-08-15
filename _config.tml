@@ -1,7 +1,0 @@
-highlighter: veelenga
-name: About me
-url: https://veelenga.github.io
-permalink: pretty
-markdown: redcarpet
-gems:
-  - jekyll-sitemap
