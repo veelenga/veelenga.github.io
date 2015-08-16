@@ -32,7 +32,8 @@ owner:
   disqus-shortname: veelenga
   twitter: veelenga
   #facebook: #username
-  #google:
+  google:
+    analytics: true
   #bing-verify:
   github: veelenga
   stackoverflow: 1586762/vitalii-elenhaupt
