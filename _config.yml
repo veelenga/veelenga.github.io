@@ -1,6 +1,6 @@
 # Site wide configuration
 
-title: My personal blog
+title: V. Elenhaupt Blog
 locale: en_US
 url: http://veelenga.com
 
@@ -27,7 +27,7 @@ kramdown:
 owner:
   name: Vitalii Elenhaupt
   avatar: bio-photo.jpg
-  bio: "Describe your self."
+  bio: "I enjoy programming and taking pictures. Love <b>learning</b>, <b>helping</b> other people and <b>seeing</b> them learn."
   email: velenhaupt@gmail.com
   disqus-shortname: veelenga
   twitter: veelenga

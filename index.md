@@ -1,7 +1,8 @@
 ---
 layout: home
-excerpt: "A minimal Jekyll theme for your blog by designer Michael Rose."
-tags: [Jekyll, theme, responsive, blog, template]
+excerpt: "V.Elenhaupt blog"
+tags: [blogging, veelenga, programming, coding, post, posts]
 image:
-  feature: sample-image-1.jpg
+  feature: home.jpg
+  photo: Wien, Austria
 ---
