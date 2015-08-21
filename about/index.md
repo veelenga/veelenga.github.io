@@ -15,7 +15,7 @@ image:
 My name is Vitalii Elenhaupt. I'm from Kiev, Ukraine. Currently I work as Java/Ruby Software Developer and actively interested in a variety of new trending technologies and programming languages.
 </h4>
 
-I have a Master's degree in Computer Science and I always believed that software development have to be my best skill.
+I have a Master's degree in Computer Science and I always believed that software development has to be my best skill.
 
 <br/>
 
