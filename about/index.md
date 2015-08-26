@@ -9,7 +9,7 @@ image:
   photo: Denizli, Turkey
 ---
 
-> Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live. 
+> Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live.
 
 <h4>
 My name is Vitalii Elenhaupt. I'm from Kiev, Ukraine. Currently I work as Java/Ruby Software Developer and actively interested in a variety of new trending technologies and programming languages.
@@ -23,7 +23,7 @@ This is my blog, so here I would share some of my thoughts (mostly technical) wi
 
 <br/>
 
-I have few <u>hobbies</u> that help me to have a good rest and stay productive:
+I have few <u>hobbies</u> that help me to have fun and stay productive:
 
   * Photographing
   * Playing soccer
