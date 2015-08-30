@@ -26,7 +26,7 @@ kramdown:
 # Site owner
 owner:
   name: Vitalii Elenhaupt
-  avatar: bio-photo.jpg
+  avatar: https://s.gravatar.com/avatar/fb7415aea80a8fa64f7427086eedb6ee?s=80
   bio: "I enjoy programming and taking pictures. Love <b>learning</b>, <b>helping</b> other people and <b>seeing</b> them learn."
   email: velenhaupt@gmail.com
   disqus-shortname: veelenga
