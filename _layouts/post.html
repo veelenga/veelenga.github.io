@@ -23,7 +23,7 @@
     {% endif %}
   alt="{{ page.title }} feature image">
   {% if page.image.photo %}
-    <span class="image-photo">Photo: <a href="{{ page.image.photolink }}">{{ page.image.photo }}</a></span>
+    <span class="image-photo">Photo: {{ page.image.photo }}</span>
   {% endif %}
   {% if page.image.credit %}
     <span class="image-credit">Photo Credit: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></span>

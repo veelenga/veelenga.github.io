@@ -6,7 +6,7 @@ modified: 2015-08-21T20:53:07.573882-04:00
 comments: false
 image:
   feature: about-me.jpg
-  photo: Denizli, Turkey
+  photo: Kiev, Ukraine
 ---
 
 > Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live.
