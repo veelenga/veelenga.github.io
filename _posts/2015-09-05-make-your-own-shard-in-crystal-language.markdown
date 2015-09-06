@@ -60,7 +60,7 @@ At the root of your project directory is placed `Projectfile` file. This is wher
 
 <br>
 
-`spec` directory is used for testing your sources. Crystal has it's own built-in testing library called `Spec` and it is very similar to Ruby's [Rspec](http://rspec.info/). We will write tests for our project in [Writing tests](writing-tests) section.
+`spec` directory is used for testing your sources. Crystal has it's own built-in testing library called `Spec` and it is very similar to Ruby's [Rspec](http://rspec.info/). We will write tests for our project in [Writing tests](#writing-tests) section.
 
 <br>
 
@@ -96,7 +96,7 @@ Nothing was printed. Why ? Because our executable only defines a new module and 
 
 ### Adding an executable
 
-Currently Crystal does not have a convention where to place executable files. So, we're going to create a new file in `bin/` directory. I believe that is the best place for our executable. Let's create `bin/hallo` with the following content:
+Currently Crystal does not have a convention where to place executable files. So, we're going to create a new file in `bin/` directory. I believe that is the best place for our executable. Create `bin/hallo` file with the following content:
 
 {% highlight ruby %}
 require "../src/hallo"
@@ -104,7 +104,7 @@ require "../src/hallo"
 Hallo.say_hi
 {% endhighlight %}
 
-Let's build our executable and then run it:
+Let's build our executable and then run it again:
 
 {% highlight text %}
 $ crystal build bin/hallo
@@ -116,7 +116,7 @@ Congratulations, we have been just created our fancy Crystal shard and we are ab
 
 ### Adding dependencies
 
-Shards wouldn't be so useful if there weren't a way to easily reuse it in your project. Fortunately, Crystal has a built-in mechanism to add dependencies. Let's make our project dependent on [emoji.cr](https://github.com/veelenga/emoji.cr) shard that is able to emojize strings.
+Shards wouldn't be so useful if there weren't a way to easily reuse it in your project. Fortunately, Crystal has a built-in mechanism to manage dependencies. Let's make our project dependent on [emoji.cr](https://github.com/veelenga/emoji.cr) shard that is able to emojize strings.
 
 <br>
 
@@ -140,7 +140,7 @@ Resolving deltas: 100% (52/52), done.
 Checking connectivity... done.
 {% endhighlight %}
 
-It will clone defined dependencies to `.deps/` directory and create a symbolic links in `libs/` directory to sources:
+It will clone defined dependencies to `.deps/` directory and create symbolic links in `libs/` directory to sources in dependencies:
 {% highlight text %}
 $ ls -gho libs
 lrwxrwxrwx 1 30 Sep  6 12:33 emoji -> ../.deps/veelenga-emoji.cr/src
@@ -188,7 +188,7 @@ $ ./hallo "I :heart: Crystal"
 I ❤️ Crystal
 {% endhighlight %}
 
-We can see that our binary works as expected and emoji shard emojizes our string. Looks easy, right? It's time to add some tests.
+We can see that our binary works as expected and emoji shard successfully added as a dependency. Looks easy, right? It's time to add some tests.
 
 ## Writing tests
 
@@ -213,7 +213,7 @@ describe Hallo do
   end
 
   describe ".say" do
-    it "returns emojizes message if there are emojies" do
+    it "returns emojized message if there are emojies" do
       Hallo.say("Hello, smiling cat :smile_cat:")
         .should eq "Hello, smiling cat 😸"
     end
@@ -249,7 +249,7 @@ Now we can write tests and test our shard on Travis. Awesome! It's a time to doc
 
 ## Documenting your code
 
-Crystal supports a markdown syntax. Let's add some documentation with examples:
+Crystal documentation supports a markdown syntax. Let's add some docs with examples:
 
 {% highlight ruby %}
 require "./hallo/*"
@@ -284,11 +284,11 @@ After that we can generate documentation locally with `crystal docs` command:
 $ crystal docs
 {% endhighlight %}
 
-It will generate documentation in `doc` folder. Just open `doc/index.html` in your browser and review a pretty formatted documentation of you shard. Looks easy!
+It will generate documentation in `doc` folder. Just open `doc/index.html` in your browser and review a pretty formatted documentation of your shard. Looks easy!
 
 ## Wrapup
 
-This is a simple and easy to use tutorial that shows how to create the new shard in Crystal language, add an executable, dependencies, write tests and document a code. I hope you are full of ideas for a new projects and you are on the way to make a new shard. Crystallians are waiting for you!
+This is a simple and easy to use tutorial that shows how to create the new shard in Crystal language, add an executable, dependencies, write tests and document a code. I hope you are full of ideas for new projects and you are on the way to make a new shard. Crystallians are waiting for you!
 
 
 ### Credits
