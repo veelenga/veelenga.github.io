@@ -60,7 +60,7 @@ At the root of your project directory is placed `Projectfile` file. This is wher
 
 <br>
 
-`spec` directory is used for testing your sources. Crystal has it's own built-in testing library called `Spec` and it is very similar to Ruby's [Rspec](http://rspec.info/). We will write tests for our project in [Writing tests](writing-tests) section.
+`spec` directory is used for testing your sources. Crystal has it's own built-in testing library called `Spec` and it is very similar to Ruby's [Rspec](http://rspec.info/). We will write tests for our project in [Writing tests](#writing-tests) section.
 
 <br>
 
