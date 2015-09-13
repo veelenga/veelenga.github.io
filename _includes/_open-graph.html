@@ -8,7 +8,7 @@
 <meta name="twitter:image" content="{{ site.url }}/images/{{ page.image.feature }}">
 {% else %}
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="{% if page.image.thumb %}{{ site.url }}/images/{{ page.image.thumb }}{% else %}{{ site.url }}/images/default-thumb.png{% endif %}">
+<meta name="twitter:image:src" content="{% if page.image.thumb %}{{ site.url }}/images/{{ page.image.thumb }}{% else %}{{ author.avatar }}{% endif %}">
 {% endif %}
 <!-- Open Graph -->
 <meta property="og:locale" content="{{ site.locale }}">
@@ -20,5 +20,5 @@
 {% if page.image.feature %}
 <meta property="og:image" content="{{ site.url }}/images/{{ page.image.feature }}">
 {% else %}
-<meta property="og:image" content="{% if page.image.thumb %}{{ site.url }}/images/{{ page.image.thumb }}{% else %}{{ site.url }}/images/default-thumb.png{% endif %}">
+<meta property="og:image" content="{% if page.image.thumb %}{{ site.url }}/images/{{ page.image.thumb }}{% else %}{{ author.avatar }}{% endif %}">
 {% endif %}
