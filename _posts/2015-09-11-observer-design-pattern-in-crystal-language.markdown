@@ -150,4 +150,4 @@ Crystal's type system is very flexible. It allows you to use generics, helps to 
 
 <br>
 
-Source code for example used in this article you may find on [Crystal Patterns](http://veelenga.com/crystal-patterns/#crystal-patterns-observer).
+Source code for example used in this article you may find on [Crystal Patterns](http://veelenga.com/crystal-patterns/#behavioral-observer).
