@@ -2,6 +2,7 @@
 layout: post
 title: "Make your own Shard in Crystal language"
 date: 2015-09-06T21:11:25+03:00
+modified: 2015-09-23
 comments: true
 excerpt: "An easy to use tutorial to create a new shard in Crystal language."
 tags: [crystal, crystal-lang, shard, shards, crystalshards, project, spec]
@@ -12,7 +13,7 @@ published: true
 
 ## Introduction
 
-[Crystal](http://crystal-lang.org ) is a young and perspective language. Currently it is in the alpha stage and only **0.7.7** release has been published. But the language is growing very quickly, more and more people are interested in Crystal. I believe it's a time to create a new popular **shard**. Shard is project written in Crystal, like a **gem** for Ruby or **crate** for Rust. The goal of this tutorial is to show you a simple and easy way to create and publish the new shard.
+[Crystal](http://crystal-lang.org ) is a young and perspective language. Currently it is in the alpha stage and only **0.8.0** release has been published. But the language is growing very quickly, more and more people are interested in Crystal. I believe it's a time to create a new popular **shard**. Shard is a project written in Crystal, like a **gem** for Ruby or **crate** for Rust. The goal of this tutorial is to show you a simple and easy way to create and publish the new shard.
 
 ## Creating a Shard
 
@@ -24,7 +25,7 @@ $ crystal init app hallo
       create  hallo/LICENSE
       create  hallo/README.md
       create  hallo/.travis.yml
-      create  hallo/Projectfile
+      create  hallo/shard.yml
       create  hallo/src/hallo.cr
       create  hallo/src/hallo/version.cr
       create  hallo/spec/spec_helper.cr
@@ -32,7 +33,7 @@ $ crystal init app hallo
 Initialized empty Git repository in /home/veelenga/dev/hallo/.git/
 {% endhighlight %}
 
-Here I'm passing `app` because I am making a binary program. If you want to make a library instead you have to use `crystal init` command with type `lib`. Run `crystal init -h` for more information.
+Here I'm passing `app` argument to `crystal init` command because I am making a binary program. If you want to make a library instead you have to use `crystal init` command with type `lib`. Run `crystal init -h` for more information.
 
 <br>
 
@@ -43,8 +44,8 @@ $ cd hallo
 $ tree .
 .
 ├── LICENSE
-├── Projectfile
 ├── README.md
+├── shard.yml
 ├── spec
 │   ├── hallo_spec.cr
 │   └── spec_helper.cr
@@ -56,7 +57,7 @@ $ tree .
 3 directories, 7 files
 {% endhighlight %}
 
-At the root of your project directory is placed `Projectfile` file. This is where you will declare your project dependencies. We will talk about it a bit later in [Adding dependencies](#adding-dependencies) section.
+At the root of your project directory is placed `shard.yml` file. This is where you will declare your project dependencies. We will talk about it a bit later in [Adding dependencies](#adding-dependencies) section.
 
 <br>
 
@@ -96,10 +97,10 @@ Nothing was printed. Why ? Because our executable only defines a new module and 
 
 ### Adding an executable
 
-Currently Crystal does not have a convention where to place executable files. So, we're going to create a new file in `bin/` directory. I believe that is the best place for our executable. Create `bin/hallo` file with the following content:
+Currently Crystal does not have a convention where to place executable files. Let's add it to the root directory. Create `./greeter.cr` file with the following content:
 
 {% highlight ruby %}
-require "../src/hallo"
+require "./src/*"
 
 Hallo.say_hi
 {% endhighlight %}
@@ -107,46 +108,73 @@ Hallo.say_hi
 Let's build our executable and then run it again:
 
 {% highlight text %}
-$ crystal build bin/hallo
-$ ./hallo
+$ crystal build greeter.cr
+$ ./greeter
 Hello, world!
 {% endhighlight %}
 
-Congratulations, we have been just created our fancy Crystal shard and we are able to run it. Awesome!
+Awesome, we can run it. But the real project can be big and it could not be so easy to build or run it. So, somewhere we need to define rules that our project requires to be build to simplify a life for other developers or project's users. This is where `Makefile` comes. Here is a tiny example:
+
+{% highlight sh %}
+OUT_DIR=bin
+
+all: build
+
+build:
+	mkdir -p $(OUT_DIR)
+	crystal build --release greeter.cr -o $(OUT_DIR)/greeter
+
+run:
+	$(OUT_DIR)/greeter
+
+clean:
+	rm -rf  $(OUT_DIR) .crystal .deps libs
+{% endhighlight %}
+
+In our `Makefile` we build our `greeter.cr` with `--release` flag that is extremely important for production applications. `-o $(OUT_DIR)/greeter` defines a destinations file, in our example it is `bin/greeter`. Let's build it:
+
+{% highlight text %}
+$ make build
+mkdir -p bin
+crystal build --release greeter.cr -o bin/greeter
+{% endhighlight %}
+
+After running this command `bin/greeter` file should have been created. Run it with:
+
+{% highlight text %}
+$ make run
+bin/greeter
+Hello, world!
+{% endhighlight %}
+
+Congratulations, we have been just created our fancy Crystal shard and we are able to build and run it. Awesome!
 
 ### Adding dependencies
 
-Shards wouldn't be so useful if there weren't a way to easily reuse it in your project. Fortunately, Crystal has a built-in mechanism to manage dependencies. Let's make our project dependent on [emoji.cr](https://github.com/veelenga/emoji.cr) shard that is able to emojize strings.
+Shards wouldn't be so useful if there weren't a way to easily reuse it in your project. Fortunately, Crystal is integrated with [shards](https://github.com/ysbaddaden/shards) project to manage project dependencies. Follow the instructions to install it at the beginning. And then let's make our project dependent on [emoji.cr](https://github.com/veelenga/emoji.cr) shard that is able to emojize strings.
 
 <br>
 
-Firstly, we need to add a dependency to our `Projectfile`:
+Firstly, we need to add a dependency to our `shard.yml` file:
 
-{% highlight ruby %}
-deps do
-  github "veelenga/emoji.cr"
-end
+{% highlight yaml %}
+...
+dependencies:
+  emoji:
+    github: veelenga/emoji.cr
+    branch: master
+...
 {% endhighlight %}
 
 Secondly, we need to load our dependencies with `crystal deps` command:
 
 {% highlight text %}
 $ crystal deps
-Cloning into '.deps/veelenga-emoji.cr'...
-remote: Counting objects: 155, done.
-remote: Total 155 (delta 0), reused 0 (delta 0), pack-reused 155
-Receiving objects: 100% (155/155), 29.15 KiB | 0 bytes/s, done.
-Resolving deltas: 100% (52/52), done.
-Checking connectivity... done.
+Updating https://github.com/veelenga/emoji.cr.git
+Installing emoji (master)
 {% endhighlight %}
 
-It will clone defined dependencies to `.deps/` directory and create symbolic links in `libs/` directory to sources in dependencies:
-{% highlight text %}
-$ ls -gho libs
-lrwxrwxrwx 1 30 Sep  6 12:33 emoji -> ../.deps/veelenga-emoji.cr/src
-{% endhighlight %}
-
-Let's now use **emoji** shard in our project. Rewrite `src/hallo.cr` to the following:
+It will clone defined dependencies to `.shards/` directory. Let's now use **emoji** shard in our project. Rewrite `src/hallo.cr` to the following:
 
 {% highlight ruby %}
 require "./hallo/*"
@@ -164,10 +192,10 @@ end
 {% endhighlight %}
 
 On the second line we *require* emoji shard and then use it to emojize a message.
-Let's also rewrite a `bin/hallo` executable file:
+Let's also rewrite a `./greeter.cr` executable file:
 
 {% highlight ruby %}
-require "../src/hallo"
+require "./src/*"
 
 if ARGV.empty?
   # say hi if no arguments passed
@@ -179,16 +207,15 @@ end
 
 Here we want to print a custom message if user passes it to the executable via command line, and print default message ("Hello, world!") if nothing was passed. Let's build and run it:
 
-
 {% highlight text %}
-$ crystal build bin/hallo
-$ ./hallo
+$ make build
+$ ./bin/greeter
 Hello, world ❗
-$ ./hallo "I :heart: Crystal"
+$ ./bin/greeter "I :heart: Crystal"
 I ❤️ Crystal
 {% endhighlight %}
 
-We can see that our binary works as expected and emoji shard successfully added as a dependency. Looks easy, right? It's time to add some tests.
+We can see that our binary works as expected and emoji shard has been successfully used as a dependency. Looks easy, right? It's time to add some tests.
 
 ## Writing tests
 
