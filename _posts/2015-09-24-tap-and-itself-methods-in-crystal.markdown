@@ -2,6 +2,7 @@
 layout: post
 title: "Methods tap and itself in Crystal"
 date: 2015-09-24T11:52:42+03:00
+comments: true
 excerpt: "After reading this post you will know why Object#tap and Object#itself methods are so useful in Crystal language and when to use them."
 tags: [blog, blogging, crystal, crystallang, object, tap, itself, programming, development]
 published: true
@@ -43,13 +44,13 @@ So why do we need it if we can just type `str` instead of `str.itself`? It comes
 
 {% highlight ruby %}
 # Group elements of array by it's values (by itself).
-[1,2,4,1,2,2,3].group_by {|x| x}  # {1 => [1, 1], 2 => [2, 2, 2], 4 => [4], 3 => [3]}
+p [1,2,4,1,2,2,3].group_by {|x| x}  # {1 => [1, 1], 2 => [2, 2, 2], 4 => [4], 3 => [3]}
 {% endhighlight %}
 
 With `itself` we can rewrite it in a more elegant and readable way:
 
 {% highlight ruby %}
-[1,2,4,1,2,2,3].group_by &.itself # {1 => [1, 1], 2 => [2, 2, 2], 4 => [4], 3 => [3]}
+p [1,2,4,1,2,2,3].group_by &.itself # {1 => [1, 1], 2 => [2, 2, 2], 4 => [4], 3 => [3]}
 {% endhighlight %}
 
 Seems reasonable to have this method in standard library.
