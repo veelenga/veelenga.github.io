@@ -3,8 +3,7 @@ layout: post
 title: "Benchmarking in Crystal? It rocks!"
 date: 2015-10-03T22:51:50+03:00
 comments: true
-excerpt: "After reading this article you will know how to easily benchmark code written in Crystal programming language.
-Benchmarking is exciting now!"
+excerpt: "Benchmarking in easy, benchmarking is existing, especially in Crystal! Checkout a quick overview with practical examples."
 tags: [blog, blogging, crystal, crystallang, performance, benchmark, benchmarking, ips, benchmark-ips]
 image:
   thumb: speed-up.jpg
