@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About me
+excerpt: All about the author
 tags: [about, me, programming, veelenga, vitalii, elenhaupt, elengaupt]
 modified: 2015-08-21T20:53:07.573882-04:00
 comments: false
