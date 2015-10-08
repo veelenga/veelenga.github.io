@@ -46,7 +46,7 @@ $ crystal test.cr --release
 Array#[]? 392.77M (± 2.57%)       fastest
 {% endhighlight %}
 
-Report says that `Array#[]` 1.12x times slower then `Array#[]?`. Ah, how it is easy to benchmark, isn't it?
+Report says that `Array#[]` 1.12x times slower than `Array#[]?`. Ah, how it is easy to benchmark, isn't it?
 
 <br>
 
@@ -67,9 +67,9 @@ end
 #   Int32#to_s  36.31M (± 4.14%)       fastest
 {% endhighlight %}
 
-`Int32#to_s` is faster then interpolation when you just want to convert integer to string.
+`Int32#to_s` is faster than interpolation when you just want to convert integer to string.
 But with interpolation we also can perform a concatenation,
-which is much more efficient then concatenation with `#to_s` method:
+which is much more efficient than concatenation with `#to_s` method:
 
 {% highlight ruby %}
 # Interpolation vs Concatenation
