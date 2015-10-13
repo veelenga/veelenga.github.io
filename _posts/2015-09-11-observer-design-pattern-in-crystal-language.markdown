@@ -119,7 +119,8 @@ The last thing we need to do is to include `Observable` module into our `Fighter
 {% highlight ruby %}
 class Fighter
   include Observable(Observer)
-...
+  #...
+end
 {% endhighlight %}
 
 Notice how we define a type of our `Observable` module when we include it.
