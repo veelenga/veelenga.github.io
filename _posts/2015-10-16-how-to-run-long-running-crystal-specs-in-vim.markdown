@@ -5,6 +5,7 @@ modified:
 excerpt: Running specs withing a Vim someday could be a pain. This short post is about how to deal with long running Crystal specs in Vim.
 tags: [crystal, vim, spec, crystallang, test]
 date: 2015-10-16T07:42:00+03:00
+comments: true
 ---
 
 There is a nice plugin [vim-crystal](https://github.com/rhysd/vim-crystal) that brings a lot of stuff
