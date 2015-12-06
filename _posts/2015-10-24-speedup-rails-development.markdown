@@ -2,11 +2,11 @@
 layout: post
 title: "Speed up Rails 4 in development mode"
 modified:
-categories:
+categories: [editors, productivity]
 excerpt: A quickest way to speed up your development with Rails 4.
 tags: [rails, ruby, speed-up, speed, development, server]
 image:
-  thumb: ruby.png
+  thumb: logos/ruby.png
 date: 2015-10-23T23:38:29+03:00
 comments: true
 ---
