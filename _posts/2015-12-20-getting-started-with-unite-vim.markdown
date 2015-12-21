@@ -22,8 +22,8 @@ You may start with adding mappings for most usable features:
 {% highlight vim %}
 
 nnoremap <C-P>    :Unite -buffer-name=files -start-insert file_rec/async:!<cr>
-nnoremap <space>/ :Unite -no-empty -no-resize -vertical-preview grep<cr>
-nnoremap <space>s :Unite -quick-match -vertical-preview buffer<cr>
+nnoremap <space>/ :Unite -no-empty -no-resize grep<cr>
+nnoremap <space>s :Unite -quick-match buffer<cr>
 
 {% endhighlight %}
 
