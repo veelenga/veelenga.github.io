@@ -287,6 +287,9 @@ $button-size: 1.5rem;
 .image-wrap {
 	position: relative;
 	margin-bottom: 2em;
+		@include fadeIn(
+		$duration: 3s
+	);
 	@include clearfix;
 	&:after {
 		content: " ";

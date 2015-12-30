@@ -1,7 +1,7 @@
 ---
 layout: post-index
 title: All Posts
-excerpt: "A List of Posts"
+excerpt: List of all available blog posts at V. Elenhaupt's Blog
 image:
   feature: posts.jpg
   photo: Paris, France
