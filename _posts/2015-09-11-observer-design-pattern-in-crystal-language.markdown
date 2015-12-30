@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Observer design pattern in Crystal language"
-date: 2015-09-11T19:53:44+03:00
+date: 2015-12-30T12:48:44+03:00
 comments: true
 excerpt: "A post where I want to share my thoughts regarding an implementation of an Observer design pattern in Crystal language."
 tags: [blog, blogging, design, patterns, pattern, crystal, crystallang, observer, observable, programming, oop, object oriented programming]
@@ -92,7 +92,7 @@ Here is how an interface for our Observer might look:
 
 {% highlight ruby %}
 abstract class Observer
-  abstract def update fighter
+  abstract def update(fighter)
 end
 {% endhighlight %}
 
@@ -109,7 +109,7 @@ end
 {% highlight ruby %}
 class DieAction < Observer
   def update(fighter)
-    puts "#{fighter.name} is dead. Finish him!" if fighter.is_dead?
+    puts "#{fighter.name} is dead. Fight is over!" if fighter.is_dead?
   end
 end
 {% endhighlight %}
@@ -144,7 +144,7 @@ fighter.damage(30)
 
 fighter.damage(75)
 # Updating stats: Scorpion's health is 0
-# Scorpion is dead. Finish him!
+# Scorpion is dead. Fight is over!
 {% endhighlight %}
 
 Crystal's type system is very flexible. It allows us to use generics, helps to prevent runtime errors and gives ability to write concise and easy to read code. In our implementation of Observer pattern we may found examples of all mentioned points.
