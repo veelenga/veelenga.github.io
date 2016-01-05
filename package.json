@@ -1,13 +1,13 @@
 {
-  "name": "minimal-mistakes-theme",
-  "author": "Michael Rose <michael@mademistakes.com>",
-  "homepage": "http://mmistakes.github.io/minimal-mistakes/",
+  "name": "veelenga.github.io",
+  "author": "Vitalii Elenhaupt <velenhaupt@gmail.com>",
+  "homepage": "veelenga.com",
   "repository": {
     "type": "git",
-    "url": "git://github.com/mmistakes/minimal-mistakes.git"
+    "url": "git://github.com/veelenga/veelenga.github.io"
   },
   "bugs": {
-    "url": "https://github.com/mmistakes/minimal-mistakes/issues"
+    "url": "https://github.com/veelenga/veelenga.github.io/issues"
   },
   "engines": {
     "node": ">= 0.10.0"
