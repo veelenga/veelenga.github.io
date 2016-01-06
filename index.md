@@ -1,6 +1,6 @@
 ---
 layout: home
-excerpt: Vitalii Elenhaupt's Software Development blog.
+excerpt: Tech Blog by V. Elenhaupt
 tags: [blogging, veelenga, vitalii, elenhaupt, programming, coding, development, post, posts]
 image:
   feature: home.jpg
