@@ -147,8 +147,9 @@ fighter.damage(75)
 # Scorpion is dead. Fight is over!
 {% endhighlight %}
 
-Crystal's type system is very flexible. It allows us to use generics, helps to prevent runtime errors and gives ability to write concise and easy to read code. In our implementation of Observer pattern we may found examples of all mentioned points.
+Crystal's type system is very flexible. It allows us to use generics, helps to prevent runtime errors and gives ability
+to write concise and easy to read code. In our implementation of Observer pattern we may found examples of all mentioned points.
 
 <br>
 
-Source code for example used in this article you may find on [Crystal Patterns](http://veelenga.com/crystal-patterns/#behavioral-observer).
+Source code for example used in this article you may find on [Crystal Patterns](https://veelenga.gitbooks.io/crystal-patterns/content/behavioral/observer.html).
