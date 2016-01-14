@@ -152,4 +152,4 @@ to write concise and easy to read code. In our implementation of Observer patter
 
 <br>
 
-Source code for example used in this article you may find on [Crystal Patterns](https://veelenga.gitbooks.io/crystal-patterns/content/behavioral/observer.html).
+Source code for example used in this article you may find in [Crystal Patterns](https://github.com/veelenga/crystal-patterns/blob/master/behavioral/observer.cr) Github repo.
