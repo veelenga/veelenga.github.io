@@ -82,7 +82,7 @@ body {
 		a {
 			display: block;
 			padding: 10px 0;
-			decoration: none;
+			text-decoration: underline;
 			border-bottom: 0 solid transparent;
 			@include transition(all .2s);
 			@media #{$small} {
