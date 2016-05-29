@@ -1,25 +1,19 @@
 {
-  "name": "minimal-mistakes",
-  "version": "2.1.0",
-  "description": "Minimal Mistakes Jekyll theme npm build scripts",
+  "name": "veelenga.github.io",
+  "author": "Vitalii Elenhaupt <velenhaupt@gmail.com>",
+  "homepage": "veelenga.com",
   "repository": {
     "type": "git",
-    "url": "git://github.com/mmistakes/minimal-mistakes.git"
+    "url": "git://github.com/veelenga/veelenga.github.io"
+  },
+  "bugs": {
+    "url": "https://github.com/veelenga/veelenga.github.io/issues"
   },
   "keywords": [
     "jekyll",
     "theme",
     "minimal"
   ],
-  "author": "Michael Rose",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/mmistakes/minimal-mistakes/issues"
-  },
-  "homepage": "https://mmistakes.github.io/minimal-mistakes/",
-  "engines": {
-    "node": ">= 0.10.0"
-  },
   "devDependencies": {
     "autoprefixer": "^6.3.5",
     "node-sass": "^3.4.2",
