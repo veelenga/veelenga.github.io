@@ -1,21 +1,17 @@
 ---
-layout: post
 title: "Getting started with Unite.vim"
 modified:
 categories: [editors]
 excerpt: Initial configuration of Unite.vim after installation.
-tags: [neovim, vim, unite.vim, configuration]
+tags: [neovim, vim, unite.vim, infrastructure]
 image:
   feature:
 date: 2015-12-15T10:16:04+02:00
-comments: true
 ---
 
 I found [Unite.vim](https://github.com/Shougo/unite.vim) as a very very powerful plugin.
 It has replaced few plugins I have been using before. Installation of the unite.vim does
 not bring us any mappings and requires some initial configuration.
-
-<br>
 
 You may start with adding mappings for most usable features:
 
@@ -29,8 +25,6 @@ nnoremap <space>s :Unite -quick-match buffer<cr>
 
 Now, if you press `<C-P>` you will have a file search window similar to [CtrlP](https://github.com/kien/ctrlp.vim) plugin search.
 With `<space>/` asynchronous grep through content in files and with `<space>s` a search through buffers. And, actually, it is amazing.
-
-<br>
 
 You can go further and add few useful mappings in unite window for navigation and window opening:
 
@@ -59,8 +53,6 @@ endfunction
 Now you can navigate through files in Unite window with `<C-j>` and `<C-k>` and open files in a new tab,
 horizontal split window or vertical split window with `<C-t>`, `<C-h>` and `<C-v>` in accordance. Pretty useful.
 
-<br>
-
 Also you are able to customize a window position, size, preview settings etc. with profiles:
 
 {% highlight vim %}
@@ -72,8 +64,6 @@ call unite#custom#profile('default', 'context', {
 {% endhighlight %}
 
 It is awesome!
-
-<br>
 
 Unite.vim is very powerful. It is able to do a lot of stuff for everyday usage.
 And with a proper configuration it becomes an indispensable plugin.

@@ -1,0 +1,25 @@
+---
+layout: archive
+title: "All blog posts"
+tags:
+  all: true
+---
+
+{% include base_path %}
+
+{% for post in paginator.posts %}
+  {% include archive-single.html %}
+{% endfor %}
+
+{% include post_paginator.html %}
+
+<hr>
+
+<section class="page__meta">
+  <p class="page__taxonomy">
+    <strong><i class="fa fa-fw fa-tags" aria-hidden="true"></i> Search by tag: </strong>
+    <span itemprop="keywords">
+      {% include available-tags.html %}
+    </span>
+  </p>
+</section>

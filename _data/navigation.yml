@@ -1,7 +1,7 @@
-# Site navigation links
+# main links links
+main:
+  - title: "Blog"
+    url: http://localhost:4000/posts
 
-- title: Posts
-  url: /posts/
-
-- title: About
-  url: /about/
+  - title: "About"
+    url: http://localhost:4000/about

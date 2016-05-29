@@ -1,16 +1,12 @@
 ---
-layout: post
 title: "Methods tap and itself in Crystal"
 date: 2015-09-24T11:52:42+03:00
-comments: true
 excerpt: "After reading this post you will know why Object#tap and Object#itself methods are so useful in Crystal language and when to use them."
-tags: [blog, blogging, crystal, crystallang, object, tap, itself, programming, development]
+tags: [crystallang, tap method, itself method, functional programming]
 published: true
 ---
 
 Method [Object#tap](http://crystal-lang.org/api/Object.html#tap%28%26block%29-instance-method) in Crystal yields to the block and then returns self. [Object#itself](http://crystal-lang.org/api/Object.html#itself-instance-method) just returns self. Why do we need those methods? Let's look at few examples.
-
-<br>
 
 ### Send itself to the chain
 
@@ -95,7 +91,5 @@ This example uses both methods. `itself` (in `any?` method without a block) is u
 ### Wrapup
 
 `itself` and `tap` are very useful methods. They are similar but usually are used for different purposes. Using both of them will make it possible to improve readability and maintainability of your code.
-
-<br>
 
 Code for this post you may find on [Github Gist](https://gist.github.com/veelenga/d35b6a2cd002de90f1a7).

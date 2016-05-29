@@ -1,10 +1,8 @@
 ---
-layout: post
 title: "Benchmarking in Crystal? It rocks!"
 date: 2015-10-03T22:51:50+03:00
-comments: true
 excerpt: "Benchmarking in easy, benchmarking is existing, especially in Crystal! Checkout a quick overview with practical examples."
-tags: [blog, blogging, crystal, crystallang, performance, benchmark, benchmarking, ips, benchmark-ips]
+tags: [crystallang, performance, benchmarking, benchmark-ips]
 image:
   thumb: speed-up.jpg
 published: true
@@ -17,8 +15,6 @@ published: true
 Whether you are an experienced developer or a newbie, using programming language regularly or just learning it,
 anyway, someday you will have few ways to code things and ask your self which implementation is faster,
 which is more efficient and which should you use in your particular case.
-
-<br>
 
 Benchmarking usually helps to answer this questions, but a lot of people associate benchmarking with a lot of work.
 Fortunately, in [Crystal](http://crystal-lang.org/) programming language benchmarking requires minimal effort with a great feedback.
@@ -48,12 +44,8 @@ Array#[]? 392.77M (± 2.57%)       fastest
 
 Report says that `Array#[]` 1.12x times slower than `Array#[]?`. Ah, how it is easy to benchmark, isn't it?
 
-<br>
-
 **Note**: according to the documentation, Crystal benchmarks should *always* be running with `--release` flag.
 Never miss awesome optimizations of the compiler while benchmarking!
-
-<br>
 
 Let's look at more examples:
 
@@ -133,8 +125,6 @@ end
 
 As expected `Hash#[]?` with symbols wins. Awesome!
 
-<br>
-
 There (in Fast Ruby) you may find a lot of good examples of tasks to compare and try it in Crystal.
 
 ## Wrapup
@@ -144,11 +134,6 @@ But you have to understand, benchmarking does not give you a complete picture ab
 but it gives you a good image about how your code is performing.
 Happy benchmarking!
 
-<br>
-
 Source code for used examples you may found on [Github Gist](https://gist.github.com/veelenga/a5b861ccd32ff559b7d2).
 
-<br>
-
 All examples were run with Crystal **0.8.0**.
-

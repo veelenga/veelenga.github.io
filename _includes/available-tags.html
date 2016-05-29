@@ -1,0 +1,12 @@
+{% case site.tags.type %}
+  {% when "liquid" %}
+    {% assign path_type = "#" %}
+  {% when "jekyll-archives" %}
+    {% assign path_type = nil %}
+{% endcase %}
+
+{% assign all_tags = site.tags | sort_tags_by_name %}
+{% for site_tag in all_tags %}
+  {% assign tag = site_tag.first | downcase %}
+  <a href="{{ base_path }}{{ tag | slugify | prepend: path_type | prepend: site.tags.path }}" class="page__taxonomy-item" rel="tag">{{ tag }}</a>{% unless forloop.last %}<span class="sep"></span>{% endunless %}
+{% endfor %}

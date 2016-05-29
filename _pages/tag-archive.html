@@ -1,0 +1,27 @@
+---
+layout: archive
+permalink: /tags/
+title: "Posts by Tags"
+header:
+  disable: true
+---
+
+{% include base_path %}
+
+<h1>All tags</h1>
+
+{% include available-tags.html %}
+
+<hr>
+
+<h1>Posts by tags</h1>
+
+{% include group-by-array collection=site.posts field="tags" %}
+
+{% for tag in group_names %}
+  {% assign posts = group_items[forloop.index0] %}
+  <h2 id="{{ tag | slugify }}" class="archive__subtitle">{{ tag }}</h2>
+  {% for post in posts %}
+    {% include archive-single.html %}
+  {% endfor %}
+{% endfor %}

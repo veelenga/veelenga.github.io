@@ -1,15 +1,13 @@
 ---
-layout: post
 title: "Make your own Shard in Crystal language"
 date: 2015-09-06T21:11:25+03:00
 modified: 2015-09-23
-comments: true
 excerpt: "An easy to use tutorial to create a new shard in Crystal language."
-tags: [crystal, crystal-lang, shard, shards, crystalshards, project, spec]
+tags: [crystallang, shards, infrastructure, specs]
 published: true
 ---
 
-{% include _toc.html %}
+{% include toc title="On this page" icon="file-text-o" %}
 
 ## Introduction
 
@@ -35,8 +33,6 @@ Initialized empty Git repository in /home/veelenga/dev/hallo/.git/
 
 Here I'm passing `app` argument to `crystal init` command because I am making a binary program. If you want to make a library instead you have to use `crystal init` command with type `lib`. Run `crystal init -h` for more information.
 
-<br>
-
 Let's print out again what was generated for us:
 
 {% highlight text %}
@@ -59,15 +55,9 @@ $ tree .
 
 At the root of your project directory is placed `shard.yml` file. This is where you will declare your project dependencies. We will talk about it a bit later in [Adding dependencies](#adding-dependencies) section.
 
-<br>
-
 `spec` directory is used for testing your sources. Crystal has it's own built-in testing library called `Spec` and it is very similar to Ruby's [Rspec](http://rspec.info/). We will write tests for our project in [Writing tests](#writing-tests) section.
 
-<br>
-
 Code for your package is placed inside the `src` directory and it has the same convention as for Ruby project: one Crystal file with the *same* name as your shard. Other project related files are placed inside `src/hallo/` directory (currently there is only `version.cr`).
-
-<br>
 
 Let's add some code to let our shard be able to say "Hello" to the world. Here is how `src/hallo.rb` looks after update:
 
@@ -153,8 +143,6 @@ Congratulations, we have been just created our fancy Crystal shard and we are ab
 
 Shards wouldn't be so useful if there weren't a way to easily reuse it in your project. Fortunately, Crystal is integrated with [shards](https://github.com/ysbaddaden/shards) project to manage project dependencies. Follow the instructions to install it at the beginning. And then let's make our project dependent on [emoji.cr](https://github.com/veelenga/emoji.cr) shard that is able to emojize strings.
 
-<br>
-
 Firstly, we need to add a dependency to our `shard.yml` file:
 
 {% highlight yaml %}
@@ -221,11 +209,7 @@ We can see that our binary works as expected and emoji shard has been successful
 
 Writing tests for your shard is very important. It will ensure that your code works, help you to be assured that your change does not break something and help others to know that your shard does it's job. Actually, tests are a good place to view how your project works in details.
 
-<br>
-
 You may say that using BDD (or TDD) practice we have to write our tests first. And you will be completely correct. But, usually, it is much easier to understand a tutorial writing code first and then tests.
-
-<br>
 
 Crystal has it's own built-in testing library called `Spec`. Let's add basic tests for our module:
 
@@ -269,8 +253,6 @@ language: crystal
 {% endhighlight %}
 
 It has been already generated with `crystal init` command. Just add it to you project if you haven't done it already.
-
-<br>
 
 Now we can write tests and test our shard on Travis. Awesome! It's a time to document our code.
 
