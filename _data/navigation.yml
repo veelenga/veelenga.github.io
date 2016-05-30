@@ -1,7 +1,7 @@
 # main links links
 main:
   - title: "Blog"
-    url: http://localhost:4000/posts
+    url: http://veelenga.com/posts
 
-  - title: "About"
-    url: http://localhost:4000/about
+  #- title: "About"
+    #url: http://localhost:4000/about
