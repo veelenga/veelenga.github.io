@@ -2,7 +2,7 @@
    Syntax highlighting
    ========================================================================== */
 
-div.highlighter-rouge, figure.highlight {
+figure.highlight {
   position: relative;
   margin-bottom: 1em;
   padding: 1em;
@@ -10,6 +10,7 @@ div.highlighter-rouge, figure.highlight {
   border-radius: $border-radius;
   background-color: $code-background-color;
   box-shadow: $box-shadow;
+  font-size: $type-size-6;
 
   &:before {
     position: absolute;
