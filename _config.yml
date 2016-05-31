@@ -11,7 +11,7 @@ title                    : "Home"
 title_separator          : "|"
 name                     : "Vitalii Elenhaupt"
 description              : "Homepage, tech blog and more by V. Elenhaupt"
-url                      : "http://veelenga.com/"
+url                      : #"http://veelenga.com"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 gh_repo                  :
 teaser                   : # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
@@ -194,34 +194,26 @@ defaults:
       layout: single
       author_profile: true
 
-# Archives
-#  Type
-#  - GitHub Pages compatible archive pages built with Liquid ~> type: liquid (default)
-#  - Jekyll Archives plugin archive pages ~> type: jekyll-archives
-#  Path (examples)
-#  - Archive page should exist at path when using Liquid method or you can
-#    expect broken links (especially with breadcrumbs enabled)
-#  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
-#  - <base_path/categories/my-awesome-category/index.html ~> path: /categories/
-#  - <base_path/my-awesome-category/index.html ~> path: /
-categories:
+category_archive:
   type: liquid
   path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
 tags:
   type: liquid
   path: /tags/
-# https://github.com/jekyll/jekyll-archives
-# jekyll-archives:
-#   enabled:
-#     - categories
-#     - tags
-#   layouts:
-#     category: archive-taxonomy
-#     tag: archive-taxonomy
-#   permalinks:
-#     category: /categories/:name/
-#     tag: /tags/:name/
 
+#jekyll-archives:
+   #enabled:
+     #- categories
+     #- tags
+   #layouts:
+     #category: archive-taxonomy
+     #tag: archive-taxonomy
+   #permalinks:
+     #category: /categories/:name/
+     #tag: /tags/:name/
 
 # HTML Compression
 # - http://jch.penibelst.de/
