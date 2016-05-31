@@ -1,11 +1,11 @@
 module Jekyll
   module TagHelpersFilter
-    def sort_tags_by_name(tags)
-      tags.sort_by { |x| [ x[0].downcase ] }
+    def sorted_tags(tags)
+      tags.keys.sort_by! { |tag| tag.downcase }
     end
 
-    def tags_only(tags)
-      tags.select { |k, v| v.is_a? Array }
+    def exclude_special(tags)
+      tags.select { |t| t != 'type' && t != 'path'}
     end
   end
 end

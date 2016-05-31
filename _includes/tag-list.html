@@ -1,6 +1,7 @@
 {% include base_path %}
 
-{% assign all_tags = page.tags | sort_tags_by_name %}
+{% assign all_tags = page.tags | sort %}
+<script>console.log('all_tags')</script>
 <p class="page__taxonomy">
   <strong><i class="fa fa-fw fa-tags" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].tags_label }} </strong>
   <span itemprop="keywords">
