@@ -16,7 +16,7 @@ If you haven't heard about Neovim or don't understand why it might be useful for
 Actually, Neovim is compatible with almost all Vim's features, so in most cases you will be able to use both editors with the same configuration.
 
 <figure>
-  <img src="/images/neovim-ui.gif">
+  <img src="/images/neovim-ui.gif" alt="neovim-ui">
 </figure>
 
 ## Installation
@@ -106,5 +106,4 @@ After all is set up, you have to try the power of Neovim. The following resource
 
 * [Neovim feature reference](https://neovim.io/doc/user/nvim.html)
 * [Related projects, API clients, plugins etc.](https://github.com/neovim/neovim/wiki/Related-projects)
-* [Terminals in Neovim](http://ryanselk.com/2015/05/19/terminals-in-neovim/)
 * [Neovim Remote Plugin](https://neovim.io/doc/user/remote_plugin.html)

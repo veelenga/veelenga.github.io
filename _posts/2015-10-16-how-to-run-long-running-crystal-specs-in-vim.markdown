@@ -19,7 +19,7 @@ Just use a `:Dispatch` command.
 Here is an example of running specs in Crystal sources:
 
 <figure>
-  <img src="/images/crystal-spec-dispatch.gif">
+  <img src="/images/crystal-spec-dispatch.gif" alt="crystal-spec-dispatch">
 </figure>
 
 And if you want to run long specs for your Crystal project with standard structure, just type `:Dispatch crystal spec`.

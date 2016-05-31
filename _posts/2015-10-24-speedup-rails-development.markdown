@@ -23,11 +23,11 @@ config.assets.debug = false
 
 With development tools in Safari browser we can notice the difference in both modes.
 
-<img src="/images/rails-speedup/debug_true.png">
+<img src="/images/rails-speedup/debug_true.png" alt="debug_true">
 
 When debug mode is on, browser loads 197 assets (totally 2.50 MB) and renders a page in 14.53 seconds.
 
-<img src="/images/rails-speedup/debug_false.png">
+<img src="/images/rails-speedup/debug_false.png" alt="debug_false">
 
 But when debug mode is off, browser loads only 14 assets and renders the same page in 1.17 seconds, which almost 14 times faster. Wow!
 

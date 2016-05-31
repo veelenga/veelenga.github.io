@@ -9,7 +9,7 @@ published: true
 ---
 
 <figure>
-  <img src="/images/speed-up.jpg">
+  <img src="/images/speed-up.jpg" alt="speed-up">
 </figure>
 
 Whether you are an experienced developer or a newbie, using programming language regularly or just learning it,
