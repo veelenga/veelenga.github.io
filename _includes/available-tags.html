@@ -1,6 +1,7 @@
 {% include base_path %}
 
-{% assign all_tags = site.tags | exclude_special | sorted_tags  %}
-{% for tag in all_tags %}
+{% assign all_tags = site.tags | exclude_special | sort  %}
+{% for site_tag in all_tags %}
+  {% assign tag = site_tag.first | downcase %}
   <a href="{{ base_path }}{{ tag | slugify | prepend: '#' | prepend: '/tags/' }}" class="page__taxonomy-item" rel="tag">{{ tag }}</a>{% unless forloop.last %}<span class="sep"></span>{% endunless %}
 {% endfor %}
