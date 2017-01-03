@@ -7,6 +7,7 @@ tags: [neovim, vim, infrastructure]
 image:
   thumb: logos/neovim.png
 date: 2015-12-06T17:05:49+02:00
+modified: 2016-01-03
 ---
 
 In this article I want to show you how to start using [Neovim](https://neovim.io/) instead of Vim with a minimum effort.
@@ -64,7 +65,7 @@ $ pip install neovim
 
 {% endhighlight %}
 
-If you need any customization you may refer to the official [documentation](https://neovim.io/doc/user/nvim_python.html).
+If you need any customization you may refer to the official [documentation](https://neovim.io/doc/user/provider.html).
 
 If the problem with existed plugins was an absence of python, it's a time to re-enable it.
 
