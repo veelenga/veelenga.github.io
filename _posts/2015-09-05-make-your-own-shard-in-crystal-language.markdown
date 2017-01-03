@@ -1,7 +1,7 @@
 ---
 title: "Make your own Shard in Crystal language"
 date: 2015-09-06T21:11:25+03:00
-modified: 2015-09-23
+modified: 2016-01-03
 excerpt: "An easy to use tutorial to create a new shard in Crystal language."
 tags: [crystallang, shards, infrastructure, specs]
 published: true
@@ -11,7 +11,7 @@ published: true
 
 ## Introduction
 
-[Crystal](http://crystal-lang.org ) is a young and perspective language. Currently it is in the alpha stage and only **0.8.0** release has been published. But the language is growing very quickly, more and more people are interested in Crystal. I believe it's a time to create a new popular **shard**. Shard is a project written in Crystal, like a **gem** for Ruby or **crate** for Rust. The goal of this tutorial is to show you a simple and easy way to create and publish the new shard.
+[Crystal](http://crystal-lang.org ) is a young and perspective language. Currently it is in the alpha stage but the language is growing very quickly, more and more people are interested in Crystal. I believe it's a time to create a new popular **shard**. Shard is a project written in Crystal, like a **gem** for Ruby or **crate** for Rust. The goal of this tutorial is to show you a simple and easy way to create and publish the new shard.
 
 ## Creating a Shard
 
@@ -83,7 +83,7 @@ If compiler successfully compiles our file, you will have a new executable file 
 $ ./hallo
 {% endhighlight %}
 
-Nothing was printed. Why ? Because our executable only defines a new module and a method inside and we do not call it. Let's create a real executable and print to the console "Hello, world!".
+Nothing was printed. Why? Because our executable only defines a new module and a method inside and we do not call it. Let's create a real executable and print to the console "Hello, world!".
 
 ### Adding an executable
 
@@ -141,7 +141,7 @@ Congratulations, we have been just created our fancy Crystal shard and we are ab
 
 ### Adding dependencies
 
-Shards wouldn't be so useful if there weren't a way to easily reuse it in your project. Fortunately, Crystal is integrated with [shards](https://github.com/ysbaddaden/shards) project to manage project dependencies. Follow the instructions to install it at the beginning. And then let's make our project dependent on [emoji.cr](https://github.com/veelenga/emoji.cr) shard that is able to emojize strings.
+Shards might not be so useful if there wouldn't a way to easily reuse it in your project. Fortunately, Crystal is integrated with [shards](https://github.com/crystal-lang/shards) project to manage project dependencies. Follow the instructions to install it at the beginning. And then let's make our project dependent on [emoji.cr](https://github.com/veelenga/emoji.cr) shard that is able to emojize strings.
 
 Firstly, we need to add a dependency to our `shard.yml` file:
 
@@ -305,4 +305,4 @@ This tutorial was inspired by [Make your own gem](http://guides.rubygems.org/mak
 Source code for this shard can be found [on Github](http://github.com/veelenga/hallo).
 
 ### Available Shards
-The best place to learn how to create a new shard is to look at the existed ones. The list of all available shards you may find at [Crystalshards](http://crystalshards.herokuapp.com) and the most popular and useful projects are at [Awesome Crystal](http://awesome-crystal.com).
+The best place to learn how to create a new shard is to look at the existed ones. The list of all available shards you may find at [Crystalshards](http://crystalshards.xyz/) and the most popular and useful projects are at [Awesome Crystal](http://awesome-crystal.com).
