@@ -3,7 +3,7 @@ title: "How to start using Neovim instead of Vim"
 modified:
 categories: [editors]
 excerpt: Step by step tutorial how to start using Neovim with Vim's config.
-tags: [neovim, vim, infrastructure]
+tags: [neovim, infrastructure]
 image:
   thumb: logos/neovim.png
 date: 2015-12-06T17:05:49+02:00

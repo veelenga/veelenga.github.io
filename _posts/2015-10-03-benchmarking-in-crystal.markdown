@@ -2,7 +2,7 @@
 title: "Benchmarking in Crystal? It rocks!"
 date: 2015-10-03T22:51:50+03:00
 excerpt: "Benchmarking in easy, benchmarking is existing, especially in Crystal! Checkout a quick overview with practical examples."
-tags: [crystallang, performance, benchmarking, benchmark-ips]
+tags: [crystal-lang, performance]
 image:
   thumb: speed-up.jpg
 published: true

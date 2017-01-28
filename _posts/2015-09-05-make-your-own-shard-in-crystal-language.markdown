@@ -3,7 +3,7 @@ title: "Make your own Shard in Crystal language"
 date: 2015-09-06T21:11:25+03:00
 modified: 2016-01-03
 excerpt: "An easy to use tutorial to create a new shard in Crystal language."
-tags: [crystallang, shards, infrastructure, specs]
+tags: [crystal-lang, infrastructure]
 published: true
 ---
 

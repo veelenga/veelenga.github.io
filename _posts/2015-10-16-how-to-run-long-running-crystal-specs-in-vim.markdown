@@ -2,7 +2,7 @@
 title: "How to Run Long Running Crystal Specs in Vim"
 modified:
 excerpt: Running long specs for your project within Vim? Then this short article is for you.
-tags: [crystallang, vim, specs]
+tags: [crystal-lang, vim]
 date: 2015-10-16T07:42:00+03:00
 ---
 

@@ -2,7 +2,7 @@
 title: "Should every Software Developer have a blog?"
 date: 2015-08-26T22:53:28+03:00
 excerpt: "A post where I want to describe what made me start blogging."
-tags: [software, development, soft skills]
+tags: [management]
 ---
 
 Dear Visitor, welcome to my blog! As you may have noticed, this is my first time I am writing. So, here I decided to tell you what made me start doing this.
