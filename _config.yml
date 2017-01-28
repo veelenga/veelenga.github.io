@@ -7,8 +7,8 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Blog"
-title_separator          : "|"
+title                    : "Home"
+title_separator          : "-"
 name                     : "Vitalii Elenhaupt"
 description              : "Homepage, tech blog and more by V. Elenhaupt"
 url                      : #"http://veelenga.com"
