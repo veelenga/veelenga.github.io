@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Home"
+title                    : "Blog"
 title_separator          : "|"
 name                     : "Vitalii Elenhaupt"
 description              : "Homepage, tech blog and more by V. Elenhaupt"
