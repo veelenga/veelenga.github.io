@@ -14,7 +14,7 @@
     {% if paginator.page == 1 %}
       <li><a href="" class="disabled current">1</a></li>
     {% else %}
-      <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '/page:num/', '' }}">1</a></li>
+      <li><a href="{{ site.paginate_path | replace: '/page:num/', '/' }}">1</a></li>
     {% endif %}
 
     {% assign page_start = 2 %}
