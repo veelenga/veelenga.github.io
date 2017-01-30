@@ -19,6 +19,11 @@
     {% endif %}
     <li><a href="{{ base_path }}/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].feed_label }}</a></li>
   </ul>
+  <ul class='page__footer-copyright'>
+    <li><a href='{{ site.url }}/year-archive'>Posts by year</a></li>
+    <li><a href='{{ site.url }}/tags'>Tags</a></li>
+    <li><a href='{{ site.url }}/about'>About</a></li>
+  </ul>
 </div>
 
 <div class="page__footer-copyright">&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}. {{ site.data.ui-text[site.locale].powered_by }} <a href="http://jekyllrb.com" rel="nofollow" target="_blank">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" target="_blank" rel="nofollow">Minimal Mistakes</a>.</div>

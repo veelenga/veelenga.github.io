@@ -2,6 +2,3 @@
 main:
   - title: "About"
     url: http://veelenga.com/about
-
-  #- title: "About"
-    #url: http://localhost:4000/about
