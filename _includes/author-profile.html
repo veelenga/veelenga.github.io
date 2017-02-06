@@ -52,6 +52,9 @@
       {% if author.instagram %}
         <li><a href="https://instagram.com/{{ author.instagram }}" target='_blank'><i class="fa fa-fw fa-instagram" aria-hidden="true"></i> Instagram</a></li>
       {% endif %}
+      {% if author.medium %}
+        <li><a href="https://medium.com/@{{ author.medium }}" target='_blank'><i class="fa fa-fw fa-medium" aria-hidden="true"></i> Medium</a></li>
+      {% endif %}
       {% if author.tumblr %}
         <li><a href="https://{{ author.tumblr }}.tumblr.com" target='_blank'><i class="fa fa-fw fa-tumblr-square" aria-hidden="true"></i> Tumblr</a></li>
       {% endif %}
