@@ -1,1 +1,1 @@
-Files for http://veelenga.com
+Files for https://veelenga.github.io

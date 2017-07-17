@@ -11,7 +11,7 @@ title                    : "Home"
 title_separator          : "-"
 name                     : "Vitalii Elenhaupt"
 description              : "Homepage, tech blog and more by V. Elenhaupt"
-url                      : "http://veelenga.com"
+url                      : "https://veelenga.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 gh_repo                  :
 teaser                   : # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"

@@ -35,7 +35,7 @@ $(document).ready(function() {
 
 Done, we have a New Year Countdown timer. So easy. It's amazing!
 
-Finally, after some styling, checkout a [demo](http://veelenga.com/new-year-countdown/)
+Finally, after some styling, checkout a [demo](https://veelenga.github.io/new-year-countdown/)
 and a code on [Github](https://github.com/veelenga/new-year-countdown).
 
 Happy New Year!
