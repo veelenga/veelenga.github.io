@@ -9,8 +9,8 @@
 locale                   : "en-US"
 title                    : "Blog"
 title_separator          : "-"
-name                     : "Vitalii Elenhaupt"
-description              : "Homepage, tech blog and more by V. Elenhaupt"
+name                     : "@veelenga"
+description              : "Homepage, tech blog and more by @veelenga"
 url                      : "https://veelenga.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 gh_repo                  :
@@ -61,7 +61,7 @@ google_ad_slot           :
 
 # Site Author
 author:
-  name             : "Vitalii Elenhaupt"
+  name             : "@veelenga <br> Vitalii Elenhaupt"
   avatar           : https://s.gravatar.com/avatar/fb7415aea80a8fa64f7427086eedb6ee?s=400
   bio              : "Always code as if the guy who ends up maintaining your code will be a <b>violent psychopath</b> who knows where you live (c)"
   location         :
