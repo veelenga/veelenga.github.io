@@ -1,9 +1,9 @@
 ---
 permalink: /oss
-title: "@veelenga's OSS"
+title: "OSS"
 header:
   disable: true
-excerpt: "@veelenga's OSS"
+excerpt: "OSS"
 modified: 2020-06-12T22:53:07.573882-04:00
 ---
 
