@@ -1,0 +1,18 @@
+<p align="center">
+  <a href="{{include.ref}}">
+    <h3 align="center">{{include.name}}</h3>
+  </a>
+  <p align="center">{{include.description}}</p>
+  {% if include.sup %}
+    <p align="center">
+      <sup>
+        <i> {{ include.sup }} </i>
+      </sup>
+    </p>
+  {% endif %}
+  <div align='center'>
+    <a href="{{include.ref}}">
+      <img src="{{include.logo_ref}}" width="{{include.logo_width}}">
+    </a>
+  </div>
+</p>
