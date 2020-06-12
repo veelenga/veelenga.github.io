@@ -6,7 +6,7 @@ en: &DEFAULT_EN
   page                  : "Page"
   pagination_previous   : "Previous"
   pagination_next       : "Next"
-  breadcrumb_home_label : "Home"
+  breadcrumb_home_label : "Blog"
   breadcrumb_separator  : "/"
   toc_label             : "On This Page"
   ext_link_label        : "Direct Link"

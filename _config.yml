@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Home"
+title                    : "Blog"
 title_separator          : "-"
 name                     : "Vitalii Elenhaupt"
 description              : "Homepage, tech blog and more by V. Elenhaupt"
@@ -63,7 +63,7 @@ google_ad_slot           :
 author:
   name             : "Vitalii Elenhaupt"
   avatar           : https://s.gravatar.com/avatar/fb7415aea80a8fa64f7427086eedb6ee?s=400
-  bio              : "I enjoy programming and taking pictures. Love <b>learning</b>, <b>helping</b> other people and <b>seeing</b> them learn."
+  bio              : "Always code as if the guy who ends up maintaining your code will be a <b>violent psychopath</b> who knows where you live (c)"
   location         :
   email            : velenhaupt@gmail.com
   uri              :
@@ -154,7 +154,7 @@ paginate_path: "/page:num/"
 timezone: # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 # Plugins
-gems:
+plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
