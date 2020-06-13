@@ -3,7 +3,7 @@
 {% assign all_tags = page.tags | sort %}
 <script>console.log('all_tags')</script>
 <p class="page__taxonomy">
-  <strong><i class="fa fa-fw fa-tags" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].tags_label }} </strong>
+  <strong><i class="fa fas fa-tags" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].tags_label }} </strong>
   <span itemprop="keywords">
   {% for page_tag in all_tags %}
     {% assign tag = page_tag | downcase %}
