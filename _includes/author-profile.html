@@ -29,7 +29,7 @@
         <li><a href="{{ author.uri }}" target='_blank'><i class="fa fab fa-chain" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].website_label }}</a></li>
       {% endif %}
       {% if author.email %}
-        <li><a href="mailto:{{ author.email }}"><i class="fa fas fa-envelope" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].email_label }}</a></li>
+        <li><a href="mailto:{{ author.email }}"><i class="fa fas fa-at" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].email_label }}</a></li>
       {% endif %}
       {% if author.keybase %}
         <li><a href="https://keybase.io/{{ author.keybase }}" target='_blank'><i class="fa fab fa-key" aria-hidden="true"></i> Keybase</a></li>
