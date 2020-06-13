@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Blog"
+title                    : "Write"
 title_separator          : "-"
 name                     : "@veelenga"
 description              : "Homepage, tech blog and more by @veelenga"

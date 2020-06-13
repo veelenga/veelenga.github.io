@@ -1,15 +1,15 @@
 ---
-permalink: /oss
-title: "OSS"
+permalink: /code
+title: "Code"
 header:
   disable: true
-excerpt: "OSS"
+excerpt: "Code"
 modified: 2020-06-12T22:53:07.573882-04:00
 ---
 
 {% include base_path %}
 
-{% include oss_entry
+{% include project_entry
   ref='https://crystal-ameba.github.io/'
   name='Ameba'
   description='Code style linter for Crystal'
@@ -21,7 +21,7 @@ modified: 2020-06-12T22:53:07.573882-04:00
 <hr/>
 <hr/>
 
-{% include oss_entry
+{% include project_entry
   ref='https://github.com/veelenga/awesome-crystal'
   name='Awesome Crystal'
   description='A curated list of awesome Crystal code and resources'
@@ -33,7 +33,7 @@ modified: 2020-06-12T22:53:07.573882-04:00
 <hr/>
 <hr/>
 
-{% include oss_entry
+{% include project_entry
   ref='https://github.com/crystal-community/crystal-patterns'
   name='Crystal Patterns'
   description='Design patterns implemented in Crystal language'
@@ -45,7 +45,7 @@ modified: 2020-06-12T22:53:07.573882-04:00
 <hr/>
 <hr/>
 
-{% include oss_entry
+{% include project_entry
   ref='https://crystal-ann.com/'
   name='Crystal [ANN]'
   description='Announce new project, blog post, version update or any other Crystal work'
@@ -57,7 +57,7 @@ modified: 2020-06-12T22:53:07.573882-04:00
 <hr/>
 <hr/>
 
-{% include oss_entry
+{% include project_entry
   ref='https://veelenga.github.io/jsonapi-payload-explorer/'
   name='JSON:API Payload Explorer'
   description='A tool to preview, search and inspect JSON:API payloads. Supports sideposting & sideloading.'
@@ -68,7 +68,7 @@ modified: 2020-06-12T22:53:07.573882-04:00
 <hr/>
 <hr/>
 
-{% include oss_entry
+{% include project_entry
   ref='https://github.com/apps/pr-review-voodoo'
   name='PR Review Voodoo'
   description='GitHub bot that helps to improve PR review workflow.'
