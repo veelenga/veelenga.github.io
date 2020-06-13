@@ -100,6 +100,9 @@
       {% if author.vine %}
         <li><a href="https://vine.co/u/{{ author.vine }}" target='_blank'><i class="fa fab fa-vine" aria-hidden="true"></i> Vine</a></li>
       {% endif %}
+      {% if author.patreon %}
+        <li><a href="https://patreon/{{ author.patreon }}" target='_blank'><i class="fa fab fa-patreon" aria-hidden="true"></i> Patreon</a></li>
+      {% endif %}
     </ul>
   </div>
 </div>
