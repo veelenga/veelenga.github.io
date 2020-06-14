@@ -12,7 +12,7 @@
   {% endif %}
   <div align='center'>
     <a href="{{include.ref}}">
-      <img src="{{include.logo_ref}}" width="{{include.logo_width}}">
+      <img src="{{include.logo_ref}}" alt="{{include.name}}" width="{{include.logo_width}}">
     </a>
   </div>
 </p>
