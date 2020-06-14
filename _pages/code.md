@@ -70,3 +70,14 @@ modified: 2020-06-12T22:53:07.573882-04:00
   logo_ref='/images/demo/pr-review-voodoo.png'
   logo_width=800
 %}
+
+<hr/>
+
+{% include project_entry
+  ref='https://github.com/crystal-ameba/ameba.el'
+  name='Ameba.el'
+  description='An Emacs plugin for Ameba static code analysis.'
+  sup='Intended to help people use Ameba tool directly in Emacs.'
+  logo_ref='/images/demo/emacs-ameba.png'
+  logo_width=800
+%}
