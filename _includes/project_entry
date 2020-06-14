@@ -1,4 +1,4 @@
-<p align="center">
+<div class="project-entry" align="center">
   <a href="{{include.ref}}">
     <h3 align="center">{{include.name}}</h3>
   </a>
@@ -15,4 +15,4 @@
       <img src="{{include.logo_ref}}" alt="{{include.name}}" width="{{include.logo_width}}">
     </a>
   </div>
-</p>
+</div>

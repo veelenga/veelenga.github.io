@@ -19,7 +19,6 @@ modified: 2020-06-12T22:53:07.573882-04:00
 %}
 
 <hr/>
-<hr/>
 
 {% include project_entry
   ref='https://github.com/veelenga/awesome-crystal'
@@ -30,7 +29,6 @@ modified: 2020-06-12T22:53:07.573882-04:00
   logo_width=800
 %}
 
-<hr/>
 <hr/>
 
 {% include project_entry
@@ -43,7 +41,6 @@ modified: 2020-06-12T22:53:07.573882-04:00
 %}
 
 <hr/>
-<hr/>
 
 {% include project_entry
   ref='https://crystal-ann.com/'
@@ -55,7 +52,6 @@ modified: 2020-06-12T22:53:07.573882-04:00
 %}
 
 <hr/>
-<hr/>
 
 {% include project_entry
   ref='https://veelenga.github.io/jsonapi-payload-explorer/'
@@ -65,7 +61,6 @@ modified: 2020-06-12T22:53:07.573882-04:00
   logo_width=800
 %}
 
-<hr/>
 <hr/>
 
 {% include project_entry

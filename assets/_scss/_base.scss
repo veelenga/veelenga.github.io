@@ -243,6 +243,20 @@ figcaption {
   }
 }
 
+div.project-entry {
+  padding: 20px;
+  box-shadow: none;
+  transition: $global-transition;
+
+  &:hover {
+    box-shadow: 0 0 10px rgba(#000, 0.25);
+
+    a:hover img {
+      box-shadow: none;
+    }
+  }
+}
+
 
 /* Fix IE9 SVG bug */
 
