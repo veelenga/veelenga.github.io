@@ -15,22 +15,22 @@ to quickly see the changes made by someone.
 ![](https://media.giphy.com/media/l0HlCSRTZIlN2WJfW/giphy.gif)
 
 There are plenty of tools which allow to quickly add versions to the
-app and most of them have very nice DSL on top, which implies auditing
-to be very efficient. 
+app and most of them have very nice DSL on top, which implies interaction 
+with auditing to be very efficient. 
 
-However, it often works to solve the regular daily tasks, but it can be much
+However, it is often easy to solve the regular daily tasks, but it can be much
 harder to deal with more complicated issues.
 
-Let's say, we would like to efficiently query **a group of model versions** using
+Let's say, we would like to efficiently track **a group of model versions** using
 [PaperTrail](https://github.com/paper-trail-gem/paper_trail) which were created
-during a specific POST/PATCH request. This can be useful if user hits some heavy
-endpoint which doesn't just create/update a single record in database, but **performs
+during a specific POST/PATCH request. This can be useful when app has some heavy
+endpoint which doesn't just create/update a single record in a database, but **performs
 a bunch of save operations** on different kind of models.
 
 ## Tracking save requests
 
 At first, we would like to have a mechanism to track save requests in the app.
-To solve that, we can just create a `SaveRequest` model with few extra
+To solve that, we can just create a `SaveRequest` model with a few extra
 columns for debugging purpose.
 
 A Rails migration could look like this:
@@ -92,8 +92,8 @@ class SaveRequest < ApplicationRecord
 end
 ```
 
-At this point we have a relation between the save request and the versions, but how to actually
-associate these records properly. The solution is not really straightforward and depends on the
+At this point we have a relationship between the save request and the versions, but how do we actually
+associate these records properly? The solution is not really straightforward and depends on the
 [PaperTrail's metadata](https://github.com/paper-trail-gem/paper_trail/blob/a2bf2ffc9ccbfb5e28a395da0953104af2b006e5/README.md#metadata-from-controllers)
 feature.
 
@@ -104,7 +104,7 @@ That way we can attach the specific save request to the each of the created vers
 
 ```diff
 class BatchCategoriesController < ApplicationController
-+ attribute :save_request
++ attr_reader :save_request
 
   prepend_before_action :track_save_request, only: %i[update create]
 
@@ -184,3 +184,7 @@ applied in order to speed up the process (i.e. creating a new table and copying 
 * delayed execution support can be added in different ways depending on the requirements
 (current save request can be passed to the job or a new record can be created to group versions
 created at the job level)
+
+## Related posts
+
+* [Tracking All Paper Trail Version From A Single Request With Correlation UUIDs](https://karolgalanciak.com/blog/2020/09/20/tracking-all-paper-trail-version-from-a-single-request-with-correlation-uuids/)
