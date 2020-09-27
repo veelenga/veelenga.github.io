@@ -1,8 +1,8 @@
 ---
-title: Tracking PaperTrail versions per request
+title: Tracking PaperTrail versions while saving in batches
 date: 2020-09-16T15:14:57+02:00
 categories:
-excerpt: Article explains how to group and efficiently query model versions with PaperTrail in Ruby on Rails application.
+excerpt: Article explains how to efficiently group and query model versions with PaperTrail in Ruby on Rails application while saving multiple records in batches.
 tags: [paper-trail ruby ruby-on-rails]
 published: true
 ---
@@ -68,7 +68,7 @@ end
 So we have an ability to track the save requests performed by the client using our endpoint.
 However, how can we track the changes made during this call?
 
-## Tracking versions per save request
+## Log versions created during save request
 
 To be able to solve this, the first step will be to add a reference between `SaveRequest`
 and `PaperTrail::Version` models so the db schema would look like this:
