@@ -8,15 +8,15 @@ published: true
 ---
 
 Auditing model changes is a common task in modern software development.
-Whether it is a feature request or just some debugging purpose in mind, 
+Whether it is a feature request or just some debugging purpose in mind,
 when the complexity of the system grows it is natural to add ability
 to quickly see the changes made by someone.
 
 ![](https://media.giphy.com/media/l0HlCSRTZIlN2WJfW/giphy.gif)
 
 There are plenty of tools which allow to quickly add versions to the
-app and most of them have very nice DSL on top, which implies interaction 
-with auditing to be very efficient. 
+app and most of them have very nice DSL on top, which implies interaction
+with auditing to be very efficient.
 
 However, it is often easy to solve the regular daily tasks, but it can be much
 harder to deal with more complicated issues.
@@ -170,7 +170,7 @@ associated with it:
 
 In this article we described how to track paper trail versions on per save request
 basis using metadata to store information about the request at PaperTrail versions table.
-Such an approach will give an ability to quickly find the version changes made in a 
+Such an approach will give an ability to quickly find the version changes made in a
 specific request.
 
 **There are some improvements to think about:**
