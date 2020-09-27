@@ -8,8 +8,8 @@ published: true
 ---
 
 Auditing model changes is a common task in modern software development.
-Whether it is a feature request or just some debugging purpose in mind,
-when the complexity of the system grows it is natural to add ability
+Whether it is a feature request or just some debugging purpose in mind
+when the complexity of the system grows it is natural to add the ability
 to quickly see the changes made by someone.
 
 ![](https://media.giphy.com/media/l0HlCSRTZIlN2WJfW/giphy.gif)
@@ -23,15 +23,15 @@ harder to deal with more complicated issues.
 
 Let's say, we would like to efficiently track **a group of model versions** using
 [PaperTrail](https://github.com/paper-trail-gem/paper_trail) which were created
-during a specific POST/PATCH request. This can be useful when app has some heavy
+during a specific POST/PATCH request. This can be useful when the app has some heavy
 endpoint which doesn't just create/update a single record in a database, but **performs
-a bunch of save operations** on different kind of models.
+a batch of save operations** on different kinds of models.
 
 ## Tracking save requests
 
 At first, we would like to have a mechanism to track save requests in the app.
 To solve that, we can just create a `SaveRequest` model with a few extra
-columns for debugging purpose.
+columns for debugging purposes.
 
 A Rails migration could look like this:
 
@@ -98,7 +98,7 @@ associate these records properly? The solution is not really straightforward and
 feature.
 
 PaperTrail allows passing some extra information to the versions by overriding the `info_for_paper_trail`
-method in the controller. So all the created in this endpoint versions will have that information.
+method in the controller. So all the created versions in this endpoint will have that information.
 
 That way we can attach the specific save request to the each of the created version:
 
@@ -128,7 +128,7 @@ That's actually it, let's give it a try.
 
 ## Demo time
 
-It we create (or update) multiple categories using our `BatchCategoriesController`
+If we create (or update) multiple categories using our `BatchCategoriesController`
 we will see that a new save request is created and there are PaperTrail versions
 associated with it:
 
@@ -168,7 +168,7 @@ associated with it:
 
 ## Wrap Up
 
-In this article we described how to track paper trail versions on per save request
+In this article, we described how to track paper trail versions on per save request
 basis using metadata to store information about the request at PaperTrail versions table.
 Such an approach will give an ability to quickly find the version changes made in a
 specific request.
