@@ -285,7 +285,7 @@ td > code {
   padding-top: 0.1rem;
   padding-bottom: 0.1rem;
   font-size: 0.75em;
-  background: #fafafa;
+  background: #f2f3f3ad;
   border: 1px solid #f2f3f3;
   border-radius: 4px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.125); }
@@ -1472,7 +1472,7 @@ figure.highlight {
   padding: 1em;
   border: 1px solid #f2f3f3;
   border-radius: 4px;
-  background-color: #fafafa;
+  background-color: #f2f3f3ad;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.125);
   font-size: 0.75em; }
   figure.highlight:before {
@@ -1498,6 +1498,9 @@ figure.highlight {
 
 .highlight table pre {
   margin: 0; }
+
+.highlight {
+  background-color: #f2f3f3ad; }
 
 .highlight .hll {
   background-color: #ffffcc; }
