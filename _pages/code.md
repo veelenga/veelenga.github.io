@@ -10,6 +10,17 @@ modified: 2020-06-12T22:53:07.573882-04:00
 {% include base_path %}
 
 {% include project_entry
+  ref='https://rblist.info/'
+  name='Russia Block List'
+  description='See how top world companies react to Russia invasion'
+  sup='Do not support the agressor #StandWithUkraine'
+  logo_ref='/images/demo/rblist.png'
+  logo_width=800
+%}
+
+<hr/>
+
+{% include project_entry
   ref='https://crystal-ameba.github.io/'
   name='Ameba'
   description='Code style linter for Crystal'
