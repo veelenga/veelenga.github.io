@@ -142,10 +142,10 @@ But anyway it still works, even if it has one extra join to the self table:
 
 ## Wrap up
 
-In this article we talked about 3 possible solutions to deal with the polymorphic associations
+In this article we discussed 3 possible solutions to deal with the polymorphic associations
 in ActiveRecord:
 
-* using `include`
+* using `includes`
 * defining a new association with a scope
 * defining a new association with a self ref
 
