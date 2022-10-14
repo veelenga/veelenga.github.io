@@ -91,7 +91,7 @@ for this specific type of model:
 ```diff
 class Payment < ApplicationRecord
   belongs_to :subject, polymorphic: true
-+ belongs_to :user, foreign_key: 'subject_id', -> { where(payments: { subject_type: 'User' }) }
++ belongs_to :user, -> { where(payments: { subject_type: 'User' }) }, foreign_key: 'subject_id'
 end
 ```
 
