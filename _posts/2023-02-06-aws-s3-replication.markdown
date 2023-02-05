@@ -87,7 +87,7 @@ This is obviously needed to read replication configuration and list the bucket i
 Replication requires versioning to be enabled.
 
 3. Allow performing `s3:ReplicateObject` and `s3:ReplicateDelete` on `DestinationBucket`.
-Obviously, `SourceBucket` must be allowed to create and delete objects during replications on `DestinationBucket`.
+Obviously, `SourceBucket` must be allowed to create and delete objects during replication on `DestinationBucket`.
 
 ```yml
 SourceBucketReplicationPolicy:
@@ -145,6 +145,75 @@ DestinationBucketPolicy:
 ```
 
 ## Change replicata owner
+
+In replication, the owner of the source object also owns the replica by default.
+When source and destination buckets are owned by different AWS accounts and you want to change replica ownership to the AWS account that owns the destination buckets, you can add optional configuration settings to change replica ownership to the AWS account that owns the destination buckets.
+
+A few tweaks are needed to change the replica owner using our snippets above.
+
+At first, we need to add the owner override option to the replication configuration.
+Important to note, this option must be added only when the source and destination buckets are owned by different AWS accounts.
+
+```diff
+SourceBucket:
+  Type: AWS::S3::Bucket
+  Properties:
+    BucketName: my-source-bucket
+    ReplicationConfiguration:
+      Role: !GetAtt 'SourceBucketReplicationRole.Arn'
+      Rules:
+        - Destination:
+            Bucket: !GetAtt 'DestinationBucket.Arn'
++           Account: <estination-bucket-owner-account-id>
++           AccessControlTranslation:
++               Owner: 'Destination'
+          Status: Enable
+```
+
+Granting Amazon S3 permission to change replica ownership.
+This is the IAM role that you specified in the replication configuration that allows Amazon S3 to assume and replicate objects on your behalf.
+
+```diff
+SourceBucketReplicationPolicy:
+  Type: 'AWS::IAM::Policy'
+  Properties:
+    PolicyName: SourceBucketReplicationPolicy
+    Roles:
+      - !Ref SourceBucketReplicationRole
+    PolicyDocument:
+      Statement:
+       ....
+        - Action:
+            - 's3:ReplicateObject'
+            - 's3:ReplicateDelete'
++           - 's3:ObjectOwnerOverrideToBucketOwner'
+          Effect: Allow
+          Resource: !Sub '${DestinationBucket.Arn}/*'
+```
+
+Adding permission in the destination bucket policy to allow changing replica ownership.
+The owner of the destination bucket must grant the owner of the source bucket permission to change replica ownership.
+This allows the destination bucket owner to accept ownership of the object replicas.
+
+```diff
+DestinationBucketPolicy:
+  Type: AWS::S3::BucketPolicy
+  Properties:
+    Bucket: !Ref 'DestinationBucket'
+    PolicyDocument:
+      Version: "2012-10-17"
+      Statement:
+        - Sid: Set permissions for objects
+          Effect: Allow
+          Principal:
+            AWS: !Ref SourceBucketReplicationRole
+          Action:
+            - s3:ReplicateObject
+            - s3:ReplicateDelete
++           - s3:ObjectOwnerOverrideToBucketOwner
+          Resource: !Sub '${Destinaionbucket}/*'
+          ...
+```
 
 ## Wrapup
 
