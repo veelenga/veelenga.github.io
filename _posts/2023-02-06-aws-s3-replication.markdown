@@ -3,7 +3,10 @@ title: AWS S3 replication across different accounts
 date: 2023-02-05T15:14:57+02:00
 categories:
 excerpt:
-tags: [aws infrastructure cloudformation]
+tags:
+  - aws
+  - infrastructure
+  - cloudformation
 published: true
 ---
 

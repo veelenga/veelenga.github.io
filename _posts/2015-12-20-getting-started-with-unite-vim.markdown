@@ -1,9 +1,12 @@
 ---
 title: "Getting started with Unite.vim"
 modified:
-categories: [editors]
+categories: 
+  - editors
 excerpt: Initial configuration of Unite.vim after installation.
-tags: [neovim, infrastructure]
+tags:
+  - neovim
+  - infrastructure
 image:
   feature:
 date: 2015-12-15T10:16:04+02:00

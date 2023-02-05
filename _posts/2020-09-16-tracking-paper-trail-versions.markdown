@@ -3,7 +3,10 @@ title: Tracking PaperTrail versions while saving in batches
 date: 2020-09-16T15:14:57+02:00
 categories:
 excerpt: Article explains how to efficiently group and query model versions with PaperTrail in Ruby on Rails application while saving multiple records in batches.
-tags: [paper-trail, ruby, ruby-on-rails]
+tags:
+  - paper-trail
+  - ruby-lang
+  - ruby-on-rails
 published: true
 ---
 

@@ -3,7 +3,9 @@ title: "Speed up Rails 4 in development mode"
 modified:
 categories:
 excerpt: A quickest way to speed up your development with Rails 4.
-tags: [rails, infrastructure]
+tags:
+  - ruby-on-rails
+  - infrastructure
 image:
   thumb: logos/ruby.png
 date: 2015-10-23T23:38:29+03:00

@@ -3,7 +3,8 @@ title: "New Year countdown With FlipClock.js"
 modified:
 categories:
 excerpt: Just a quick way to create awesome New Year Countdown.
-tags: [js]
+tags:
+  - javascript
 date: 2015-12-23T15:14:57+02:00
 ---
 

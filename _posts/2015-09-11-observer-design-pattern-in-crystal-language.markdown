@@ -2,7 +2,10 @@
 title: "Observer design pattern in Crystal language"
 date: 2015-12-30T12:48:44+03:00
 excerpt: "A post where I want to share my thoughts regarding an implementation of an Observer design pattern in Crystal language."
-tags: [design, crystal-lang, oop]
+tags:
+  - design
+  - crystal-lang
+  - oop
 published: true
 ---
 

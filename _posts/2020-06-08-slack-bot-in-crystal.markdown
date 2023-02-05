@@ -3,7 +3,9 @@ title: Writing Slack bot in Crystal programming language
 date: 2020-06-08T15:14:57+02:00
 categories:
 excerpt: Small tutorial that shows how to quickly create a slack bot using Crystal programming language
-tags: [crystal-lang, slack]
+tags:
+  - crystal-lang
+  - slack
 published: true
 ---
 
