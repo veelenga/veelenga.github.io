@@ -4,8 +4,8 @@ date: 2020-10-09T15:14:57+02:00
 categories:
 excerpt:
 tags:
-  - active-record
-  - ruby-on-rails
+  - active record
+  - ruby on rails
 published: true
 ---
 

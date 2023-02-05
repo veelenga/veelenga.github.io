@@ -1,7 +1,7 @@
 ---
 title: "Getting started with Unite.vim"
 modified:
-categories: 
+categories:
   - editors
 excerpt: Initial configuration of Unite.vim after installation.
 tags:

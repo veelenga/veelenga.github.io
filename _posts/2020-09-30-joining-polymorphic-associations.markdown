@@ -5,8 +5,8 @@ categories:
 excerpt: Short list of thoughts on how to join polymorphic associations in ActiveRecord and why it cannot be loaded eagerly.
 tags:
   - polymorphism
-  - active-record
-  - ruby-on-rails
+  - active record
+  - ruby on rails
 published: true
 ---
 
