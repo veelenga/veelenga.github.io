@@ -16,7 +16,7 @@ There is an [an official article on AWS docs](https://docs.aws.amazon.com/Amazon
 However, making these changes in the infrastructure-as-code is not that straightforward.
 In this article we are going to replicate s3 bucket across different accounts using CloudFormation and yaml notation.
 
-## Bucket definition
+## What to replicate?
 
 Let's assume we have defined two S3 buckets:
 
@@ -43,6 +43,8 @@ It can be done following this steps:
 
 ## Source bucket replication configuration
 
+At the very beginnng we need a role, which will be attached to the bucket and to the policies:
+
 ```yml
 SourceBucketReplicationRole:
   Type: 'AWS::IAM::Role'
@@ -55,27 +57,45 @@ SourceBucketReplicationRole:
           Principal:
             Service:
               - s3.amazonaws.com
+```
 
+On the next step we need to attach a newly created role to the `SourceBucket` creating bucket replication configuration.
+In the example below, basically, it just defines the role to be attached and the destination to replicate to:
+
+```diff
 SourceBucket:
   Type: AWS::S3::Bucket
   Properties:
     BucketName: my-source-bucket
-   VersioningConfiguration:
-     Status: Enabled
-   ReplicationConfiguration:
-     Role: !GetAtt 'SourceBucketReplicationRole.Arn'
-     Rules:
-       - Destination:
-           Bucket: !GetAtt 'DestinationBucket.Arn'
-         Status: Enable
++   ReplicationConfiguration:
++     Role: !GetAtt 'SourceBucketReplicationRole.Arn'
++     Rules:
++       - Destination:
++           Bucket: !GetAtt 'DestinationBucket.Arn'
++         Status: Enable
 ```
 
 ## Source bucket replication policy
+
+The most important part is to properly define the policy and attach it to our newly created role.
+In the snippet below we create IAM policy with the following statments:
+
+1. Allow performing `s3:GetReplicationConfiguration` and `s3:ListBucket` on `SourceBucket` resource.
+This is obviously needed to read replication configuration and list the bucket in order to replicate it to somewhere.
+
+2. Allow performing `s3:GetObjectVersion` and `s3:GetObjectVersionAcl`.
+Replication requires versioning to be enabled.
+
+3. Allow performing `s3:ReplicateObject` and `s3:ReplicateDelete` on `DestinationBucket`.
+Obviously, `SourceBucket` must be allowed to create and delete objects during replications on `DestinationBucket`.
 
 ```yml
 SourceBucketReplicationPolicy:
   Type: 'AWS::IAM::Policy'
   Properties:
+    PolicyName: SourceBucketReplicationPolicy
+    Roles:
+      - !Ref SourceBucketReplicationRole
     PolicyDocument:
       Statement:
         - Action:
@@ -93,9 +113,6 @@ SourceBucketReplicationPolicy:
             - 's3:ReplicateDelete'
           Effect: Allow
           Resource: !Sub '${DestinationBucket.Arn}/*'
-    PolicyName: SourceBucketReplicationPolicy
-    Roles:
-      - !Ref SourceBucketReplicationRole
 ```
 
 ## Destination bucket policy
@@ -126,3 +143,17 @@ DestinationBucketPolicy:
             - s3:PutBucketVersioning
           Resource: !Ref SourceBucketReplicationRole
 ```
+
+## Change replicata owner
+
+## Wrapup
+
+AWS S3 Bucket Replication across multiple AWS accounts is an incredibly powerful tool for businesses that need to ensure their data is secure and always available.
+The best part about using the AWS S3 bucket replication feature is how easy it makes sharing files between different accounts without having to manually transfer them over each time.
+However, the process of configuring such a replication using CloudFormation is not that straightforward.
+But still, if you understand the idea it connects the dots. Just to wrapup, it can be done in a few steps:
+
+1. Create replication configuration
+2. Create policy on the source bucket to write to destination
+3. Create policy on the destination bucket to allow replicating from the source
+4. Change replica owner upon replication
