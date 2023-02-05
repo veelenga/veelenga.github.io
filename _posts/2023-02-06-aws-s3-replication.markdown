@@ -12,11 +12,11 @@ With S3 bucket replication, you can replicate entire buckets of data across mult
 This ensures that if one region experiences a disruption or outage, your data will still be available from another region.
 
 Replicating an S3 bucket is also very simple to do with just a few clicks in the AWS Console or through the use of APIs.
-There is an [an official article on AWS docs](https://docs.aws.amazon.com/AmazonS3/latest/userguide/replication-walkthrough-2.html) explaining how to configure such an replication.
+There is [an official article on AWS docs](https://docs.aws.amazon.com/AmazonS3/latest/userguide/replication-walkthrough-2.html) explaining how to configure such a replication.
 However, making these changes in the infrastructure-as-code is not that straightforward.
-In this article we are going to replicate s3 bucket across different accounts using CloudFormation and yaml notation.
+In this article, we are going to replicate s3 bucket across different accounts using CloudFormation and yaml notation.
 
-## What, where and how to replicate?
+## What, where, and how to replicate?
 
 Let's assume we have defined two S3 buckets:
 
@@ -35,7 +35,7 @@ DestinationBucket:
 As the naming implies we need to replicate from `SourceBucket` to `DestinationBucket`.
 Since buckets are owned by different AWS accounts we can't replicate in a usual way just defining the replication configuration on the `SourceBucket`.
 In order to replicate to a bucket in a different AWS account, the `SourceBucket` must be allowed to replicate objects to the destination.
-It can be done following this steps:
+It can be done following these steps:
 
 1. Create replication configuration on the source bucket
 2. Create policy **on the source bucket** to allow replicating to the destination bucket
@@ -43,7 +43,7 @@ It can be done following this steps:
 
 ## Source bucket replication configuration
 
-At the very beginnng we need a role, which will be attached to the bucket and to the policies:
+At the very beginning, we need a role, which will be attached to the bucket and to the policies:
 
 ```yml
 SourceBucketReplicationRole:
@@ -59,8 +59,8 @@ SourceBucketReplicationRole:
               - s3.amazonaws.com
 ```
 
-On the next step we need to attach a newly created role to the `SourceBucket` creating bucket replication configuration.
-In the example below, basically, it just defines the role to be attached and the destination to replicate to:
+In the next step, we need to attach a newly created role to the `SourceBucket` creating bucket replication configuration.
+In the example below, basically, it just defines the role to be attached and the destination to replicate:
 
 ```diff
 SourceBucket:
@@ -81,7 +81,7 @@ The most important part is to properly define the policy and attach it to our ne
 In the snippet below we create IAM policy with the following statements:
 
 1. Allow performing `s3:GetReplicationConfiguration` and `s3:ListBucket` on `SourceBucket` resource.
-This is obviously needed to read replication configuration and list the bucket in order to replicate it to somewhere.
+This is obviously needed to read the replication configuration and list the bucket in order to replicate it somewhere.
 
 2. Allow performing `s3:GetObjectVersion` and `s3:GetObjectVersionAcl`.
 Replication requires versioning to be enabled.
@@ -117,11 +117,11 @@ SourceBucketReplicationPolicy:
 
 ## Destination bucket policy
 
-Destination bucket policy looks similar to the one we defined above but operate on source bucket replication role.
+The destination bucket policy looks similar to the one we defined above but operates on the source bucket replication role.
 So here we create IAM policy with the following statements:
 
 1. Allow `s3:ReplicateObject` and `s3:ReplicateDelete` on `DestinationBucket`.
-This allows resources with `SourceBucketReplicationRole` role to replicate objects to destination bucket.
+This allows resources with `SourceBucketReplicationRole` role to replicate objects to the destination bucket.
 
 2. Allow `s:List*`, `s3:GetBucketVersioning` and `s3:PutBucketVersioning` on `SourceBucketReplicationRole`.
 
@@ -152,10 +152,10 @@ DestinationBucketPolicy:
           Resource: !Ref SourceBucketReplicationRole
 ```
 
-## Change replicata owner
+## Change replica owner
 
 In replication, the owner of the source object also owns the replica by default.
-When source and destination buckets are owned by different AWS accounts and you want to change replica ownership to the AWS account that owns the destination buckets, you can add optional configuration settings to change replica ownership to the AWS account that owns the destination buckets.
+When the source and destination buckets are owned by different AWS accounts and you want to change replica ownership to the AWS account that owns the destination buckets, you can add optional configuration settings to change replica ownership to the AWS account that owns the destination buckets.
 
 A few tweaks are needed to change the replica owner using our snippets above.
 
@@ -223,14 +223,14 @@ DestinationBucketPolicy:
           ...
 ```
 
-## Wrapup
+## Wrap up
 
 AWS S3 Bucket Replication across multiple AWS accounts is an incredibly powerful tool for businesses that need to ensure their data is secure and always available.
 The best part about using the AWS S3 bucket replication feature is how easy it makes sharing files between different accounts without having to manually transfer them over each time.
 However, the process of configuring such a replication using CloudFormation is not that straightforward.
-But still, if you understand the idea it connects the dots. Just to wrapup, it can be done in a few steps:
+But still, if you understand the idea it connects the dots. Just to wrap up, it can be done in a few steps:
 
-1. Create replication configuration
-2. Create policy on the source bucket to write to destination
-3. Create policy on the destination bucket to allow replicating from the source
+1. Create the replication configuration
+2. Create the policy on the source bucket to write to the destination
+3. Create the policy on the destination bucket to allow replicating from the source
 4. Change replica owner upon replication
