@@ -16,7 +16,7 @@ There is an [an official article on AWS docs](https://docs.aws.amazon.com/Amazon
 However, making these changes in the infrastructure-as-code is not that straightforward.
 In this article we are going to replicate s3 bucket across different accounts using CloudFormation and yaml notation.
 
-## What to replicate?
+## What, where and how to replicate?
 
 Let's assume we have defined two S3 buckets:
 
@@ -78,7 +78,7 @@ SourceBucket:
 ## Source bucket replication policy
 
 The most important part is to properly define the policy and attach it to our newly created role.
-In the snippet below we create IAM policy with the following statments:
+In the snippet below we create IAM policy with the following statements:
 
 1. Allow performing `s3:GetReplicationConfiguration` and `s3:ListBucket` on `SourceBucket` resource.
 This is obviously needed to read replication configuration and list the bucket in order to replicate it to somewhere.
@@ -117,6 +117,14 @@ SourceBucketReplicationPolicy:
 
 ## Destination bucket policy
 
+Destination bucket policy looks similar to the one we defined above but operate on source bucket replication role.
+So here we create IAM policy with the following statements:
+
+1. Allow `s3:ReplicateObject` and `s3:ReplicateDelete` on `DestinationBucket`.
+This allows resources with `SourceBucketReplicationRole` role to replicate objects to destination bucket.
+
+2. Allow `s:List*`, `s3:GetBucketVersioning` and `s3:PutBucketVersioning` on `SourceBucketReplicationRole`.
+
 ```yml
 DestinationBucketPolicy:
   Type: AWS::S3::BucketPolicy
@@ -132,7 +140,7 @@ DestinationBucketPolicy:
           Action:
             - s3:ReplicateObject
             - s3:ReplicateDelete
-          Resource: !Sub '${Destinaionbucket}/*'
+          Resource: !Sub '${DestinationBucket}/*'
         - Sid: Set permissions on bucket
           Effect: Allow
           Principal:
@@ -164,7 +172,7 @@ SourceBucket:
       Rules:
         - Destination:
             Bucket: !GetAtt 'DestinationBucket.Arn'
-+           Account: <estination-bucket-owner-account-id>
++           Account: <destination-bucket-owner-account-id>
 +           AccessControlTranslation:
 +               Owner: 'Destination'
           Status: Enable
@@ -211,7 +219,7 @@ DestinationBucketPolicy:
             - s3:ReplicateObject
             - s3:ReplicateDelete
 +           - s3:ObjectOwnerOverrideToBucketOwner
-          Resource: !Sub '${Destinaionbucket}/*'
+          Resource: !Sub '${DestinationBucket}/*'
           ...
 ```
 
