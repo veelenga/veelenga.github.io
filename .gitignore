@@ -3,3 +3,5 @@ dist
 .tmp
 .sass-cache
 _site
+
+.DS_store
