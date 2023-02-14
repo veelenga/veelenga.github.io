@@ -2595,7 +2595,7 @@ a:hover .archive__item-title {
       width: auto;
       height: auto; } }
   .author__avatar img {
-    max-width: 110px;
+    max-width: 190px;
     border-radius: 50%; }
     @media (min-width: 64em) {
       .author__avatar img {
