@@ -126,7 +126,7 @@ Record lock, heap no 2 PHYSICAL RECORD: n_fields 2; compact format; info bits 0
 *** WE ROLL BACK TRANSACTION (1)
 ```
 
-What does it report?
+Let's go through the report:
 
 1. There are two transactions (TRANSACTION 1255170 and TRANSACTION 1255169) that are inserting a new product into the `products` table.
 Both transactions have acquired locks on the same index page for the `code` column using different lock modes.
