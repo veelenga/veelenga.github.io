@@ -3,7 +3,6 @@ permalink: /code
 title: "Code"
 header:
   disable: true
-excerpt: "Code"
 modified: 2020-06-12T22:53:07.573882-04:00
 ---
 
