@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "github-pages", "=228"
+gem "github-pages", "=230"
 gem "nokogiri", "1.16.2"
 gem "html-proofer"
 # gem "jekyll-archives"
