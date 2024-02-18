@@ -1,0 +1,16 @@
+---
+title: Chartkick & turbo frames: elevating rails visuals
+date: 2024-02-24T12:14:57+02:00
+categories:
+excerpt:
+tags:
+  - rails
+  - chartkick
+  - turbo
+published: false
+---
+
+In today's digital landscape, delivering dynamic and interactive content is essential for engaging user experiences.
+Rails developers often leverage powerful tools like Chartkick to visualize data seamlessly within their applications.
+Concurrently, Turbo Frames offer a streamlined way to update parts of a webpage without a full reload, enhancing responsiveness and user experience.
+In this blog post, we'll explore the synergy between Chartkick charts and Turbo Frames in Rails applications, empowering developers to create rich, real-time data visualizations within a fluid user interface.
