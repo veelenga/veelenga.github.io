@@ -12,6 +12,7 @@ published: true
 
 In today's digital landscape, delivering dynamic and interactive content is essential for engaging user experiences.
 Rails developers often leverage powerful tools like [Chartkick](https://chartkick.com/) to visualize data seamlessly within their applications.
+
 Concurrently, Turbo Frames offer a streamlined way to update parts of a webpage without a full reload, enhancing responsiveness and user experience.
 In this blog post, we'll explore the synergy between Chartkick charts and Turbo Frames in Rails applications, empowering developers to create rich, real-time data visualizations within a fluid user interface.
 
@@ -72,6 +73,8 @@ After implementing the `index` view, we can finally start visualizing our dashbo
 Let's take a look at the initial structure of our dashboard page:
 
 ```erb
+<!-- app/views/my_dashboard/index.html.erb -->
+
 <div>
   <div id='header' class='flex'>
     <span class='bg-white p-3 w-full rounded text-center uppercase text-lg font-bold'>
@@ -99,7 +102,7 @@ Let's add Turbo Frames for each chart:
   </div>
 ```
 
-In this code snippet, we iterate through an array containing the actions (`users_chart` and `orders_chart`) for our charts. 
+In this code snippet, we iterate through an array containing the actions (`users_chart` and `orders_chart`) for our charts.
 For each action, we create a Turbo Frame with a unique identifier (action) and specify the endpoint using `url_for(action: action)`.
 Additionally, we include the loading: :lazy parameter to enable lazy-loading, ensuring that the frames are fetched lazily.
 
@@ -110,7 +113,7 @@ Let's walk through the implementation of the `users_chart` action in our control
 
 ```diff
 class MyDashboardController < ApplicationController
-+  FRAME_CHART_PARTIAL = 'avo/my_dashboard/frame_chart'
++  FRAME_CHART_PARTIAL = 'my_dashboard/frame_chart'
 
   def users_chart
 +    data = User.group_by_day(:created_at).count
@@ -153,6 +156,8 @@ Similarly, in the `orders_chart` action, we group orders by both `order_type` an
 Finally, we can define the partial view that will utilize the provided data and visualize it:
 
 ```erb
+<!-- app/views/my_dashboard/_frame.html.erb -->
+
 <%= turbo_frame_tag(id) do %>
   <div class="bg-white p-3 rounded">
     <%= line_chart data, id: "#{id}-chart", **opts %>
@@ -166,5 +171,4 @@ Within the frame, we utilize the `line_chart` helper provided by Chartkick to re
 ## Wrap-up
 
 In this blog post, we've successfully implemented dynamic charts in our Rails application's dashboard using Chartkick and Turbo Frames.
-By fetching and visualizing data with ActiveRecord and Chartkick helpers, and seamlessly integrating them into the interface with Turbo Frames, we've enhanced user experience and provided valuable insights for data analysis.
-This integration lays a solid foundation for further development and refinement of our application's dashboard.
+By fetching and visualizing data with ActiveRecord and Chartkick helpers, and seamlessly integrating them into the interface with Turbo Frames.
