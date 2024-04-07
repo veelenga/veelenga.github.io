@@ -105,10 +105,9 @@ Resources:
 However, using the root account in a resource-based policy grants the highest level of permissions within AWS.
 While this approach may seem convenient for allowing any account service to pull images from the ECR repository, it comes with significant drawbacks and security concerns.
 
-## Summary
+## Wrap up
 
 In this post, we explored various methods to share Amazon ECR images across accounts.
 We discussed the pros and cons of each approach and provided examples of how to implement a resource-based policy for ECR repositories.
-Also we looked at how to implement a Lambda function based policy and a root account based policy.
 
 
