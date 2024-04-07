@@ -116,6 +116,6 @@ We discussed the pros and cons of each approach and provided examples of how to 
 
 Resources:
 
-* https://repost.aws/knowledge-center/secondary-account-access-ecr
-* https://docs.aws.amazon.com/AmazonECR/latest/userguide/repository-policy-examples.html
-* https://docs.aws.amazon.com/AmazonECR/latest/userguide/replication.html
+* [https://repost.aws/knowledge-center/secondary-account-access-ecr](https://repost.aws/knowledge-center/secondary-account-access-ecr)
+* [https://docs.aws.amazon.com/AmazonECR/latest/userguide/repository-policy-examples.html](https://docs.aws.amazon.com/AmazonECR/latest/userguide/repository-policy-examples.html)
+* [https://docs.aws.amazon.com/AmazonECR/latest/userguide/replication.html](https://docs.aws.amazon.com/AmazonECR/latest/userguide/replication.html)
