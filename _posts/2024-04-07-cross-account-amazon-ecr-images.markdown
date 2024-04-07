@@ -1,5 +1,5 @@
 ---
-title: Cross Account Amazon ECR Images
+title: Cross account Amazon ECR images
 date: 2024-04-07T12:14:57+02:00
 categories:
 excerpt:
