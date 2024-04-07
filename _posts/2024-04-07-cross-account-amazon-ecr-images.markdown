@@ -74,10 +74,14 @@ Resources:
               - ecr:BatchCheckLayerAvailability
               - ecr:GetRepositoryPolicy
               - ecr:SetRepositoryPolicy
+            Condition:
+              StringEquals:
+                aws:sourceArn: !Sub "arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:my-lambda-function"
 ```
 
 The difference between the two policies is the `Principal` field and the list of actions.
 Image-based lambdas can add permissions only if the principal calling Lambda has `ecr:getRepositoryPolicy` and `ecr:setRepositoryPolicy` permissions so they are required in the policy.
+The condition field is used to restrict the access to the ECR repository only for the specific Lambda function.
 
 ## Root account resource-based policy
 
