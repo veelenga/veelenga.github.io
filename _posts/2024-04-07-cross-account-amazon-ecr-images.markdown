@@ -110,4 +110,8 @@ While this approach may seem convenient for allowing any account service to pull
 In this post, we explored various methods to share Amazon ECR images across accounts.
 We discussed the pros and cons of each approach and provided examples of how to implement a resource-based policy for ECR repositories.
 
+Resources:
 
+* https://repost.aws/knowledge-center/secondary-account-access-ecr
+* https://docs.aws.amazon.com/AmazonECR/latest/userguide/repository-policy-examples.html
+* https://docs.aws.amazon.com/AmazonECR/latest/userguide/replication.html
