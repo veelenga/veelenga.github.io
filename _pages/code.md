@@ -9,6 +9,17 @@ modified: 2020-06-12T22:53:07.573882-04:00
 {% include base_path %}
 
 {% include project_entry
+  ref='https://donaty.io'
+  name='Donation Charity'
+  description='Fully transparent on-chain donations'
+  sup='Here at Donaty.io we believe that everyone should have the opportunity to give back to the community.'
+  logo_ref='/images/demo/donaty.png'
+  logo_width=800
+%}
+
+<hr/>
+
+{% include project_entry
   ref='https://veelenga.github.io/rblist'
   name='Russia Block List'
   description='See how top world companies react to Russia invasion'
