@@ -4,7 +4,7 @@ date: 2024-02-26T12:14:57+02:00
 categories:
 excerpt:
 tags:
-  - rails
+  - ruby on rails
   - chartkick
   - turbo
 published: true
