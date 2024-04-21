@@ -7,10 +7,12 @@ tags:
   - ruby on rails
   - avo
 published: true
+twitter:
+  image: /avo-custom-fields/header.jpeg
 ---
 
 
-[Avo](https://avohq.io/) is a custom content management system for Ruby on Rails applications that has a lot of features out of the box.
+[Avo](https://avohq.io/) is a content management system for Ruby on Rails applications that has a lot of features out of the box.
 It is designed to be easy to use and extendable, allowing developers to move faster and save development time.
 
 Avo has a notion of panels to define the layout and behavior of the specific resources.
