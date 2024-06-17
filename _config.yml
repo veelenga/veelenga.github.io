@@ -52,7 +52,7 @@ social:
 analytics:
   provider               : "google"
   google:
-    tracking_id          : "UA-63584551-3"
+    tracking_id          : "G-K8Z4KZZHG8"
 
 # Google AdSense
 google_ad_client         :
