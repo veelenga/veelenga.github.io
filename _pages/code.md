@@ -9,6 +9,17 @@ modified: 2024-04-09T12:14:57+02:00
 {% include base_path %}
 
 {% include project_entry
+  ref='https://chromewebstore.google.com/detail/openai-garmin-workout/bgphnlbjnkghcliepjibelgkglbjmmma'
+  name='OpenAI Garmin Connect Workout'
+  description='Create Garmin Connect workouts using generative AI'
+  sup="This project allows you to create complex Garmin workouts using natural language input processed by OpenAI's GPT."
+  logo_ref='/images/demo/openai-garmin-workout.png'
+  logo_width=800
+%}
+
+<hr/>
+
+{% include project_entry
   ref='https://donaty.io'
   name='Donation Charity'
   description='Fully transparent on-chain donations'
