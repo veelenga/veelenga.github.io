@@ -1,6 +1,6 @@
 ---
 title: AWS S3 replication across different accounts
-date: 2023-02-05T15:14:57+02:00
+date: 2024-10-23T15:14:57+02:00
 categories:
 excerpt:
 tags:
@@ -143,7 +143,7 @@ DestinationBucketPolicy:
           Action:
             - s3:ReplicateObject
             - s3:ReplicateDelete
-          Resource: !Sub '${DestinationBucket}/*'
+          Resource: !Sub '${DestinationBucket.Arn}/*'
         - Sid: Set permissions on bucket
           Effect: Allow
           Principal:
@@ -152,7 +152,7 @@ DestinationBucketPolicy:
             - s3:List*
             - s3:GetBucketVersioning
             - s3:PutBucketVersioning
-          Resource: !Ref SourceBucketReplicationRole
+          Resource: !GetAtt DestinationBucket.Arn
 ```
 
 ## Change replica owner
