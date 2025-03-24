@@ -75,7 +75,7 @@ modified: 2024-10-09T12:14:57+02:00
 <hr/>
 
 {% include project_entry
-  ref='https://crystal-ann.com/'
+  ref='https://github.com/crystal-community/crystal-ann'
   name='Crystal [ANN]'
   description='Announce new project, blog post, version update or any other Crystal work'
   sup='Crystal [ANN] is intended to spread announcements with community. A new announcement will appear on this website, on Twitter and distributed over RSS. People being interested will not miss it.'
