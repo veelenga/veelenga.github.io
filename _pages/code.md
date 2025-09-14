@@ -3,10 +3,21 @@ permalink: /code
 title: "Code"
 header:
   disable: true
-modified: 2024-10-09T12:14:57+02:00
+modified: 2025-09-14T12:14:57+02:00
 ---
 
 {% include base_path %}
+
+{% include project_entry
+  ref='https://veelenga.github.io/phrase-bridge/?bridge=UA-PL'
+  name='Phrase Bridge'
+  description='Learn a new language, bridge new cultures every day.'
+  sup="An app that helps you learn languages by creating daily phrases using OpenAI."
+  logo_ref='/images/demo/phrase-bridge.png'
+  logo_width=800
+%}
+
+<hr/>
 
 {% include project_entry
   ref='https://chromewebstore.google.com/detail/openai-garmin-workout/bgphnlbjnkghcliepjibelgkglbjmmma'
