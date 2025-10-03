@@ -365,15 +365,7 @@ figcaption {
       color: #000;
       border-bottom-color: #000; }
 
-div.project-entry {
-  padding: 20px;
-  box-shadow: none;
-  transition: all 0.2s ease-in-out; }
-  div.project-entry:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); }
-    div.project-entry:hover a:hover img {
-      box-shadow: none; }
-
+/* Project entry styles moved to _projects.scss */
 /* Fix IE9 SVG bug */
 svg:not(:root) {
   overflow: hidden; }
@@ -2595,7 +2587,7 @@ a:hover .archive__item-title {
       width: auto;
       height: auto; } }
   .author__avatar img {
-    max-width: 190px;
+    max-width: 110px;
     border-radius: 50%; }
     @media (min-width: 64em) {
       .author__avatar img {
@@ -2715,6 +2707,128 @@ a:hover .archive__item-title {
     .author__urls a:hover {
       text-decoration: underline; }
 
+/* ==========================================================================
+   PROJECT ENTRIES
+   ========================================================================== */
+/* Project Container - White Card
+   ========================================================================== */
+.project-entry {
+  margin-bottom: 2.5rem;
+  padding: 2rem;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  transition: all 0.2s ease; }
+  .project-entry:hover {
+    border-color: #e0e0e0;
+    background: #fafafa; }
+
+/* Project Content (Header + Descriptions)
+   ========================================================================== */
+.project-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding: 0; }
+
+.project-tagline {
+  margin: 0.5rem 0 !important; }
+
+.project-description {
+  margin: 0.5rem 0 1.5rem 0 !important; }
+
+/* Project Title
+   ========================================================================== */
+.project-title {
+  text-decoration: none;
+  flex: 1;
+  min-width: 200px; }
+
+.project-title h3 {
+  margin: 0 !important;
+  font-size: 1.2em !important;
+  font-weight: 700 !important;
+  color: #52adc8 !important;
+  transition: color 0.2s ease; }
+
+.project-title:hover h3 {
+  color: #3d8ba3 !important;
+  text-decoration: underline; }
+
+/* Tech Stack Badges
+   ========================================================================== */
+.tech-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-items: center; }
+
+.tech-badge {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  background: #f5f5f5;
+  color: #666;
+  border-radius: 12px;
+  letter-spacing: 0.3px; }
+
+/* Project Description
+   ========================================================================== */
+.project-tagline {
+  font-size: 0.95rem !important;
+  font-weight: 600 !important;
+  color: #494e52 !important;
+  line-height: 1.5; }
+
+.project-description {
+  font-size: 0.85rem !important;
+  color: #666 !important;
+  line-height: 1.6; }
+
+/* Project Image
+   ========================================================================== */
+.project-image {
+  text-align: center;
+  margin: 1.5rem 0 0 0;
+  padding: 0;
+  position: relative; }
+
+.project-image a {
+  display: inline-block;
+  position: relative; }
+
+.project-image img {
+  max-width: 100% !important;
+  height: auto !important;
+  border-radius: 6px !important;
+  border: none !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important; }
+
+/* Responsive Design
+   ========================================================================== */
+@media (max-width: 768px) {
+  .project-header {
+    flex-direction: column;
+    align-items: flex-start; }
+
+  .project-title h3 {
+    font-size: 1.1em !important; }
+
+  .project-tagline {
+    font-size: 0.9rem !important; }
+
+  .project-description {
+    font-size: 0.8rem !important; }
+
+  .tech-badges {
+    width: 100%; } }
 /*!
  * Font Awesome Free 5.13.0 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)

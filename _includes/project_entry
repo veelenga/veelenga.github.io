@@ -1,18 +1,29 @@
-<div class="project-entry" align="center">
-  <a href="{{include.ref}}">
-    <h3 align="center">{{include.name}}</h3>
-  </a>
-  <p align="center">{{include.description}}</p>
-  {% if include.sup %}
-    <p align="center">
-      <sup>
-        <i> {{ include.sup }} </i>
-      </sup>
-    </p>
-  {% endif %}
-  <div align='center'>
-    <a href="{{include.ref}}">
-      <img src="{{include.logo_ref}}" alt="{{include.name}}" width="{{include.logo_width}}">
+<div class="project-entry">
+  <div class="project-header">
+    <a href="{{include.ref}}" class="project-title">
+      <h3>{{include.name}}</h3>
     </a>
+    {% if include.tech_stack %}
+      <div class="tech-badges">
+        {% assign techs = include.tech_stack | split: ',' %}
+        {% for tech in techs %}
+          <span class="tech-badge">{{ tech | strip }}</span>
+        {% endfor %}
+      </div>
+    {% endif %}
   </div>
+
+  <p class="project-tagline">{{include.description}}</p>
+
+  {% if include.sup %}
+    <p class="project-description">{{ include.sup }}</p>
+  {% endif %}
+
+  {% if include.logo_ref %}
+    <div class="project-image">
+      <a href="{{include.ref}}">
+        <img src="{{include.logo_ref}}" alt="{{include.name}}">
+      </a>
+    </div>
+  {% endif %}
 </div>
