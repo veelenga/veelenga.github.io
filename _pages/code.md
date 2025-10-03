@@ -3,10 +3,21 @@ permalink: /code
 title: "Code"
 header:
   disable: true
-modified: 2025-09-14T12:14:57+02:00
+modified: 2025-10-03T12:14:57+02:00
 ---
 
 {% include base_path %}
+
+{% include project_entry
+  ref='https://github.com/veelenga/claude-mermaid'
+  name='Claude Mermaid'
+  description='MCP server for rendering Mermaid diagrams in Claude Code'
+  sup="An MCP server that enables Claude to render and preview Mermaid diagrams with live browser updates."
+  logo_ref='/images/claude-mcp/claude-code.png'
+  logo_width=800
+%}
+
+<hr/>
 
 {% include project_entry
   ref='https://veelenga.github.io/phrase-bridge/?bridge=UA-PL'
