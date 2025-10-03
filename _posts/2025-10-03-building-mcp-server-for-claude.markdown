@@ -427,7 +427,6 @@ Whether building a diagram renderer, database query tool, or API integration, th
 
 ## Resources
 
-- [MCP Specification](https://spec.modelcontextprotocol.io/)
+- [MCP Specification](https://modelcontextprotocol.io/docs/)
 - [MCP TypeScript SDK](https://github.com/modelcontextprotocol/typescript-sdk)
 - [claude-mermaid GitHub](https://github.com/veelenga/claude-mermaid)
-- [Claude Code Documentation](https://docs.claude.com/claude-code)
