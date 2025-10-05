@@ -72,7 +72,10 @@ When building working code takes hours instead of weeks, the struggle that creat
 This leads to building anything while understanding nothing. It works until complexity arises, then there's no foundation to solve real problems.
 
 This is why AI demands a new step: **Reflect**. The deliberate pause that transforms speed into real understanding.
-Reflection means analyzing the decisions:
+
+> **Note:** Reflection isn't new. Learning science calls it [metacognition](https://en.wikipedia.org/wiki/Metacognition) or [deliberate practice](https://en.wikipedia.org/wiki/Practice_(learning_method)#Deliberate_practice) with reflection. Experienced developers already do this naturally. What's new is making it explicit and essential in the AI era, where speed can easily replace depth.
+
+Reflection in this context means analyzing the decisions:
 
 **Design Choices:**
 - Why was the code structured this way?
