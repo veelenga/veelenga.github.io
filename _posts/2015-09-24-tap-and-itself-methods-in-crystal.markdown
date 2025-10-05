@@ -90,7 +90,7 @@ p team.any? {|player| player =~ /4/} # false
 
 This example uses both methods. `itself` (in `any?` method without a block) is used to pass itself to the block in `any?` method with the block. This is exactly how it is used in Crystal's standard library in [`Enumerable`](http://crystal-lang.org/api/Enumerable.html) and [`Iterator`](http://crystal-lang.org/api/Iterator.html) modules. `tap` is used to initialize data on object in a yielded block. From the example you can see that with `tap` you can highly improve a readability of your code. Moreover, `tap` returns self so you can chain another method after it.
 
-### Wrapup
+### Wrap-up
 
 `itself` and `tap` are very useful methods. They are similar but usually are used for different purposes. Using both of them will make it possible to improve readability and maintainability of your code.
 

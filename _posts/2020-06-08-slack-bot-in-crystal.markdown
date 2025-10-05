@@ -304,7 +304,7 @@ There are a couple of steps to do here.
 
 ![](https://user-images.githubusercontent.com/3624712/76696876-fdf55f80-6698-11ea-8237-502535622bec.png)
 
-## Wrap up
+## Wrap-up
 
 In this article we showed how to create a Slack bot written in Crystal
 programming language, deployed it to Heroku and configured Slack application to

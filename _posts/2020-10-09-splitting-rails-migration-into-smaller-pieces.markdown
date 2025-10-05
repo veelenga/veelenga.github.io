@@ -142,7 +142,7 @@ $ STEP=3 bundle exec rake payments:reference_user
 Also, it is not required to run all the steps at once thus the dev team can have some
 window for the deployment and migration.
 
-## Wrap up
+## Wrap-up
 
 In this article, we explored how to split long running migration into smaller parts and
 run them manually before deploying the dependent code changes. This can be useful when

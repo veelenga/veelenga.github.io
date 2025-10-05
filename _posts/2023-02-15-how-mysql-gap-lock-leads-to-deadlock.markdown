@@ -136,7 +136,7 @@ At the same time, transaction 1255170 is holding a shared (S) lock on the index 
 To resolve the deadlock, the database automatically chooses one of the transactions to roll back (in this case, transaction 1255170).
 The other transaction (transaction 1255169) is allowed to proceed and complete its insert operation.
 
-## Wrap up
+## Wrap-up
 
 Databases like any software are not ideal and can't prevent you from having issues.
 Deadlock is one of the issues which could be easily happened and developers should know how to understand and fix the problem.

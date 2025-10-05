@@ -129,7 +129,7 @@ As expected `Hash#[]?` with symbols wins. Awesome!
 
 There (in Fast Ruby) you may find a lot of good examples of tasks to compare and try it in Crystal.
 
-## Wrapup
+## Wrap-up
 
 Next time you're considering which method is faster, set up and run a quick benchmark.
 But you have to understand, benchmarking does not give you a complete picture about why your code might run slower,

@@ -169,7 +169,7 @@ associated with it:
 
 ```
 
-## Wrap Up
+## Wrap-up
 
 In this article, we described how to track paper trail versions on per save request
 basis using metadata to store information about the request at PaperTrail versions table.

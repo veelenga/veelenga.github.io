@@ -124,7 +124,7 @@ Developers must evolve into system architects who think globally from the start.
 For example, without understanding upfront whether building for 10 users or 10 million, AI might suggest SQLite initially, only to require a complete rewrite later.
 The role becomes less about writing code and more about defining business needs, scalability requirements, constraints, and ensuring systems solve real problems from day one.
 
-## Wrap up
+## Wrap-up
 
 The next time tackling a new technology or framework, try adding that pause.
 After building something with AI's help, stop and reflect.

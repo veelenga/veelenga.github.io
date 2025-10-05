@@ -116,7 +116,7 @@ end
 
 Notice how we define a type of our `Observable` module when we include it.
 
-## Wrapup
+## Wrap-up
 
 We are ready to run a simple example:
 

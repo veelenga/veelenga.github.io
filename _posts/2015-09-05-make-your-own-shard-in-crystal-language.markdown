@@ -297,7 +297,7 @@ $ crystal docs
 
 It will generate documentation in `doc` folder. Just open `doc/index.html` in your browser and review a pretty formatted documentation of your shard. Looks easy!
 
-## Wrapup
+## Wrap-up
 
 This is a simple and easy to use tutorial that shows how to create the new shard in Crystal language, add an executable, dependencies, write tests and document a code. I hope you are full of ideas for new projects and you are on the way to make a new shard. Crystallians are waiting for you!
 

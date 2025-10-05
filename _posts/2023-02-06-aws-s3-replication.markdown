@@ -226,7 +226,7 @@ DestinationBucketPolicy:
           ...
 ```
 
-## Wrap up
+## Wrap-up
 
 AWS S3 Bucket Replication across multiple AWS accounts is an incredibly powerful tool for businesses that need to ensure their data is secure and always available.
 The best part about using the AWS S3 bucket replication feature is how easy it makes sharing files between different accounts without having to manually transfer them over each time.
