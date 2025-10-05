@@ -18,16 +18,16 @@ This is how our brains naturally and effectively build skills.
 
 ![Learning Loop Diagram](/images/learning-loop/diagram.svg)
 
-### Step 1: Learn
+### Learn
 
-Learning is gathering information. The key is learning what's needed, when it's needed.
+The key to efficient learning is learning what's needed, when it's needed.
 
 - Start with the basics to get a high-level understanding first. Don't learn everything at once.
 - Learn as needed once practicing starts. Do not hesitate to skip what's not relevant yet.
 - Use whatever works best for the current stage. Official docs, videos, blogs, or books etc.
 - Go deeper with each loop.
 
-### Step 2: Practice
+### Practice
 
 Practice turns information into skill. Real understanding comes from struggling with doing.
 
@@ -37,7 +37,7 @@ Practice turns information into skill. Real understanding comes from struggling 
 - Experiment and break things to see what fails and why. Understanding failure modes leads to better code.
 - Work on real projects where real constraints and real problems force real learning.
 
-### Step 3: Share
+### Share
 
 Sharing isn't just being nice. It's the best way to learn. Teaching forces messy knowledge into clear understanding.
 
@@ -64,17 +64,16 @@ This is why experienced developers learn new things so quickly. They've just don
 
 ## The AI Challenge
 
-The best developers in the AI era won't be the fastest. They'll be those who stay thoughtful while moving fast.
+AI is a powerful accelerator for the learning loop.
+It helps learn concepts faster, build projects quicker, and even draft explanations when sharing.
+It's now possible to take a shortcut and skip learning entirely, dive straight into practice, and get working results.
 
-AI doesn't replace the loop but speeds it up dramatically. Each step can be done faster, much faster.
-With AI, it's now possible to skip learning entirely, dive straight into practice, and get working results. But this speed creates a hidden danger.
-When building working code takes hours instead of weeks, the struggle that creates deep understanding gets skipped. Results come without insight.
-This leads to building anything while understanding nothing. It works until complexity arises, then there's no foundation to solve real problems.
+But this speed creates a hidden danger.
+When working code can be built in hours instead of weeks, the struggle that creates deep understanding gets skipped.
+Results come fast, but insight doesn't.
+This leads to building anything while understanding nothing, which works fine until real complexity shows up and there's no foundation to handle it.
 
 This is why AI demands a new step: **Reflect**. The deliberate pause that transforms speed into real understanding.
-
-> **Note:** Reflection isn't new. Learning science calls it [metacognition](https://en.wikipedia.org/wiki/Metacognition) or [deliberate practice](https://en.wikipedia.org/wiki/Practice_(learning_method)#Deliberate_practice) with reflection. Experienced developers already do this naturally. What's new is making it explicit and essential in the AI era, where speed can easily replace depth.
-
 Reflection in this context means analyzing the decisions:
 
 **Design Choices:**
@@ -93,7 +92,7 @@ Reflection in this context means analyzing the decisions:
 - Where else have similar problems appeared?
 - How would experienced developers approach this?
 
-Think of AI as power tools. They make things faster, but the builder still needs to know what and how to build.
+> **Note:** Reflection isn't new. Learning science calls it [metacognition](https://en.wikipedia.org/wiki/Metacognition) or [deliberate practice](https://en.wikipedia.org/wiki/Practice_(learning_method)#Deliberate_practice) with reflection. Experienced developers already do this naturally. What's new is making it explicit and essential in the AI era, where speed can easily replace depth.
 
 ## The Future: Build → Reflect?
 
