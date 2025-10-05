@@ -92,13 +92,16 @@ Reflection in this context means analyzing the decisions:
 - Where else have similar problems appeared?
 - How would experienced developers approach this?
 
-> **Note:** Reflection isn't new. Learning science calls it [metacognition](https://en.wikipedia.org/wiki/Metacognition) or [deliberate practice](https://en.wikipedia.org/wiki/Practice_(learning_method)#Deliberate_practice) with reflection. Experienced developers already do this naturally. What's new is making it explicit and essential in the AI era, where speed can easily replace depth.
+> **Note:** Reflection isn't new.
+> Learning science calls it [metacognition](https://en.wikipedia.org/wiki/Metacognition) or [deliberate practice](https://en.wikipedia.org/wiki/Practice_(learning_method)#Deliberate_practice) with reflection.
+> Experienced developers already do this naturally. What's new is making it explicit and essential in the AI era, where speed can easily replace depth.
 
 ## The Future: Build → Reflect?
 
 As AI improves, the loop might compress.
 
-Today, non-developers can use AI to build simple apps. But they hit walls fast. Can't integrate with existing systems, handle complex features, or build something that scales.
+Today, non-developers can use AI to build simple apps. But they hit walls fast.
+Can't integrate with existing systems, handle complex features, or build something that scales.
 
 Imagine that the future AI can:
 - Build complete systems while explaining every decision
@@ -107,15 +110,23 @@ Imagine that the future AI can:
 - Handle cross project communication
 - Basically solve a problem, not just write a code
 
-> **Note:** This only works with global thinking upfront. Without knowing whether building for 10 users or 10 million, AI might suggest SQLite initially, only to require a complete database rewrite later. The human must think about the system as a whole from the start.
-
 The loop could become just two steps:
 
-**Build**: describe the complete vision with all constraints, and AI creates systems while teaching why each decision was made. <br>
-**Reflect**: analyze what was built and develop intuition. Understanding when different approaches make sense and what global thinking was missing. <br>
+1. **Build**: describe the complete vision with all constraints, and AI creates systems while teaching why each decision was made.
+2. **Reflect**: analyze what was built and develop intuition. Understanding when different approaches make sense and what global thinking was missing.
 
-In this future, "Learn" and "Practice" merge into "Build". Learning happens by building with an expert AI assistant. "Share" becomes part of "Reflect" as the AI helps articulate insights and document decisions.
+In this future, "Learn" and "Practice" merge into "Build".
+Learning happens by building with an expert AI assistant.
+"Share" becomes part of "Reflect" as the AI helps articulate insights and document decisions.
 
-This isn't about replacing developers. It's about elevating them to system architects who think globally about business needs, scalability, constraints, and ensuring systems solve real problems from day one.
+This isn't about replacing developers, but it does require a shift in thinking.
+Developers must evolve into system architects who think globally from the start.
+For example, without understanding upfront whether building for 10 users or 10 million, AI might suggest SQLite initially, only to require a complete rewrite later.
+The role becomes less about writing code and more about defining business needs, scalability requirements, constraints, and ensuring systems solve real problems from day one.
 
-The next time tackling a new technology or framework, try adding that pause. After building something with AI's help, stop and reflect. Ask those hard questions about design, trade-offs, and patterns. That's where speed turns into mastery.
+## Wrap up
+
+The next time tackling a new technology or framework, try adding that pause.
+After building something with AI's help, stop and reflect.
+Ask those hard questions about design, trade-offs, and patterns.
+That's where speed turns into mastery.
