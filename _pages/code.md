@@ -27,8 +27,8 @@ modified: 2025-10-03T12:14:57+02:00
 %}
 
 {% include project_entry
-  ref='https://chromewebstore.google.com/detail/openai-garmin-workout/bgphnlbjnkghcliepjibelgkglbjmmma'
-  name='OpenAI Garmin Connect Workout'
+  ref='https://github.com/veelenga/prompt-garmin-workout'
+  name='Prompt Garmin Workout'
   description='Create Garmin Connect workouts using generative AI'
   sup="This project allows you to create complex Garmin workouts using natural language input processed by OpenAI's GPT."
   logo_ref='/images/demo/openai-garmin-workout.png'
