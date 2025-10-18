@@ -1,27 +1,114 @@
----
-layout: archive
-title: "Write"
-header:
-  disable: true
-tags:
-  all: true
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitalii Elenhaupt - Software Engineer | System Design, DevOps & AI</title>
 
-{% include base_path %}
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Software engineer passionate about building scalable systems and efficient infrastructure. Expertise in System Design, Analytics, DevOps, and AI Engineering.">
+    <meta name="author" content="Vitalii Elenhaupt">
+    <meta name="keywords" content="software engineer, system design, devops, cloud infrastructure, ai engineering, analytics">
+    <link rel="canonical" href="https://veelenga.github.io">
 
-{% for post in paginator.posts %}
-  {% include archive-single.html %}
-{% endfor %}
+    <!-- Open Graph Tags for Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Vitalii Elenhaupt - Software Engineer">
+    <meta property="og:description" content="Passionate about building scalable systems and efficient infrastructure. System Design, Analytics, DevOps, and AI Engineering.">
+    <meta property="og:url" content="https://veelenga.github.io">
+    <meta property="og:site_name" content="Vitalii Elenhaupt">
+    <meta property="og:image" content="https://s.gravatar.com/avatar/fb7415aea80a8fa64f7427086eedb6ee?s=400">
+    <meta property="og:image:alt" content="Vitalii Elenhaupt - Software Engineer">
 
-{% include post_paginator.html %}
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@veelenga">
+    <meta name="twitter:title" content="Vitalii Elenhaupt - Software Engineer">
+    <meta name="twitter:description" content="Building scalable systems and efficient infrastructure.">
+    <meta name="twitter:image" content="https://s.gravatar.com/avatar/fb7415aea80a8fa64f7427086eedb6ee?s=400">
 
-<hr>
+    <!-- Schema.org Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Vitalii Elenhaupt",
+        "url": "https://veelenga.github.io",
+        "image": "https://s.gravatar.com/avatar/fb7415aea80a8fa64f7427086eedb6ee?s=400",
+        "jobTitle": "Software Engineer",
+        "description": "Passionate about building scalable systems and efficient infrastructure",
+        "email": "velenhaupt@gmail.com",
+        "sameAs": [
+            "https://twitter.com/veelenga",
+            "https://github.com/veelenga",
+            "https://medium.com/@veelenga",
+            "https://www.linkedin.com/in/vitalii-elenhaupt",
+            "https://stackoverflow.com/users/1586762/vitalii-elenhaupt"
+        ],
+        "expertise": [
+            "System Design",
+            "DevOps",
+            "Cloud Infrastructure",
+            "Analytics",
+            "AI Engineering"
+        ]
+    }
+    </script>
 
-<section class="page__meta">
-  <p class="page__taxonomy">
-    <strong><i class="fa fas fa-tags" aria-hidden="true"></i> Search by tag: </strong>
-    <span itemprop="keywords">
-      {% include available-tags.html %}
-    </span>
-  </p>
-</section>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/css/home.css">
+</head>
+<body>
+    <section class="hero">
+        <!-- Tech pattern background -->
+        <div class="tech-pattern"></div>
+
+        <!-- Animated code elements -->
+        <div class="code-element code-element-1">const build = () => {</div>
+        <div class="code-element code-element-2">scalable systems</div>
+        <div class="code-element code-element-3">async deploy()</div>
+        <div class="code-element code-element-4">return innovation;</div>
+        <div class="code-element code-element-5">DevOps && Cloud</div>
+        <div class="code-element code-element-6">System.design()</div>
+
+        <div class="hero-content">
+            <h1>Vitalii Elenhaupt</h1>
+            <p class="description">Building scalable systems and efficient infrastructure</p>
+
+            <div class="skills-tags">
+                <span class="skill-tag">System Design</span>
+                <span class="skill-tag">Analytics</span>
+                <span class="skill-tag">DevOps</span>
+                <span class="skill-tag">AI Engineering</span>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="/blog/" class="cta-btn">
+                    <i class="fa fa-pencil"></i> Blog Posts
+                </a>
+                <a href="/projects/" class="cta-btn">
+                    <i class="fa fa-code"></i> Projects
+                </a>
+            </div>
+
+            <div class="social-links">
+                <a href="https://twitter.com/veelenga" title="Twitter" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a href="https://github.com/veelenga" title="GitHub" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-github"></i>
+                </a>
+                <a href="mailto:velenhaupt@gmail.com" title="Email">
+                    <i class="fa fa-envelope"></i>
+                </a>
+                <a href="https://medium.com/@veelenga" title="Medium" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-medium"></i>
+                </a>
+                <a href="https://stackoverflow.com/users/1586762/vitalii-elenhaupt" title="Stack Overflow" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-stack-overflow"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
