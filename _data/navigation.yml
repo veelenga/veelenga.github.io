@@ -1,4 +1,8 @@
 # main links links
 main:
-  - title: "code"
-    url: https://veelenga.github.io/code
+  - title: "Home"
+    url: /
+  - title: "Blog"
+    url: /blog/
+  - title: "Projects"
+    url: /projects/

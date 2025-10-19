@@ -1,6 +1,6 @@
 ---
-permalink: /code
-title: "Code"
+permalink: /projects/
+title: "Projects"
 header:
   disable: true
 modified: 2025-10-03T12:14:57+02:00
