@@ -22,7 +22,7 @@
   {% if include.logo_ref %}
     <div class="project-image">
       <a href="{{include.ref}}">
-        <img src="{{include.logo_ref}}" alt="{{include.name}}">
+        <img src="{{include.logo_ref}}" alt="{{include.name}}" loading="lazy">
       </a>
     </div>
   {% endif %}

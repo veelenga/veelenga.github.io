@@ -2,20 +2,40 @@
    PROJECT ENTRIES
    ========================================================================== */
 
-/* Project Container - White Card
+/* Projects Grid Container
+   ========================================================================== */
+
+.page__content {
+  // Apply grid layout when containing project entries
+  &:has(.project-entry) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    gap: 1.5rem;
+
+    @media (max-width: 1024px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+/* Project Container - Enhanced Card Design
    ========================================================================== */
 
 .project-entry {
-  margin-bottom: 2.5rem;
-  padding: 2rem;
-  background: transparent;
-  border: 1px solid transparent;
-  border-radius: 8px;
-  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  background: #ffffff;
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 100%;
 
   &:hover {
-    border-color: #e0e0e0;
-    background: #fafafa;
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    border-color: #d0d0d0;
   }
 }
 
@@ -24,20 +44,13 @@
 
 .project-header {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-bottom: 1rem;
+  flex-direction: row;
+  gap: 0;
+  margin-bottom: 0.75rem;
   padding: 0;
-}
-
-.project-tagline {
-  margin: 0.5rem 0 !important;
-}
-
-.project-description {
-  margin: 0.5rem 0 1.5rem 0 !important;
+  min-height: 2rem;
 }
 
 /* Project Title
@@ -45,21 +58,23 @@
 
 .project-title {
   text-decoration: none;
-  flex: 1;
-  min-width: 200px;
+  flex: 0 1 auto;
+  min-width: 0;
+  margin-bottom: 0;
+  margin-right: auto;
 }
 
 .project-title h3 {
   margin: 0 !important;
-  font-size: 1.2em !important;
+  font-size: 1.3em !important;
   font-weight: 700 !important;
-  color: #52adc8 !important;
+  color: #2c3e50 !important;
   transition: color 0.2s ease;
+  line-height: 1.3;
 }
 
 .project-title:hover h3 {
-  color: #3d8ba3 !important;
-  text-decoration: underline;
+  color: #52adc8 !important;
 }
 
 /* Tech Stack Badges
@@ -68,20 +83,26 @@
 .tech-badges {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
+  gap: 0.35rem;
   align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 0;
+  flex-shrink: 1;
+  margin-left: 1rem;
 }
 
 .tech-badge {
   display: inline-block;
-  padding: 0.25rem 0.65rem;
-  font-size: 0.65rem;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.6rem;
   font-weight: 600;
   text-transform: uppercase;
   background: #f5f5f5;
   color: #666;
-  border-radius: 12px;
+  border-radius: 10px;
   letter-spacing: 0.3px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
 }
 
 /* Project Description
@@ -90,14 +111,17 @@
 .project-tagline {
   font-size: 0.95rem !important;
   font-weight: 600 !important;
-  color: #494e52 !important;
+  color: #34495e !important;
   line-height: 1.5;
+  margin: 0 0 0.5rem 0 !important;
 }
 
 .project-description {
   font-size: 0.85rem !important;
-  color: #666 !important;
+  color: #7f8c8d !important;
   line-height: 1.6;
+  margin: 0 0 0.75rem 0 !important;
+  flex-grow: 1;
 }
 
 /* Project Image
@@ -105,37 +129,59 @@
 
 .project-image {
   text-align: center;
-  margin: 1.5rem 0 0 0;
+  margin: auto 0 0 0;
   padding: 0;
   position: relative;
+  overflow: hidden;
+  border-radius: 8px;
 }
 
 .project-image a {
-  display: inline-block;
+  display: block;
   position: relative;
+  overflow: hidden;
+  border-radius: 8px;
 }
 
 .project-image img {
   max-width: 100% !important;
   height: auto !important;
-  border-radius: 6px !important;
+  border-radius: 8px !important;
   border: none !important;
-  box-shadow: none !important;
-  -webkit-box-shadow: none !important;
-  -moz-box-shadow: none !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+  transition: all 0.3s ease !important;
+
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12) !important;
+  }
 }
 
 /* Responsive Design
    ========================================================================== */
 
 @media (max-width: 768px) {
+  .page__content:has(.project-entry) {
+    gap: 1.25rem;
+  }
+
+  .project-entry {
+    padding: 1.25rem;
+    margin-bottom: 0;
+  }
+
   .project-header {
     flex-direction: column;
     align-items: flex-start;
+    margin-bottom: 0.5rem;
+  }
+
+  .project-title {
+    margin-bottom: 0.35rem;
   }
 
   .project-title h3 {
-    font-size: 1.1em !important;
+    font-size: 1.2em !important;
   }
 
   .project-tagline {
@@ -144,9 +190,44 @@
 
   .project-description {
     font-size: 0.8rem !important;
+    margin-bottom: 0.5rem !important;
   }
 
   .tech-badges {
     width: 100%;
+    margin-bottom: 0.5rem;
+    justify-content: flex-start;
+  }
+
+  .tech-badge {
+    padding: 0.2rem 0.5rem;
+    font-size: 0.55rem;
+  }
+
+  .project-image {
+    margin-top: 0.75rem;
+  }
+}
+
+/* Desktop Enhancements
+   ========================================================================== */
+
+@media (min-width: 1200px) {
+  .page__content:has(.project-entry) {
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 1.75rem;
+  }
+
+  .project-entry {
+    padding: 1.75rem;
+  }
+}
+
+/* Tablet Optimization
+   ========================================================================== */
+
+@media (min-width: 769px) and (max-width: 1199px) {
+  .page__content:has(.project-entry) {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   }
 }
