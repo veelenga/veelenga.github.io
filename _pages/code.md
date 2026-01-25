@@ -18,6 +18,15 @@ modified: 2025-10-03T12:14:57+02:00
 %}
 
 {% include project_entry
+  ref='https://veelenga.github.io/zwo-generator/'
+  name='Zwift Workout Generator'
+  description='Generate Zwift workouts using natural language'
+  sup="An AI-powered tool that lets you create structured Zwift workouts by describing them in plain English. Combines AI generation with direct manipulation for precise control."
+  logo_ref='/images/demo/zwift-workout-generator.png'
+  tech_stack='JavaScript, OpenAI, React'
+%}
+
+{% include project_entry
   ref='https://veelenga.github.io/phrase-bridge/?bridge=UA-PL'
   name='Phrase Bridge'
   description='Learn a new language, bridge new cultures every day'
