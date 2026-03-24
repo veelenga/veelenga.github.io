@@ -14,7 +14,7 @@ Agents generate working code in seconds these days.
 But "working" and "maintainable" aren't the same thing.
 The difference shows up weeks later when the team needs to modify that code, debug an issue, or onboard a new developer.
 
-A [code-quality skill](https://github.com/veelenga/dotfiles/blob/master/.claude/skills/code-quality/SKILL.md) addresses this gap.
+A code-quality skill addresses this gap.
 Instead of generating code that merely works, it enforces principles that make code readable, maintainable, and pragmatic.
 Let's break it down.
 
@@ -423,9 +423,32 @@ Save it for code that will live in production and be maintained by a team.
 AI-assisted development is fast. A code-quality skill makes that speed sustainable.
 By enforcing SOLID principles, eliminating magic numbers, and keeping changes focused, it transforms AI output from "functional" to "maintainable by default."
 
+## Building your own
+
+A code-quality skill is just a markdown file placed in your project's `.claude/skills/` directory. Here's a minimal starting point:
+
+```markdown
+# Code quality skill
+
+## Core principles
+- Write readable, maintainable, and pragmatic code
+- Follow SOLID principles where appropriate
+- Use named constants instead of magic numbers
+- Keep methods focused (ideally under 10 lines)
+- Only modify code directly related to the current task
+
+## When you notice issues in nearby code
+1. Point out what could be improved and why
+2. Suggest specific improvements
+3. Ask if those improvements should be made now or deferred
+4. Wait for confirmation before making unrelated changes
+```
+
+Expand it with language-specific conventions, project patterns, and lessons learned from code reviews. The key is to encode your team's standards so the agent applies them consistently.
+
 ## Resources
 
-- [Example code-quality skill implementation](https://github.com/veelenga/dotfiles/blob/master/.claude/skills/code-quality/SKILL.md)
+- [Claude Code skills documentation](https://docs.anthropic.com/en/docs/claude-code/skills)
 - [SOLID Principles](https://en.wikipedia.org/wiki/SOLID)
 - [Clean Code by Robert C. Martin](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882)
 - [Refactoring by Martin Fowler](https://refactoring.com/)
