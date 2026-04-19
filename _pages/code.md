@@ -9,6 +9,15 @@ modified: 2025-10-03T12:14:57+02:00
 {% include base_path %}
 
 {% include project_entry
+  ref='https://github.com/crystal-autobot/autobot'
+  name='Autobot'
+  description='Ultra-lightweight personal AI assistant framework'
+  sup="A fast, secure, and efficient AI automation tool built in Crystal. 2MB binary, ~5MB RAM, <20ms startup. Supports multiple LLM providers, chat channels, vision, voice, and kernel-level sandboxing."
+  logo_ref='/images/demo/autobot.png'
+  tech_stack='Crystal, AI, Telegram, Slack'
+%}
+
+{% include project_entry
   ref='https://github.com/veelenga/claude-mermaid'
   name='Claude Mermaid'
   description='MCP server for rendering Mermaid diagrams in Claude Code'
