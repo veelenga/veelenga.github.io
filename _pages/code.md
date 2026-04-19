@@ -18,6 +18,15 @@ modified: 2025-10-03T12:14:57+02:00
 %}
 
 {% include project_entry
+  ref='https://github.com/veelenga/preview-skills'
+  name='Preview Skills'
+  description='Reduce cognitive load when reviewing AI agent work'
+  sup="Standalone preview skills for visualizing files in the browser. Transform plans, diffs, and data into navigable previews. Zero dependencies, self-contained, works with any AI coding agent."
+  logo_ref='/images/demo/preview-skills.png'
+  tech_stack='JavaScript, Claude Code, HTML'
+%}
+
+{% include project_entry
   ref='https://github.com/veelenga/claude-mermaid'
   name='Claude Mermaid'
   description='MCP server for rendering Mermaid diagrams in Claude Code'
