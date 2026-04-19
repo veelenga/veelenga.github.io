@@ -1,6 +1,6 @@
 ---
 title: "Slack meets Bedrock: analytics, monitoring, and production"
-date: 2026-04-19T00:00:00+00:00
+date: 2026-04-19T10:00:00+02:00
 excerpt: "Deploying an AI bot is the easy part. Knowing whether it's helping anyone, catching failures before users report them, and keeping costs under control is where the real engineering happens."
 tags:
   - aws
@@ -166,7 +166,7 @@ ORDER BY timestamp DESC
 LIMIT 50;
 ```
 
-That last query is gold. It shows conversations where the agent couldn't find relevant documents. Each result is a potential content gap in your knowledge bases.
+This shows conversations where the agent couldn't find relevant documents. Each result is a potential content gap in your knowledge bases.
 
 ## Trace parsing
 
@@ -174,7 +174,7 @@ Bedrock Agent responses come as an event stream. Mixed in with the actual text a
 
 [ark](https://github.com/crystal-autobot/ark) parses these traces in real time as the response streams in:
 
-```
+```ruby
 EventStream.decode(response) do |message|
   case message.event_type
   when "chunk"
@@ -372,17 +372,9 @@ One CloudFormation stack. All resources reference each other through `!Ref` and 
 
 ## Wrap-up
 
-Three posts, one system:
-
-1. [**The gateway**](/slack-meets-bedrock-building-the-gateway/) translates between Slack's WebSocket world and Bedrock's HTTP API. Socket Mode eliminates public endpoints. Thread timestamps map to sessions. A semaphore prevents overload.
-
-2. [**Knowledge and tools**](/slack-meets-bedrock-knowledge-bases-tools-action-groups/) make the agent useful. Separate knowledge bases for separate domains. Lambda-backed action groups for external system access. Code interpreter for computation. Descriptions drive routing.
-
-3. **Analytics and production** (this post) make the system observable and reliable. Firehose to S3 to Athena gives you SQL over every conversation. ECS with circuit breakers handles deployment. CloudWatch alarms catch failures.
+The most valuable thing you build isn't the bot itself. It's the analytics pipeline that shows you what people actually ask, what the agent can't answer, and where your documentation has gaps. That feedback loop improves both the bot and the organization it serves.
 
 The total infrastructure cost for a team-sized bot runs $15 to $40 per month. The dominant cost is Bedrock invocations. Everything else rounds to zero.
-
-The most valuable thing you build isn't the bot. It's the analytics pipeline that shows you what people actually ask, what the agent can't answer, and where your documentation has gaps. That feedback loop improves both the bot and the organization it serves.
 
 The entire gateway layer described across this series is implemented in [ark](https://github.com/crystal-autobot/ark). It handles Socket Mode, session management, Bedrock Agent invocation, trace parsing, analytics publishing, and Slack formatting in a single binary. If you're building something similar, it can save you a few weeks of plumbing.
 

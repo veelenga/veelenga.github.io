@@ -90,7 +90,7 @@ There is a catch. Bedrock Agent sessions expire. The default TTL varies, and you
 
 The fix: detect stale sessions and re-inject context.
 
-```
+```ruby
 session_ttl = 55.minutes
 
 if session_stale?(session_id)
@@ -119,7 +119,7 @@ A naive approach processes messages sequentially. User B waits for user A's 30-s
 
 The solution: a bounded semaphore. Set a concurrency limit (10 works well) and process messages in parallel up to that limit. When all slots are full, respond immediately with a "busy" message instead of queuing indefinitely.
 
-```
+```ruby
 semaphore = Channel.new(MAX_CONCURRENT)  # buffered channel
 MAX_CONCURRENT.times { semaphore.send(token) }
 
@@ -211,8 +211,6 @@ The ECS task role needs exactly two permissions:
     - !Sub 'arn:aws:bedrock:${AWS::Region}:${AWS::AccountId}:agent/${AgentId}'
     - !Sub 'arn:aws:bedrock:${AWS::Region}:${AWS::AccountId}:agent-alias/${AgentId}/*'
 ```
-
-128MB of RAM and 128 CPU units (0.125 vCPU) is enough. The gateway is I/O bound, not compute bound. It spends most of its time waiting for Bedrock responses.
 
 ## Wrap-up
 

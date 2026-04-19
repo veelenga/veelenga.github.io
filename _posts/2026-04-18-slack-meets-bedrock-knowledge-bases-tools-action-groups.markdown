@@ -224,7 +224,7 @@ What it handles well:
 | Calculations | "Convert these quarterly numbers to annual growth rates" |
 | File transformation | "Extract emails from this CSV and deduplicate" |
 
-The gateway handles the file round-trip: download from Slack, send to Bedrock, receive output files, upload back to Slack. [ark](https://github.com/crystal-autobot/ark) implements this with MIME type validation and size limits on both sides. Part 1 covered the mechanics.
+The gateway handles the file round-trip: download from Slack, send to Bedrock, receive output files, upload back to Slack. [Part 1](/slack-meets-bedrock-building-the-gateway/) covered the mechanics.
 
 ## Writing effective agent instructions
 
