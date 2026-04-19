@@ -1,1 +1,4 @@
 User-agent: *
+Allow: /
+
+Sitemap: https://veelenga.github.io/sitemap.xml
