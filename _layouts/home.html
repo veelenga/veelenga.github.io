@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<section class="hero">
+  <div class="hero__pattern"></div>
+  <div class="hero__dots"></div>
+  <div class="hero__fade"></div>
+  <div class="hero__content">
+    <h1>{{ page.hero_title | default: site.author.name }}</h1>
+    <p class="hero__bio">Building scalable systems and efficient infrastructure</p>
+    <p class="hero__focus">System design · Analytics · DevOps · AI engineering</p>
+
+    <div class="hero__social">
+      <a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener" aria-label="GitHub">{% include icons/github.svg %}</a>
+      <a href="https://twitter.com/{{ site.author.twitter }}" target="_blank" rel="noopener" aria-label="Twitter">{% include icons/twitter.svg %}</a>
+      <a href="mailto:{{ site.author.email }}" aria-label="Email">{% include icons/email.svg %}</a>
+      <a href="https://medium.com/@{{ site.author.medium }}" target="_blank" rel="noopener" aria-label="Medium">{% include icons/medium.svg %}</a>
+      <a href="https://stackoverflow.com/users/{{ site.author.stackoverflow }}" target="_blank" rel="noopener" aria-label="Stack Overflow">{% include icons/stackoverflow.svg %}</a>
+    </div>
+  </div>
+</section>
+
+<script src="/assets/js/hero-grid.js"></script>

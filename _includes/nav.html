@@ -1,0 +1,10 @@
+<nav class="nav">
+  <div class="nav__inner">
+    <a href="/" class="nav__name">{{ site.author.name }}</a>
+    <div class="nav__links">
+      {% for link in site.data.navigation.main %}
+        <a href="{{ link.url }}"{% if page.url == link.url %} class="active"{% endif %}>{{ link.title }}</a>
+      {% endfor %}
+    </div>
+  </div>
+</nav>

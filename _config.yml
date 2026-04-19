@@ -1,221 +1,59 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your entire site, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# `jekyll serve`. If you change this file, please restart the server process.
+title: "Vitalii Elenhaupt"
+name: "Vitalii Elenhaupt"
+description: "Software engineer. Building scalable systems and efficient infrastructure."
+url: "https://veelenga.github.io"
+locale: "en-US"
 
-# Site Settings
-locale                   : "en-US"
-title                    : "Write"
-title_separator          : "-"
-name                     : "@veelenga"
-description              : "Homepage, tech blog and more by @veelenga"
-url                      : "https://veelenga.github.io"
-baseurl                  : # the subpath of your site, e.g. "/blog"
-gh_repo                  :
-teaser                   : # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
-# breadcrumbs            : false # true, false (default)
-words_per_minute         : 80
-comments:
-  provider               : disqus
-  disqus:
-    shortname            : veelenga
-  facebook:
-    # https://developers.facebook.com/docs/plugins/comments
-    appid                :
-    num_posts            : # 5 (default)
-    colorscheme          : # "light" (default), "dark"
+author:
+  name: "Vitalii Elenhaupt"
+  email: velenhaupt@gmail.com
+  twitter: veelenga
+  github: veelenga
+  medium: veelenga
+  stackoverflow: "1586762/vitalii-elenhaupt"
 
-# SEO Related
-google_site_verification : ImaDf_2ZgCxHbiLwVWkoyw4Q4l9ZBSsozPll6JY24vk
-bing_site_verification   :
-alexa_site_verification  :
-yandex_site_verification :
-
-# Social Sharing
-twitter:
-  username               : veelenga
-facebook:
-  username               :
-  app_id                 :
-  publisher              :
-og_image                 : # Open Graph/Twitter default site image
-# For specifying social profiles
-# - https://developers.google.com/structured-data/customize/social-profiles
-social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+# SEO
+google_site_verification: ImaDf_2ZgCxHbiLwVWkoyw4Q4l9ZBSsozPll6JY24vk
 
 # Analytics
-analytics:
-  provider               : "google"
-  google:
-    tracking_id          : "G-K8Z4KZZHG8"
+google_analytics: "G-K8Z4KZZHG8"
 
-# Google AdSense
-google_ad_client         :
-google_ad_slot           :
-
-
-# Site Author
-author:
-  name             : "Vitalii Elenhaupt <br> @veelenga"
-  avatar           : https://s.gravatar.com/avatar/fb7415aea80a8fa64f7427086eedb6ee?s=400
-  bio              : "Passionate about building scalable systems and efficient infrastructure.<br><br>Focused on <b>System Design</b>, <b>Analytics</b>, <b>DevOps</b>, and <b>AI Engineering</b>."
-  location         :
-  email            : velenhaupt@gmail.com
-  uri              :
-  bitbucket        :
-  codepen          :
-  dribbble         :
-  flickr           :
-  facebook         :
-  foursquare       :
-  github           : veelenga
-  google_plus      :
-  keybase          :
-  instagram        :
-  medium           : veelenga
-  lastfm           :
-  linkedin         :
-  pinterest        :
-  soundcloud       :
-  stackoverflow    : 1586762/vitalii-elenhaupt
-  steam            :
-  tumblr           :
-  twitter          : veelenga
-  vine             :
-  weibo            :
-  xing             :
-  youtube          :
-
-
-# Reading Files
-include:
-  - .htaccess
-  - _pages
-exclude:
-  - "*.sublime-project"
-  - "*.sublime-workspace"
-  - .asset-cache
-  - .bundle
-  - .jekyll-assets-cache
-  - .sass-cache
-  - assets/js/plugins
-  - assets/js/_main.js
-  - assets/js/vendor
-  - Capfile
-  - CHANGELOG
-  - config
-  - Gemfile
-  - Gruntfile.js
-  - gulpfile.js
-  - LICENSE
-  - log
-  - node_modules
-  - package.json
-  - Rakefile
-  - README
-  - tmp
-  - vendor
-keep_files:
-  - .git
-  - .svn
-encoding: "utf-8"
-markdown_ext: "markdown,mkdown,mkdn,mkd,md"
-
-
-# Conversion
+# Build
 markdown: kramdown
-#highlighter: rouge
-lsi: false
-excerpt_separator: "\n\n"
-incremental: false
-
-
-# Markdown Processing
 kramdown:
   input: GFM
   hard_wrap: false
   auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  smart_quotes: lsquo,rsquo,ldquo,rdquo
-  enable_coderay: false
+  syntax_highlighter: rouge
+excerpt_separator: "\n\n"
 
-
-# Outputting
+# URLs — must match the old site
 permalink: /:categories/:title/
-timezone: # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 # Plugins
 plugins:
   - jekyll-sitemap
-  - jekyll-gist
   - jekyll-feed
-  - jemoji
 
-# mimic GitHub Pages with --safe
-whitelist:
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jemoji
+# Files
+include:
+  - _pages
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md
 
+# Defaults
 defaults:
-  # _posts
   - scope:
       path: ""
       type: posts
     values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
-  # _pages
+      layout: post
   - scope:
       path: ""
       type: pages
     values:
-      layout: single
-      author_profile: true
-
-  - scope:
-      path: ""
-      type: categories
-    values:
-      layout: single
-      author_profile: true
-
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
-tags:
-  type: liquid
-  path: /tags/
-
-#jekyll-archives:
-   #enabled:
-     #- categories
-     #- tags
-   #layouts:
-     #category: archive-taxonomy
-     #tag: archive-taxonomy
-   #permalinks:
-     #category: /categories/:name/
-     #tag: /tags/:name/
-
-# HTML Compression
-# - http://jch.penibelst.de/
-compress_html:
-  clippings: all
-  ignore:
-    envs: development
+      layout: page

@@ -1,12 +1,11 @@
 ---
 permalink: /projects/
+layout: page
 title: "Projects"
-header:
-  disable: true
-modified: 2025-10-03T12:14:57+02:00
+wide: true
 ---
 
-{% include base_path %}
+<div class="projects-grid">
 
 {% include project_entry
   ref='https://github.com/crystal-autobot/autobot'
@@ -132,3 +131,5 @@ modified: 2025-10-03T12:14:57+02:00
   logo_ref='/images/demo/emacs-ameba.png'
   tech_stack='Emacs Lisp, Crystal'
 %}
+
+</div>

@@ -2,24 +2,14 @@
 layout: default
 ---
 
-{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
-  {% include page__hero.html %}
-{% endif %}
+<main class="archive">
+  {% if page.title %}
+    <header class="archive__header">
+      <h1 class="archive__title">{{ page.title }}</h1>
+    </header>
+  {% endif %}
 
-{% if page.url != "/" and site.breadcrumbs %}
-  {% unless paginator %}
-    {% include breadcrumbs.html %}
-  {% endunless %}
-{% endif %}
-
-<div id="main" role="main">
-  {% include sidebar.html %}
-
-  <div class="archive">
-    {% unless page.header.disable or page.header.overlay_color or page.header.overlay_image%}
-      <h1 class="page__title">{{ page.title }}</h1>
-    {% endunless %}
+  <div class="archive__content">
     {{ content }}
   </div>
-</div>
-
+</main>
