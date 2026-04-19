@@ -2,7 +2,7 @@ name: CI
 
 on:
   pull_request:
-    push:
+  push:
     branches:
       - main
       - master
@@ -16,9 +16,9 @@ jobs:
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
-
-      - name: Install dependencies
-        run: bundle install
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
 
       - name: Build
-        run: jekyll build
+        run: bundle exec jekyll build
