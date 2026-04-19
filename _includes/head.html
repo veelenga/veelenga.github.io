@@ -12,6 +12,9 @@
 <meta property="og:title" content="{{ seo_title }}">
 <meta property="og:description" content="{{ seo_description }}">
 <meta property="og:url" content="{{ canonical_url }}">
+{% assign og_image = page.image | default: "/images/og-preview.png" %}
+{% unless og_image contains "http" %}{% assign og_image = og_image | prepend: site.url %}{% endunless %}
+<meta property="og:image" content="{{ og_image }}">
 {% if page.date %}
   <meta property="og:type" content="article">
   <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
@@ -20,10 +23,11 @@
 {% endif %}
 
 <!-- Twitter -->
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@{{ site.author.twitter }}">
 <meta name="twitter:title" content="{{ seo_title }}">
 <meta name="twitter:description" content="{{ seo_description }}">
+<meta name="twitter:image" content="{{ og_image }}">
 
 <!-- JSON-LD -->
 <script type="application/ld+json">
