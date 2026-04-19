@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+<article class="post">
+  <header class="post__header">
+    <h1 class="post__title">{{ page.title }}</h1>
+    <div class="post__meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time>
+      {% assign words = page.content | strip_html | number_of_words %}
+      {% if words >= 180 %}
+        <span class="post__meta-sep">&middot;</span>
+        <span>{{ words | divided_by: 80 }} min read</span>
+      {% endif %}
+    </div>
+  </header>
+
+  <div class="post__content">
+    {{ content }}
+  </div>
+
+  <nav class="post__nav">
+    {% if page.previous %}
+      <a href="{{ page.previous.url }}" class="post__nav-link post__nav-link--prev">
+        <span class="post__nav-label">&larr; Previous</span>
+        <span class="post__nav-title">{{ page.previous.title }}</span>
+      </a>
+    {% endif %}
+    {% if page.next %}
+      <a href="{{ page.next.url }}" class="post__nav-link post__nav-link--next">
+        <span class="post__nav-label">Next &rarr;</span>
+        <span class="post__nav-title">{{ page.next.title }}</span>
+      </a>
+    {% endif %}
+  </nav>
+</article>

@@ -1,7 +1,6 @@
-node_modules
-dist
-.tmp
-.sass-cache
-_site
-
-.DS_store
+_site/
+.jekyll-cache/
+.sass-cache/
+.bundle/
+vendor/
+.DS_Store
