@@ -256,7 +256,7 @@ img {
   width: 100%;
   max-width: var(--width-content);
   margin: 0 auto;
-  padding: 4rem 1.5rem 4rem;
+  padding: 2.5rem 1.5rem 4rem;
   flex: 1;
 }
 
@@ -287,6 +287,10 @@ img {
 
 .post-list__item:first-child {
   padding-top: 0;
+}
+
+.post-list__item:last-child {
+  border-bottom: none;
 }
 
 .post-list__link {
