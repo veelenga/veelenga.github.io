@@ -264,10 +264,10 @@ for vendor_dir in "$KB_DIR"/*/; do
     vendor=$(basename "$vendor_dir")
     for file in "$vendor_dir"/*.md; do
         filename=$(basename "$file")
-        aws s3 cp "$file" "s3://$BUCKET/$vendor/$filename"
         generate_metadata "$vendor" > "$TMP/${filename}.metadata.json"
         aws s3 cp "$TMP/${filename}.metadata.json" \
             "s3://$BUCKET/$vendor/${filename}.metadata.json"
+        aws s3 cp "$file" "s3://$BUCKET/$vendor/$filename"
     done
 done
 
@@ -277,6 +277,10 @@ aws bedrock-agent start-ingestion-job \
 ```
 
 A few choices in this script are deliberate.
+
+The sidecar is uploaded *before* the document.
+If Bedrock picks up the document first, it gets indexed without a `vendor` tag and the filter silently lets it through to every caller.
+Upload metadata first, and it's always there when the document lands.
 
 The folder name *is* the vendor name.
 Authors never write metadata themselves.
