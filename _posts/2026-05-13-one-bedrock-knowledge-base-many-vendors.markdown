@@ -1,6 +1,6 @@
 ---
 title: "One Bedrock knowledge base, many vendors"
-date: 2026-05-10T10:00:00+02:00
+date: 2026-05-13T10:00:00+02:00
 excerpt: "A knowledge base per vendor is expensive. One shared pile leaks. Metadata-tagged documents with a query-time filter sit in the middle, and that's the pattern that actually scales."
 tags:
   - aws
