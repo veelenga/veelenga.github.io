@@ -11,8 +11,6 @@ tags:
 published: true
 ---
 
-What if users could change how a Crystal program behaves — at runtime, without recompiling, without restarting? Not via a config file, but with actual logic of their own. That's the kind of thing embedded scripting languages are for, and the smallest, most loved one of them is [Lua](https://www.lua.org).
-
 This post walks through how Crystal and Lua run inside the same program and talk to each other, and the small, clever data structure that makes the whole thing work.
 
 The concrete tool we'll use is [lua.cr](https://github.com/veelenga/lua.cr), a Crystal shard I built that wraps the Lua 5.4 C API. No prior knowledge of it is needed — the focus here is on the idea, not the syntax. Once the idea clicks, the code stops looking strange.
