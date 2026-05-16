@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" width="100%" style="max-width:900px;font-family:'SFMono-Regular',Menlo,Consolas,monospace;background:#fafafa;">
+  <defs>
+    <marker id="f1-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4A90E2"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="36" text-anchor="middle" font-size="16" font-weight="600" fill="#222">
+    Frame 1 — Crystal has placed everything on the counter
+  </text>
+
+  <!-- Crystal -->
+  <g transform="translate(30, 70)">
+    <rect x="0" y="0" width="220" height="290" rx="10" fill="#fff" stroke="#cfcfcf" stroke-width="2"/>
+    <text x="110" y="26" text-anchor="middle" font-size="14" font-weight="700" fill="#4A90E2">Crystal</text>
+    <line x1="20" y1="38" x2="200" y2="38" stroke="#eee"/>
+    <g font-size="13" fill="#555">
+      <text x="22" y="68">push fn  sum</text>
+      <text x="22" y="92">push     3</text>
+      <text x="22" y="116">push     5</text>
+      <text x="22" y="140" fill="#bbb">call(nargs=2)</text>
+    </g>
+    <rect x="14" y="102" width="192" height="20" rx="3" fill="#FFE9A8" opacity="0.7"/>
+  </g>
+
+  <!-- Crystal -> Stack arrow -->
+  <g transform="translate(260, 230)">
+    <line x1="0" y1="0" x2="55" y2="0" stroke="#4A90E2" stroke-width="2.5" marker-end="url(#f1-blue)"/>
+    <text x="30" y="-18" text-anchor="middle" font-size="12" font-weight="600" fill="#4A90E2">push</text>
+  </g>
+
+  <!-- Stack -->
+  <g transform="translate(340, 70)">
+    <rect x="0" y="0" width="260" height="290" rx="10" fill="#fff" stroke="#cfcfcf" stroke-width="2"/>
+    <text x="130" y="26" text-anchor="middle" font-size="14" font-weight="700" fill="#666">The Lua stack</text>
+    <text x="130" y="42" text-anchor="middle" font-size="11" fill="#999">(shared exchange counter)</text>
+    <line x1="20" y1="268" x2="240" y2="268" stroke="#dcdcdc" stroke-width="2" stroke-dasharray="4,4"/>
+    <text x="130" y="284" text-anchor="middle" font-size="10" fill="#aaa">bottom of stack</text>
+
+    <g>
+      <rect x="20" y="222" width="220" height="40" rx="6" fill="#7B68EE"/>
+      <text x="36" y="248" fill="#fff" font-size="15" font-weight="600">fn sum</text>
+      <text x="226" y="248" text-anchor="end" fill="#fff" font-size="10" opacity="0.85">TFUNCTION</text>
+    </g>
+    <g>
+      <rect x="20" y="176" width="220" height="40" rx="6" fill="#4A90E2"/>
+      <text x="36" y="202" fill="#fff" font-size="15" font-weight="600">3</text>
+      <text x="226" y="202" text-anchor="end" fill="#fff" font-size="10" opacity="0.85">TNUMBER</text>
+    </g>
+    <g>
+      <rect x="20" y="130" width="220" height="40" rx="6" fill="#4A90E2"/>
+      <text x="36" y="156" fill="#fff" font-size="15" font-weight="600">5</text>
+      <text x="226" y="156" text-anchor="end" fill="#fff" font-size="10" opacity="0.85">TNUMBER</text>
+    </g>
+  </g>
+
+  <!-- Lua idle -->
+  <g transform="translate(680, 70)">
+    <rect x="0" y="0" width="200" height="290" rx="10" fill="#fff" stroke="#cfcfcf" stroke-width="2"/>
+    <text x="100" y="26" text-anchor="middle" font-size="14" font-weight="700" fill="#50C878">Lua</text>
+    <line x1="14" y1="38" x2="186" y2="38" stroke="#eee"/>
+    <g font-size="12" fill="#bbb">
+      <text x="14" y="62">function sum(x, y)</text>
+      <text x="14" y="82">&#160;&#160;return x + y</text>
+      <text x="14" y="102">end</text>
+    </g>
+    <text x="100" y="170" text-anchor="middle" font-size="11" fill="#aaa" font-style="italic">(waiting)</text>
+  </g>
+
+  <text x="450" y="388" text-anchor="middle" font-size="13" fill="#666">
+    The function and its arguments are sitting on the shared stack, top-most last.
+  </text>
+</svg>
