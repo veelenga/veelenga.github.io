@@ -11,19 +11,13 @@ tags:
 published: true
 ---
 
-This post walks through how Crystal and Lua run inside the same program and talk to each other, and the small, clever data structure that makes the whole thing work.
-
-The concrete tool we'll use is [lua.cr](https://github.com/veelenga/lua.cr), a Crystal shard I built that wraps the Lua 5.4 C API. No prior knowledge of it is needed — the focus here is on the idea, not the syntax. Once the idea clicks, the code stops looking strange.
+This post walks through how Crystal and Lua run inside the same program and talk to each other. We'll use [lua.cr](https://github.com/veelenga/lua.cr), a Crystal shard I built that wraps the Lua 5.4 C API. The whole bridge between the two languages comes down to one small data structure: a stack.
 
 ## The Lua stack
 
-Lua isn't really meant to be used on its own. It was designed to be **embedded**, meaning it can be dropped into a host program (in our case a Crystal app) so that the host can be configured, scripted, or extended without recompiling. That's why Lua scripts run inside Redis, inside Neovim, inside World of Warcraft. Same Lua, different hosts.
+Lua is designed to be **embedded** in other programs, so those programs can be scripted or extended at runtime without recompiling. That's why Lua runs inside Redis, Neovim, and World of Warcraft. To make that work, Lua and its host need a way to exchange values, but they can't just share memory: different type systems, different garbage collectors, different ideas of what an object is.
 
-To make that work, Lua needs a way to exchange values with whatever language is hosting it. It can't just share memory: the host and Lua have different type systems, different garbage collectors, different ideas of what an object even is. So Lua picked the simplest thing that could work: **a stack**.
-
-The host puts values on the stack. Lua reads values off the stack. When a function call needs to happen, both sides agree to leave the inputs and outputs on the stack. That's the whole protocol.
-
-Here's what one full round-trip looks like — Crystal calling a Lua function `sum(3, 5)` and getting `8` back:
+So Lua picked the simplest thing that could work: **a stack**. The host puts values on it, Lua reads values off it, and function calls happen by leaving inputs and outputs on it. Here is an example:
 
 ![Calling sum(3, 5) through the Lua stack](/images/lua-cr/stack-animation.svg)
 
