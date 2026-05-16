@@ -1,5 +1,5 @@
 ---
-title: "How two languages talk: the Lua stack explained"
+title: "Crystal meets Lua: how two languages share a stack"
 date: 2026-05-16T10:00:00+02:00
 categories:
 excerpt: A visual walkthrough of how Crystal and Lua work together — and the surprisingly small data structure that quietly makes it all possible.
@@ -11,7 +11,9 @@ tags:
 published: true
 ---
 
-In this post we'll see how Crystal and Lua can run inside the same program and talk to each other.
+What if users could change how a Crystal program behaves — at runtime, without recompiling, without restarting? Not via a config file, but with actual logic of their own. That's the kind of thing embedded scripting languages are for, and the smallest, most loved one of them is [Lua](https://www.lua.org).
+
+This post walks through how Crystal and Lua run inside the same program and talk to each other, and the small, clever data structure that makes the whole thing work.
 
 The concrete tool we'll use is [lua.cr](https://github.com/veelenga/lua.cr), a Crystal shard I built that wraps the Lua 5.4 C API. No prior knowledge of it is needed — the focus here is on the idea, not the syntax. Once the idea clicks, the code stops looking strange.
 
@@ -94,6 +96,18 @@ It's a clever little design once it clicks:
 
 This same trick is used by [Python's C API](https://docs.python.org/3/c-api/), [the JVM's JNI](https://docs.oracle.com/javase/8/docs/technotes/guides/jni/), and basically every "embed a scripting language in my program" story. Lua just makes it especially small and especially obvious.
 
+## But wait — why not just write `sum` in Crystal?
+
+Calling a two-line `sum` function through three pushes and a call is obviously overkill. Nobody embeds Lua to add numbers. The point is what becomes possible once the bridge exists:
+
+- **Configuration that's actually programmable.** Some things are too dynamic for YAML. A trading rule, an alert condition, a routing decision — these are tiny programs. Shipping them as Lua means they can change without recompiling the Crystal binary or even restarting the process.
+- **User-supplied logic.** Game scripting is the classic example. Designers write NPC behavior, quest logic, and UI rules in Lua while the engine itself stays in a fast compiled language. Same pattern in Neovim plugins, WoW addons, and Redis server-side scripts.
+- **Hot reload without redeploys.** Lua chunks can be loaded, replaced, and reloaded at runtime. A long-running Crystal service can pick up new logic without restarting.
+- **Safer extension points.** Lua is small enough to sandbox. A script can compute and decide, but it doesn't get to open arbitrary files or shell out unless the host explicitly hands it those abilities.
+- **A friendlier scripting layer for non-programmers.** Lua is much smaller than Crystal — a few operators, a handful of types, no compile step. People who'd be lost in a systems language can get useful work done in Lua in an afternoon.
+
+The Crystal side keeps doing what Crystal is good at: fast, typed, compiled code. The Lua side does what Lua is good at: small, soft, changeable scripts. The stack is the bridge between them.
+
 ## What this looks like in Crystal
 
 I built [lua.cr](https://github.com/veelenga/lua.cr) as a thin Crystal wrapper around this exact protocol. The class is literally called `Lua::Stack`, and pushing values uses `<<`:
@@ -131,18 +145,6 @@ lua.close
 {% endhighlight %}
 
 `Function#call` does exactly what the animation showed: push the function, push the arguments, ask Lua to call, read the result off the top.
-
-## But wait — why not just write `sum` in Crystal?
-
-Calling a two-line `sum` function through three pushes and a `pcall` is obviously overkill. Nobody embeds Lua to add numbers. The point is what becomes possible once the bridge exists:
-
-- **Configuration that's actually programmable.** Some things are too dynamic for YAML. A trading rule, an alert condition, a routing decision — these are tiny programs. Shipping them as Lua means they can change without recompiling the Crystal binary or even restarting the process.
-- **User-supplied logic.** Game scripting is the classic example. Designers write NPC behavior, quest logic, and UI rules in Lua while the engine itself stays in a fast compiled language. Same pattern in Neovim plugins, WoW addons, and Redis server-side scripts.
-- **Hot reload without redeploys.** Lua chunks can be loaded, replaced, and reloaded at runtime. A long-running Crystal service can pick up new logic without restarting.
-- **Safer extension points.** Lua is small enough to sandbox. A script can compute and decide, but it doesn't get to open arbitrary files or shell out unless the host explicitly hands it those abilities.
-- **A friendlier scripting layer for non-programmers.** Lua is much smaller than Crystal — a few operators, a handful of types, no compile step. People who'd be lost in a systems language can get useful work done in Lua in an afternoon.
-
-The Crystal side keeps doing what Crystal is good at: fast, typed, compiled code. The Lua side does what Lua is good at: small, soft, changeable scripts. The stack is the bridge between them.
 
 ## Wrap-up
 
