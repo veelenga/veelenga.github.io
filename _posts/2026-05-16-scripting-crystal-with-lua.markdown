@@ -33,7 +33,7 @@ Watching the middle column reveals the whole conversation: things appear, the `C
 
 Now let's slow that down and look at each step.
 
-## Step 1. Crystal places things on the counter
+### Step 1. Crystal places things on the counter
 
 ![Crystal has pushed the function and its arguments](/images/lua-cr/frame-1-push.svg)
 
@@ -45,7 +45,7 @@ Crystal wants to call `sum(3, 5)`. To set that up, it does three pushes, in orde
 
 Notice we never said "this is a function call with two arguments." We didn't need to. The shape of the stack already says everything: the bottom-most item is the function, the items above it are the arguments in order, the topmost item is the last argument. No extra "argument count," no struct, no array — the stack itself tells how many things are there and in what order.
 
-## Step 2. The handoff
+### Step 2. The handoff
 
 ![Lua takes the args off and runs](/images/lua-cr/frame-2-call.svg)
 
@@ -63,7 +63,7 @@ end
 
 Lua computes `x + y = 8` and is about to return. But there's only one place where it can leave the result: back on the stack.
 
-## Step 3. The result
+### Step 3. The result
 
 ![Lua left 8 on the stack; Crystal pops it](/images/lua-cr/frame-3-result.svg)
 
