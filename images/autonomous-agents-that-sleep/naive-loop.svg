@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 430" width="100%" style="max-width:900px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:#fafafa;">
+  <defs>
+    <marker id="nl-slate" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 z" fill="#5A6B78"/>
+    </marker>
+    <marker id="nl-red" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 z" fill="#E2574A"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="34" text-anchor="middle" font-size="19" font-weight="700" fill="#2b3640">The obvious build: a loop that runs until the work is done</text>
+
+  <!-- ===== the loop ===== -->
+  <rect x="60" y="66" width="372" height="300" rx="14" fill="#ffffff" stroke="#AEB7Bf" stroke-width="1.6" stroke-dasharray="6 5"/>
+  <text x="80" y="92" font-size="12" font-family="'SFMono-Regular',Menlo,Consolas,monospace" fill="#76828c">while not done:</text>
+
+  <rect x="92" y="104" width="210" height="46" rx="9" fill="#F1F3F5" stroke="#AEB7Bf" stroke-width="1.4"/>
+  <text x="197" y="132" text-anchor="middle" font-size="13" fill="#2b3640">call the model</text>
+
+  <line x1="197" y1="150" x2="197" y2="170" stroke="#5A6B78" stroke-width="2" marker-end="url(#nl-slate)" fill="none"/>
+  <rect x="92" y="172" width="210" height="46" rx="9" fill="#F1F3F5" stroke="#AEB7Bf" stroke-width="1.4"/>
+  <text x="197" y="200" text-anchor="middle" font-size="13" fill="#2b3640">take an action: edit, push</text>
+
+  <line x1="197" y1="218" x2="197" y2="238" stroke="#5A6B78" stroke-width="2" marker-end="url(#nl-slate)" fill="none"/>
+  <rect x="92" y="240" width="210" height="46" rx="9" fill="#F1F3F5" stroke="#AEB7Bf" stroke-width="1.4"/>
+  <text x="197" y="268" text-anchor="middle" font-size="13" fill="#2b3640">CI green? review done?</text>
+
+  <!-- sequential highlight rings -->
+  <g fill="none" stroke="#5A6B78" stroke-width="3">
+    <rect x="87" y="99" width="220" height="56" rx="12">
+      <animate attributeName="opacity" dur="4.4s" repeatCount="indefinite" keyTimes="0;0.22;0.25;0.97;1" values="1;1;0;0;1"/>
+    </rect>
+    <rect x="87" y="167" width="220" height="56" rx="12">
+      <animate attributeName="opacity" dur="4.4s" repeatCount="indefinite" keyTimes="0;0.25;0.27;0.5;0.52;1" values="0;0;1;1;0;0"/>
+    </rect>
+    <rect x="87" y="235" width="220" height="56" rx="12">
+      <animate attributeName="opacity" dur="4.4s" repeatCount="indefinite" keyTimes="0;0.5;0.52;0.75;0.77;1" values="0;0;1;1;0;0"/>
+    </rect>
+  </g>
+
+  <!-- return arrow: flows out of box C, pauses at the clock, then back to the top -->
+  <path d="M302,263 H342" fill="none" stroke="#E2574A" stroke-width="2.4" stroke-dasharray="9 7">
+    <animate attributeName="stroke-dashoffset" from="64" to="0" dur="1.4s" repeatCount="indefinite"/>
+  </path>
+  <path d="M374,263 H400 V127 H304" fill="none" stroke="#E2574A" stroke-width="2.4" stroke-dasharray="9 7" marker-end="url(#nl-red)">
+    <animate attributeName="stroke-dashoffset" from="160" to="0" dur="1.4s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- waiting clock sits on the path (drawn on top so the line never crosses it) -->
+  <g>
+    <circle cx="358" cy="263" r="13" fill="#FBEBE9" stroke="#E2574A" stroke-width="1.6"/>
+    <line x1="358" y1="263" x2="362" y2="266" stroke="#E2574A" stroke-width="1.6"/>
+    <line x1="358" y1="263" x2="358" y2="254" stroke="#E2574A" stroke-width="1.8">
+      <animateTransform attributeName="transform" type="rotate" from="0 358 263" to="360 358 263" dur="2.4s" repeatCount="indefinite"/>
+    </line>
+  </g>
+
+  <text x="362" y="120" text-anchor="middle" font-size="11.5" font-weight="600" fill="#E2574A">still pending → retry</text>
+
+  <!-- budget creeping up while it waits -->
+  <text x="197" y="307" text-anchor="middle" font-size="10.5" fill="#76828c">budget spent while waiting</text>
+  <rect x="110" y="314" width="174" height="9" rx="4" fill="#eceff1" stroke="#d7dde1" stroke-width="1"/>
+  <rect x="110" y="314" width="0" height="9" rx="4" fill="#E2574A">
+    <animate attributeName="width" values="0;174;174" keyTimes="0;0.85;1" dur="4.4s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- ===== three ways it breaks ===== -->
+  <text x="470" y="86" font-size="14" font-weight="700" fill="#E2574A">Three ways it breaks</text>
+
+  <g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif">
+    <rect x="470" y="100" width="388" height="74" rx="10" fill="#ffffff" stroke="#cfd6db" stroke-width="1.3"/>
+    <rect x="470" y="100" width="6" height="74" rx="3" fill="#E2574A"/>
+    <text x="492" y="128" font-size="14.5" font-weight="700" fill="#2b3640">Burns budget</text>
+    <text x="492" y="150" font-size="12" fill="#76828c">It polls a 12-minute build, paying for every spin.</text>
+
+    <rect x="470" y="186" width="388" height="74" rx="10" fill="#ffffff" stroke="#cfd6db" stroke-width="1.3"/>
+    <rect x="470" y="186" width="6" height="74" rx="3" fill="#E2574A"/>
+    <text x="492" y="214" font-size="14.5" font-weight="700" fill="#2b3640">Can't be steered</text>
+    <text x="492" y="236" font-size="12" fill="#76828c">A new instruction waits until the loop checks for it.</text>
+
+    <rect x="470" y="272" width="388" height="74" rx="10" fill="#ffffff" stroke="#cfd6db" stroke-width="1.3"/>
+    <rect x="470" y="272" width="6" height="74" rx="3" fill="#E2574A"/>
+    <text x="492" y="300" font-size="14.5" font-weight="700" fill="#2b3640">A crash is amnesia</text>
+    <text x="492" y="322" font-size="12" fill="#76828c">Progress lives in memory; restart and it's lost.</text>
+  </g>
+
+  <text x="450" y="406" text-anchor="middle" font-size="13.5" fill="#41525E">It demos beautifully, until the agent has to wait for something.</text>
+</svg>

@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 470" width="100%" style="max-width:900px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:#fafafa;">
+  <defs>
+    <marker id="lf-slate" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" refX="9" refY="5.5" orient="auto">
+      <path d="M0,0 L11,5.5 L0,11 z" fill="#5A6B78"/>
+    </marker>
+    <marker id="lf-indigo" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#5B6BB5"/>
+    </marker>
+  </defs>
+
+  <!-- title -->
+  <text x="450" y="36" text-anchor="middle" font-size="19" font-weight="700" fill="#2b3640">One turn, then stop. The world wakes it back up</text>
+
+  <!-- ===== connecting arrows (behind nodes) ===== -->
+  <g stroke="#5A6B78" stroke-width="2" fill="none">
+    <line x1="218" y1="190" x2="262" y2="190" marker-end="url(#lf-slate)"/>
+    <line x1="426" y1="190" x2="470" y2="190" marker-end="url(#lf-slate)"/>
+    <line x1="634" y1="190" x2="678" y2="190" marker-end="url(#lf-slate)"/>
+  </g>
+  <text x="240" y="181" text-anchor="middle" font-size="11" fill="#76828c">emit</text>
+  <text x="448" y="181" text-anchor="middle" font-size="11" fill="#76828c">then</text>
+  <text x="656" y="181" text-anchor="middle" font-size="11" fill="#76828c">idle</text>
+
+  <!-- return arrow: WAKE -> TURN (stops just below the TURN box) -->
+  <path d="M762,256 L762,338 Q762,352 748,352 L152,352 Q138,352 138,338 L138,262"
+        fill="none" stroke="#5B6BB5" stroke-width="2.5" marker-end="url(#lf-indigo)"/>
+  <text x="450" y="346" text-anchor="middle" font-size="12.5" font-weight="600" fill="#5B6BB5">a change wakes the next turn</text>
+
+  <!-- ===== node 1: TURN (agent awake) ===== -->
+  <g>
+    <rect x="62" y="124" width="152" height="132" rx="12" fill="#EAF3FC" stroke="#3D7DBF" stroke-width="1.6"/>
+    <text x="138" y="116" text-anchor="middle" font-size="12" font-weight="700" letter-spacing="1" fill="#3D7DBF">TURN</text>
+    <circle cx="138" cy="158" r="17" fill="#fff" stroke="#3D7DBF" stroke-width="1.6"/>
+    <circle cx="132" cy="156" r="2.4" fill="#3D7DBF"/>
+    <circle cx="144" cy="156" r="2.4" fill="#3D7DBF"/>
+    <path d="M131,164 Q138,169 145,164" fill="none" stroke="#3D7DBF" stroke-width="1.6"/>
+    <text x="138" y="196" text-anchor="middle" font-size="12.5" fill="#2b3640">scope · edit</text>
+    <text x="138" y="214" text-anchor="middle" font-size="12.5" fill="#2b3640">verify · push</text>
+    <text x="138" y="238" text-anchor="middle" font-size="11" fill="#76828c">the agent, working</text>
+  </g>
+
+  <!-- ===== node 2: REPORT (status line) ===== -->
+  <g>
+    <rect x="270" y="124" width="152" height="132" rx="12" fill="#FFF6E0" stroke="#D6A22E" stroke-width="1.6"/>
+    <text x="346" y="116" text-anchor="middle" font-size="12" font-weight="700" letter-spacing="1" fill="#B9871f">REPORT</text>
+    <rect x="288" y="158" width="116" height="46" rx="7" fill="#fff" stroke="#D6A22E" stroke-width="1.3"/>
+    <text x="346" y="178" text-anchor="middle" font-size="10.5" font-family="'SFMono-Regular',Menlo,Consolas,monospace" fill="#8a6a14">AGENT_STATUS:</text>
+    <text x="346" y="194" text-anchor="middle" font-size="10.5" font-family="'SFMono-Regular',Menlo,Consolas,monospace" fill="#8a6a14">{"prs":[…]}</text>
+    <text x="346" y="232" text-anchor="middle" font-size="11" fill="#76828c">one machine-</text>
+    <text x="346" y="246" text-anchor="middle" font-size="11" fill="#76828c">readable line</text>
+  </g>
+
+  <!-- ===== node 3: STOP (asleep) ===== -->
+  <g>
+    <rect x="478" y="124" width="152" height="132" rx="12" fill="#F1F3F5" stroke="#AEB7Bf" stroke-width="1.6"/>
+    <text x="554" y="116" text-anchor="middle" font-size="12" font-weight="700" letter-spacing="1" fill="#8a949c">STOP</text>
+    <circle cx="554" cy="158" r="17" fill="#fff" stroke="#AEB7Bf" stroke-width="1.6"/>
+    <path d="M547,157 q3,-3 6,0" fill="none" stroke="#8a949c" stroke-width="1.6"/>
+    <path d="M555,157 q3,-3 6,0" fill="none" stroke="#8a949c" stroke-width="1.6"/>
+    <path d="M549,165 q5,3 10,0" fill="none" stroke="#8a949c" stroke-width="1.6"/>
+    <g fill="#8a949c" font-style="italic" font-weight="700">
+      <text x="575" y="151" font-size="11">z<animate attributeName="opacity" values="0.25;1;0.25" dur="2.6s" begin="0s" repeatCount="indefinite"/></text>
+      <text x="582" y="143" font-size="13">z<animate attributeName="opacity" values="0.25;1;0.25" dur="2.6s" begin="0.4s" repeatCount="indefinite"/></text>
+      <text x="590" y="134" font-size="15">z<animate attributeName="opacity" values="0.25;1;0.25" dur="2.6s" begin="0.8s" repeatCount="indefinite"/></text>
+    </g>
+    <text x="554" y="202" text-anchor="middle" font-size="12.5" fill="#2b3640">the turn ends</text>
+    <text x="554" y="234" text-anchor="middle" font-size="11" fill="#76828c">no waiting,</text>
+    <text x="554" y="248" text-anchor="middle" font-size="11" fill="#76828c">no polling</text>
+  </g>
+
+  <!-- ===== node 4: WAKE (event) ===== -->
+  <g>
+    <rect x="686" y="124" width="152" height="132" rx="12" fill="#EEEEFB" stroke="#5B6BB5" stroke-width="1.6"/>
+    <text x="762" y="116" text-anchor="middle" font-size="12" font-weight="700" letter-spacing="1" fill="#4a59a3">WAKE</text>
+    <!-- bell icon -->
+    <g stroke="#5B6BB5" stroke-width="1.6" fill="#fff" stroke-linejoin="round">
+      <circle cx="762" cy="141" r="1.6" fill="#5B6BB5" stroke="none"/>
+      <path d="M754,156 C754,145 757,142 762,142 C767,142 770,145 770,156 Z"/>
+      <line x1="751" y1="156" x2="773" y2="156"/>
+    </g>
+    <circle cx="762" cy="159" r="2" fill="#5B6BB5"/>
+    <g font-size="10.5" font-family="'SFMono-Regular',Menlo,Consolas,monospace">
+      <rect x="703" y="170" width="118" height="19" rx="4" fill="#fff" stroke="#5B6BB5" stroke-width="1"/>
+      <text x="762" y="183" text-anchor="middle" fill="#4a59a3">CI failed</text>
+      <rect x="703" y="194" width="118" height="19" rx="4" fill="#fff" stroke="#5B6BB5" stroke-width="1"/>
+      <text x="762" y="207" text-anchor="middle" fill="#4a59a3">review comment</text>
+      <rect x="703" y="218" width="118" height="19" rx="4" fill="#fff" stroke="#5B6BB5" stroke-width="1"/>
+      <text x="762" y="231" text-anchor="middle" fill="#4a59a3">human steps in</text>
+    </g>
+  </g>
+
+  <!-- ===== traveling highlight rings ===== -->
+  <g fill="none" stroke-width="3.5">
+    <rect x="57" y="119" width="162" height="142" rx="15" stroke="#3D7DBF">
+      <animate attributeName="opacity" dur="8s" repeatCount="indefinite"
+        keyTimes="0; 0.23; 0.25; 0.96; 1" values="1; 1; 0; 0; 1"/>
+    </rect>
+    <rect x="265" y="119" width="162" height="142" rx="15" stroke="#D6A22E">
+      <animate attributeName="opacity" dur="8s" repeatCount="indefinite"
+        keyTimes="0; 0.25; 0.27; 0.375; 0.40; 1" values="0; 0; 1; 1; 0; 0"/>
+    </rect>
+    <rect x="473" y="119" width="162" height="142" rx="15" stroke="#8a949c">
+      <animate attributeName="opacity" dur="8s" repeatCount="indefinite"
+        keyTimes="0; 0.375; 0.40; 0.6875; 0.71; 1" values="0; 0; 1; 1; 0; 0"/>
+    </rect>
+    <rect x="681" y="119" width="162" height="142" rx="15" stroke="#5B6BB5">
+      <animate attributeName="opacity" dur="8s" repeatCount="indefinite"
+        keyTimes="0; 0.6875; 0.71; 0.875; 0.90; 1" values="0; 0; 1; 1; 0; 0"/>
+    </rect>
+  </g>
+
+  <!-- "time passes" marker that shows during the STOP window -->
+  <text x="554" y="288" text-anchor="middle" font-size="10.5" fill="#AEB7Bf">
+    time passes…
+    <animate attributeName="opacity" dur="8s" repeatCount="indefinite"
+      keyTimes="0; 0.40; 0.45; 0.66; 0.71; 1" values="0; 0; 1; 1; 0; 0"/>
+  </text>
+
+  <!-- ===== bottom caption ===== -->
+  <text x="450" y="404" text-anchor="middle" font-size="13.5" fill="#41525E">The agent does one turn and stops. A controller <tspan font-style="italic">outside</tspan> it holds the state,</text>
+  <text x="450" y="424" text-anchor="middle" font-size="13.5" fill="#41525E">waits, and starts the next turn only when something actually changes.</text>
+</svg>

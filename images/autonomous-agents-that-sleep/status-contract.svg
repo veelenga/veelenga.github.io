@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 440" width="100%" style="max-width:900px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:#fafafa;">
+  <defs>
+    <marker id="sc-amber" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 z" fill="#D6A22E"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="34" text-anchor="middle" font-size="19" font-weight="700" fill="#2b3640">Two readers, one turn: prose for people, one line for code</text>
+
+  <!-- ===== left: the turn's reply ===== -->
+  <rect x="45" y="70" width="430" height="300" rx="12" fill="#ffffff" stroke="#cfd6db" stroke-width="1.4"/>
+  <text x="64" y="98" font-size="11" font-weight="600" fill="#76828c">THE TURN'S REPLY</text>
+
+  <g font-size="12.5" fill="#41525E">
+    <text x="66" y="126">Scoped it to the backend repo and added</text>
+    <text x="66" y="146">the missing null-check. Tests pass locally.</text>
+    <text x="66" y="166">Opened a draft PR. Link above.</text>
+  </g>
+
+  <rect x="62" y="188" width="396" height="150" rx="8" fill="#FFF6E0" stroke="#D6A22E" stroke-width="1.4"/>
+  <g font-size="12" font-family="'SFMono-Regular',Menlo,Consolas,monospace" fill="#8a6a14">
+    <text x="78" y="214">AGENT_STATUS: {</text>
+    <text x="78" y="236">  "prs": [{ "repo": "backend",</text>
+    <text x="78" y="258">            "url": ".../pull/42" }],</text>
+    <text x="78" y="280">  "note": "opened a draft PR"</text>
+    <text x="78" y="302">}</text>
+  </g>
+  <!-- "parsed" glow on the status line -->
+  <rect x="58" y="184" width="404" height="158" rx="10" fill="none" stroke="#D6A22E" stroke-width="3">
+    <animate attributeName="opacity" dur="5.2s" repeatCount="indefinite" keyTimes="0;0.04;0.18;0.24;1" values="0;0.95;0.95;0;0"/>
+  </rect>
+  <text x="260" y="356" text-anchor="middle" font-size="11.5" font-style="italic" fill="#76828c">the prose is for a human; the last line is for code</text>
+
+  <!-- arrow: read last line -->
+  <path d="M478,212 H548" fill="none" stroke="#D6A22E" stroke-width="2.2" marker-end="url(#sc-amber)"/>
+  <text x="513" y="204" text-anchor="middle" font-size="10.5" fill="#b9871f">read last line</text>
+  <circle r="5" fill="#D6A22E">
+    <animateMotion dur="5.2s" repeatCount="indefinite" path="M478,212 L546,212" keyPoints="0;0;1;1" keyTimes="0;0.2;0.34;1" calcMode="linear"/>
+    <animate attributeName="opacity" dur="5.2s" repeatCount="indefinite" keyTimes="0;0.2;0.21;0.34;0.36;1" values="0;0;1;1;0;0"/>
+  </circle>
+
+  <!-- ===== right: what the orchestrator does ===== -->
+  <text x="560" y="98" font-size="12" font-weight="700" fill="#41525E">WHAT THE CONTROLLER DOES</text>
+
+  <!-- row: prs -->
+  <g>
+    <animate attributeName="opacity" dur="5.2s" repeatCount="indefinite" keyTimes="0;0.36;0.44;1" values="0.5;0.5;1;1"/>
+    <rect x="560" y="138" width="64" height="26" rx="6" fill="#FFF6E0" stroke="#D6A22E" stroke-width="1.2"/>
+    <text x="592" y="156" text-anchor="middle" font-size="11.5" font-family="'SFMono-Regular',Menlo,Consolas,monospace" fill="#8a6a14">prs</text>
+    <text x="640" y="156" font-size="12.5" fill="#2b3640">→ watch PR #42 for CI + reviews</text>
+  </g>
+  <!-- row: note -->
+  <g>
+    <animate attributeName="opacity" dur="5.2s" repeatCount="indefinite" keyTimes="0;0.5;0.58;1" values="0.5;0.5;1;1"/>
+    <rect x="560" y="200" width="64" height="26" rx="6" fill="#FFF6E0" stroke="#D6A22E" stroke-width="1.2"/>
+    <text x="592" y="218" text-anchor="middle" font-size="11.5" font-family="'SFMono-Regular',Menlo,Consolas,monospace" fill="#8a6a14">note</text>
+    <text x="640" y="218" font-size="12.5" fill="#2b3640">→ surface it to a human</text>
+  </g>
+  <!-- row: attention -->
+  <g>
+    <animate attributeName="opacity" dur="5.2s" repeatCount="indefinite" keyTimes="0;0.64;0.72;1" values="0.5;0.5;1;1"/>
+    <rect x="560" y="262" width="92" height="26" rx="6" fill="#FFF6E0" stroke="#D6A22E" stroke-width="1.2"/>
+    <text x="606" y="280" text-anchor="middle" font-size="11.5" font-family="'SFMono-Regular',Menlo,Consolas,monospace" fill="#8a6a14">attention</text>
+    <text x="668" y="274" font-size="12.5" fill="#2b3640">→ only if blocked:</text>
+    <text x="668" y="292" font-size="12.5" fill="#2b3640">ping a human, pause</text>
+  </g>
+
+  <text x="450" y="414" text-anchor="middle" font-size="13.5" fill="#41525E">The agent reports state in a fixed shape, so code drives the loop without ever reading the prose.</text>
+</svg>
