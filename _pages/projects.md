@@ -8,6 +8,15 @@ wide: true
 <div class="projects-grid">
 
 {% include project_entry
+  ref='https://github.com/veelenga/insta360-go-ultra-transfer'
+  name='igut'
+  description='Browse and copy media from Insta360 GO Ultra over WiFi'
+  sup='Unofficial desktop companion for the Insta360 GO Ultra camera. Web gallery with live previews, batch downloads with Finder-style progress, and a CLI. Built on a reverse-engineered WiFi protocol, installable via Homebrew.'
+  logo_ref='/images/demo/igut.png'
+  tech_stack='Python, React, Homebrew'
+%}
+
+{% include project_entry
   ref='https://github.com/crystal-autobot/autobot'
   name='Autobot'
   description='Ultra-lightweight personal AI assistant framework'
