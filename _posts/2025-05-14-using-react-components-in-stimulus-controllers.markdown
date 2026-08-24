@@ -357,3 +357,4 @@ Remember that we don't need to choose between a fully server-rendered approach o
 - [React Documentation](https://reactjs.org/)
 - [react-rails Gem](https://github.com/reactjs/react-rails)
 - [Hotwire Documentation](https://hotwired.dev/)
+- [Modern Rails UX with Hotwire, ViewComponent, Stimulus & Vue Islands](https://www.bairesdev.com/blog/hotwire-rails/)
