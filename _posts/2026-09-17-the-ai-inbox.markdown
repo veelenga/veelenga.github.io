@@ -11,9 +11,7 @@ published: true
 
 We write things down all day: a link to read later, a thought after a meeting, a voice memo on the way home. Writing takes seconds. Organizing takes minutes, so we skip it, and the pile grows until nothing in it can be found.
 
-There's a simple pattern that fixes this. Anyone can write to an inbox, a person or any AI agent, in any shape. Later, on a schedule, an AI agent organizes it all into structured data, by rules we write once.
-
-![ChatGPT, Claude, Grok, a human and any other writer drop rough notes into one inbox. On schedule, an AI agent organizes them one by one into rows of structured data with a type, a title and a project.](/images/the-ai-inbox/inbox.svg)
+There's a simple pattern that fixes this, with an AI agent doing the boring part. But first, let's look at why the pile grows at all.
 
 ## The pile that never gets organized
 
@@ -29,17 +27,21 @@ It isn't a lack of discipline. The two jobs just don't fit into the same moment.
 
 ## Capture now, organize later
 
-So we split them, and hand the slow job to something that doesn't mind doing it. The pattern has three parts, the same three boxes as in the diagram at the top.
+So we split them, and hand the slow job to something that doesn't mind doing it. Anyone can write to an inbox, a person or an AI agent, in any shape. Later, on a schedule, an AI agent organizes it all into structured data, by rules we write once.
+
+![ChatGPT, Claude, Grok, a human and any other writer drop rough notes into one inbox. On schedule, an AI agent organizes them one by one into rows of structured data with a type, a title and a project.](/images/the-ai-inbox/inbox.svg)
+
+The pattern has three parts, one for each box in the diagram.
 
 ### Inbox
 
-Anything goes into one inbox: a line of text, a link, a voice memo, a forwarded email. No title, no tags, no folder. The inbox has a single job, which is not to lose the thought.
+Anything goes into one inbox: a line of text, a link, a voice memo, a forwarded email. No title, no tags, no folder. The inbox has a single job: don't lose the thought.
 
 Because it's that simple, anyone can write to it: ChatGPT, Claude, Grok, a phone shortcut, an email forward, or a person typing a line by hand.
 
 ### Organize
 
-An AI agent runs on a schedule, for example once a night. It reads every new item in the inbox, together with our rules and what's already organized. For each item it:
+An AI agent runs on a schedule, for example once a night. It reads every new item in the inbox, along with our rules and everything already organized. For each item it:
 
 - gives it a clear title and fixes typos, without adding or dropping facts
 - decides what it is and where it belongs
@@ -54,9 +56,15 @@ Organized items become structured data: notes with titles and tags, tasks with d
 
 The inbox item itself is never edited, only marked as done. If the agent gets something wrong, the original is still there.
 
-### Example: Memo
+## Example: Memo
 
-Memo is a pair of [Claude skills](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview) (small instruction files an agent follows) for personal notes in Notion, built on this pattern. The skill that writes to the inbox, `/memo`, gets to be tiny. This is the whole part that saves a note:
+Memo is a setup for personal notes in Notion, built on this pattern. The inbox lives in Notion, and the organizing is done by `memo-organize`, a [Claude skill](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview) (a small instruction file an agent follows) that runs on a schedule.
+
+Writing to the inbox needs no special tool. Any AI chat connected to Notion can do it with a quick prompt:
+
+> Add this to the Memo inbox in Notion.
+
+There's also a `/memo` skill that does the same with fewer words. It's optional, and it's tiny. This is the whole part that saves a note:
 
 {% highlight markdown %}
 ## `/memo <what to keep>`
@@ -69,11 +77,11 @@ One page in **Inbox**:
 Answer with the link, one line. A routine fills in the rest.
 {% endhighlight %}
 
-No project, no tags, no people, no format to follow. A title, a body, and a link back. A person typing a line straight into the Notion inbox does exactly the same job, and the next step can't tell the difference.
+No project, no tags, no people, no format to follow. Just a title, a body, and a link back. The quick prompt, the skill and a person typing straight into Notion all do the same job, and the organizing step can't tell the difference.
 
-That next step is the second skill, `memo-organize`, and it's where all the organizing happens. It picks the project, finds the people behind every spelling of a name, checks each note with a small script, and rewrites the summaries. That takes about sixty lines of rules, against the few lines above. Organizing is the part that grows, and the only part to change when the rules do.
+The real work lives in `memo-organize`. It picks the project, finds the people behind every spelling of a name, checks each note with a small script, and rewrites the summaries. That takes about sixty lines of rules, against the few lines above. Organizing is the part that grows, and the only part to change when the rules do.
 
-### Where it fits
+## Where it fits
 
 The same shape works anywhere things arrive faster than we can organize them:
 
