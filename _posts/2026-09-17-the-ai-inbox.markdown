@@ -1,7 +1,7 @@
 ---
 title: "The AI inbox"
 date: 2026-09-17T08:30:00+02:00
-excerpt: "Writing a note takes seconds, organizing it takes minutes, so the pile grows until nothing in it can be found. A simple pattern fixes it: anyone writes to an inbox, and an AI agent organizes it into structured data later, on schedule."
+excerpt: "Saving things takes seconds, organizing them takes minutes, so the pile grows until nothing in it can be found. A pattern that works for me: anyone writes to an inbox, and an AI agent organizes it into structured data later, on schedule."
 tags:
   - ai
   - agents
@@ -9,13 +9,13 @@ tags:
 published: true
 ---
 
-We write things down all day: a link to read later, a thought after a meeting, a voice memo on the way home. Writing takes seconds. Organizing takes minutes, so we skip it, and the pile grows until nothing in it can be found.
+Things reach us all day: a link to read later, a thought after a meeting, an email that needs a reply, a bug report from a user. Saving them takes seconds. Organizing them takes minutes, so we skip it, and the pile grows until nothing in it can be found.
 
-There's a simple pattern that fixes this, with an AI agent doing the boring part. But first, let's look at why the pile grows at all.
+This post shares a pattern that has worked well for me, with an AI agent doing the organizing. But first, let's look at why the pile grows at all.
 
 ## The pile that never gets organized
 
-Capturing and organizing look like one job, but they want opposite things. Capturing wants speed: the thought is here now and gone in a minute. Organizing wants time and context: which project it belongs to, whether it's a task or a fact, whether we've seen it before.
+Notes are the easiest case to picture, so we'll use them as the example. Capturing and organizing look like one job, but they want opposite things. Capturing wants speed: the thought is here now and gone in a minute. Organizing wants time and context: which project it belongs to, whether it's a task or a fact, whether we've seen it before.
 
 When both have to happen in the same moment, we lose either way.
 
