@@ -1,0 +1,272 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 410" width="100%" style="max-width:900px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:#fafafa;">
+  <defs>
+    <marker id="hr-slate" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" refX="9" refY="5.5" orient="auto">
+      <path d="M0,0 L11,5.5 L0,11 z" fill="#5A6B78"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="36" text-anchor="middle" font-size="19" font-weight="700" fill="#2b3640">Anyone writes to the inbox. AI organizes it.</text>
+
+  <!-- writers -->
+  <text x="68" y="88" text-anchor="middle" font-size="11" fill="#76828c">any writer</text>
+  <g stroke="#5A6B78" stroke-width="1.4" fill="none">
+    <line x1="120" y1="117" x2="144" y2="205"/>
+    <line x1="120" y1="161" x2="144" y2="205"/>
+    <line x1="120" y1="205" x2="144" y2="205"/>
+    <line x1="120" y1="249" x2="144" y2="205"/>
+    <line x1="120" y1="293" x2="144" y2="205"/>
+    <line x1="144" y1="205" x2="186" y2="205" stroke-width="2" marker-end="url(#hr-slate)"/>
+  </g>
+  <text x="163" y="196" text-anchor="middle" font-size="11" fill="#76828c">writes</text>
+  <rect x="16" y="102" width="104" height="30" rx="15" fill="#fff" stroke="#cfd6dc" stroke-width="1.3"/>
+  <path d="M34,110 Q35,116 41,117 Q35,118 34,124 Q33,118 27,117 Q33,116 34,110 Z" fill="#5B6BB5"/>
+  <text x="48" y="121" font-size="12" fill="#2b3640">ChatGPT</text>
+  <rect x="16" y="146" width="104" height="30" rx="15" fill="#fff" stroke="#cfd6dc" stroke-width="1.3"/>
+  <path d="M34,154 Q35,160 41,161 Q35,162 34,168 Q33,162 27,161 Q33,160 34,154 Z" fill="#5B6BB5"/>
+  <text x="48" y="165" font-size="12" fill="#2b3640">Claude</text>
+  <rect x="16" y="190" width="104" height="30" rx="15" fill="#fff" stroke="#cfd6dc" stroke-width="1.3"/>
+  <path d="M34,198 Q35,204 41,205 Q35,206 34,212 Q33,206 27,205 Q33,204 34,198 Z" fill="#5B6BB5"/>
+  <text x="48" y="209" font-size="12" fill="#2b3640">Grok</text>
+  <rect x="16" y="234" width="104" height="30" rx="15" fill="#fff" stroke="#cfd6dc" stroke-width="1.3"/>
+  <g fill="none" stroke="#5A6B78" stroke-width="1.5" stroke-linecap="round"><circle cx="34" cy="245.5" r="3.2"/><path d="M28,256 a6,5.5 0 0 1 12,0"/></g>
+  <text x="48" y="253" font-size="12" fill="#2b3640">Human</text>
+  <rect x="16" y="278" width="104" height="30" rx="15" fill="#fff" stroke="#cfd6dc" stroke-width="1.3"/>
+  <g fill="#5A6B78"><circle cx="28.5" cy="293" r="1.8"/><circle cx="34" cy="293" r="1.8"/><circle cx="39.5" cy="293" r="1.8"/></g>
+  <text x="48" y="297" font-size="12" fill="#2b3640">Any other</text>
+
+  <!-- inbox -->
+  <rect x="190" y="90" width="180" height="230" rx="12" fill="#FFF6E0" stroke="#D6A22E" stroke-width="1.6"/>
+  <text x="280" y="115" text-anchor="middle" font-size="14" font-weight="700" fill="#8a6a14">Inbox</text>
+  <text x="280" y="131" text-anchor="middle" font-size="11" fill="#76828c">anything goes</text>
+
+  <!-- organize -->
+  <line x1="372" y1="205" x2="426" y2="205" stroke="#5A6B78" stroke-width="2" marker-end="url(#hr-slate)"/>
+  <text x="399" y="196" text-anchor="middle" font-size="11" fill="#76828c">raw</text>
+  <rect x="430" y="90" width="140" height="230" rx="12" fill="#EEEEFB" stroke="#5B6BB5" stroke-width="1.6"/>
+  <text x="500" y="115" text-anchor="middle" font-size="14" font-weight="700" fill="#4a59a3">Organize</text>
+  <text x="500" y="131" text-anchor="middle" font-size="11" fill="#76828c">AI agent, on schedule</text>
+  <circle cx="500" cy="196" r="26" fill="#fff" stroke="#5B6BB5" stroke-width="1.8"/>
+  <g stroke="#5B6BB5" stroke-width="1.6" stroke-linecap="round">
+    <line x1="500" y1="173" x2="500" y2="177"/><line x1="523" y1="196" x2="519" y2="196"/>
+    <line x1="500" y1="219" x2="500" y2="215"/><line x1="477" y1="196" x2="481" y2="196"/>
+    <line x1="500" y1="196" x2="491" y2="191"/>
+    <line x1="500" y1="196" x2="500" y2="179">
+      <animateTransform attributeName="transform" type="rotate" dur="14s" repeatCount="indefinite" keyTimes="0;0.2857;0.7;1" values="0 500 196;0 500 196;360 500 196;360 500 196"/>
+    </line>
+  </g>
+  <circle cx="500" cy="196" r="2.2" fill="#5B6BB5"/>
+  <rect x="450" y="248" width="100" height="32" rx="6" fill="#fff" stroke="#5B6BB5" stroke-width="1.2"/>
+  <g stroke="#5B6BB5" stroke-width="1.2" fill="none">
+    <path d="M463,255 L472,255 L476,259 L476,273 L463,273 Z"/>
+    <line x1="466" y1="262" x2="473" y2="262"/><line x1="466" y1="266" x2="473" y2="266"/>
+  </g>
+  <text x="484" y="268" font-size="12" fill="#4a59a3">our rules</text>
+
+  <!-- structured data -->
+  <line x1="572" y1="205" x2="626" y2="205" stroke="#5A6B78" stroke-width="2" marker-end="url(#hr-slate)"/>
+  <text x="599" y="196" text-anchor="middle" font-size="11" fill="#76828c">clean</text>
+  <rect x="630" y="90" width="254" height="230" rx="12" fill="#E8F5EE" stroke="#3E9B6B" stroke-width="1.6"/>
+  <text x="757" y="115" text-anchor="middle" font-size="14" font-weight="700" fill="#2f7d55">Structured data</text>
+  <text x="757" y="131" text-anchor="middle" font-size="11" fill="#76828c">clean, findable</text>
+  <g font-size="10" font-weight="700" fill="#76828c">
+    <text x="662" y="156" text-anchor="middle">type</text>
+    <text x="690" y="156">title</text>
+    <text x="870" y="156" text-anchor="end">project</text>
+  </g>
+  <line x1="642" y1="163" x2="872" y2="163" stroke="#b9dcc8" stroke-width="1"/>
+
+  <!-- highlight rings -->
+  <g fill="none" stroke-width="3.5">
+    <rect x="185" y="85" width="190" height="240" rx="15" stroke="#D6A22E" opacity="0">
+      <animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0;0.0071;0.0214;0.2643;0.2786;1" values="0;0;1;1;0;0"/>
+    </rect>
+    <rect x="425" y="85" width="150" height="240" rx="15" stroke="#5B6BB5" opacity="0">
+      <animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0;0.2786;0.2929;0.7071;0.7214;1" values="0;0;1;1;0;0"/>
+    </rect>
+    <rect x="625" y="85" width="264" height="240" rx="15" stroke="#3E9B6B" opacity="0">
+      <animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0;0.7214;0.7357;0.9214;0.9357;1" values="0;0;1;1;0;0"/>
+    </rect>
+  </g>
+  <g fill="none" stroke-width="2.5">
+    <rect x="12" y="98" width="112" height="38" rx="19" stroke="#5B6BB5" opacity="0">
+      <animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0;0.0143;0.0214;0.0607;0.0679;1" values="0;0;1;1;0;0"/>
+    </rect>
+    <rect x="12" y="142" width="112" height="38" rx="19" stroke="#5B6BB5" opacity="0">
+      <animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0;0.0607;0.0679;0.1071;0.1143;1" values="0;0;1;1;0;0"/>
+    </rect>
+    <rect x="12" y="186" width="112" height="38" rx="19" stroke="#5B6BB5" opacity="0">
+      <animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0;0.1071;0.1143;0.1536;0.1607;1" values="0;0;1;1;0;0"/>
+    </rect>
+    <rect x="12" y="230" width="112" height="38" rx="19" stroke="#5A6B78" opacity="0">
+      <animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0;0.1536;0.1607;0.2;0.2071;1" values="0;0;1;1;0;0"/>
+    </rect>
+    <rect x="12" y="274" width="112" height="38" rx="19" stroke="#5A6B78" opacity="0">
+      <animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0;0.2;0.2071;0.2464;0.2536;1" values="0;0;1;1;0;0"/>
+    </rect>
+  </g>
+
+  <!-- rows -->
+  <g>
+    <animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0;0.3679;0.3893;0.9214;0.95;1" values="0;0;1;1;0;0"/>
+    <animateTransform attributeName="transform" type="translate" dur="14s" repeatCount="indefinite" keyTimes="0;0.3679;0.3893;1" values="-14,0;-14,0;0,0;0,0" calcMode="spline" keySplines="0 0 1 1;.2 .7 .3 1;0 0 1 1"/>
+    <rect x="642" y="170" width="40" height="16" rx="8" fill="#fff" stroke="#3E9B6B" stroke-width="1"/>
+    <text x="662" y="181.5" text-anchor="middle" font-size="10" fill="#2f7d55">link</text>
+    <text x="690" y="182" font-size="11" fill="#2b3640">Postgres index guide</text>
+    <text x="870" y="182" text-anchor="end" font-size="10.5" fill="#76828c">reading</text>
+  </g>
+  <g>
+    <animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0;0.4464;0.4679;0.9214;0.95;1" values="0;0;1;1;0;0"/>
+    <animateTransform attributeName="transform" type="translate" dur="14s" repeatCount="indefinite" keyTimes="0;0.4464;0.4679;1" values="-14,0;-14,0;0,0;0,0" calcMode="spline" keySplines="0 0 1 1;.2 .7 .3 1;0 0 1 1"/>
+    <rect x="642" y="194" width="40" height="16" rx="8" fill="#fff" stroke="#3E9B6B" stroke-width="1"/>
+    <text x="662" y="205.5" text-anchor="middle" font-size="10" fill="#2f7d55">task</text>
+    <text x="690" y="206" font-size="11" fill="#2b3640">Book bike service</text>
+    <text x="870" y="206" text-anchor="end" font-size="10.5" fill="#76828c">training</text>
+  </g>
+  <g>
+    <animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0;0.525;0.5464;0.9214;0.95;1" values="0;0;1;1;0;0"/>
+    <animateTransform attributeName="transform" type="translate" dur="14s" repeatCount="indefinite" keyTimes="0;0.525;0.5464;1" values="-14,0;-14,0;0,0;0,0" calcMode="spline" keySplines="0 0 1 1;.2 .7 .3 1;0 0 1 1"/>
+    <rect x="642" y="218" width="40" height="16" rx="8" fill="#fff" stroke="#3E9B6B" stroke-width="1"/>
+    <text x="662" y="229.5" text-anchor="middle" font-size="10" fill="#2f7d55">note</text>
+    <text x="690" y="230" font-size="11" fill="#2b3640">Budget call with Anna</text>
+    <text x="870" y="230" text-anchor="end" font-size="10.5" fill="#76828c">Q4 plan</text>
+  </g>
+  <g>
+    <animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0;0.5393;0.5607;0.9214;0.95;1" values="0;0;1;1;0;0"/>
+    <animateTransform attributeName="transform" type="translate" dur="14s" repeatCount="indefinite" keyTimes="0;0.5393;0.5607;1" values="-14,0;-14,0;0,0;0,0" calcMode="spline" keySplines="0 0 1 1;.2 .7 .3 1;0 0 1 1"/>
+    <rect x="642" y="242" width="40" height="16" rx="8" fill="#fff" stroke="#3E9B6B" stroke-width="1"/>
+    <text x="662" y="253.5" text-anchor="middle" font-size="10" fill="#2f7d55">task</text>
+    <text x="690" y="254" font-size="11" fill="#2b3640">Send numbers by Fri</text>
+    <text x="870" y="254" text-anchor="end" font-size="10.5" fill="#76828c">Q4 plan</text>
+  </g>
+  <g>
+    <animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0;0.6036;0.625;0.9214;0.95;1" values="0;0;1;1;0;0"/>
+    <animateTransform attributeName="transform" type="translate" dur="14s" repeatCount="indefinite" keyTimes="0;0.6036;0.625;1" values="-14,0;-14,0;0,0;0,0" calcMode="spline" keySplines="0 0 1 1;.2 .7 .3 1;0 0 1 1"/>
+    <rect x="642" y="266" width="40" height="16" rx="8" fill="#fff" stroke="#3E9B6B" stroke-width="1"/>
+    <text x="662" y="277.5" text-anchor="middle" font-size="10" fill="#2f7d55">idea</text>
+    <text x="690" y="278" font-size="11" fill="#2b3640">Dark mode for the app</text>
+    <text x="870" y="278" text-anchor="end" font-size="10.5" fill="#76828c">app</text>
+  </g>
+  <g>
+    <animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0;0.6821;0.7036;0.9214;0.95;1" values="0;0;1;1;0;0"/>
+    <animateTransform attributeName="transform" type="translate" dur="14s" repeatCount="indefinite" keyTimes="0;0.6821;0.7036;1" values="-14,0;-14,0;0,0;0,0" calcMode="spline" keySplines="0 0 1 1;.2 .7 .3 1;0 0 1 1"/>
+    <rect x="642" y="290" width="40" height="16" rx="8" fill="#fff" stroke="#3E9B6B" stroke-width="1"/>
+    <text x="662" y="301.5" text-anchor="middle" font-size="10" fill="#2f7d55">note</text>
+    <text x="690" y="302" font-size="11" fill="#2b3640">Sprint decisions</text>
+    <text x="870" y="302" text-anchor="end" font-size="10.5" fill="#76828c">team</text>
+  </g>
+
+  <!-- clean items travelling to structured data -->
+  <circle cx="578" cy="205" r="4.5" fill="#5B6BB5" opacity="0">
+    <animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0;0.35;0.3536;0.3714;0.375;1" values="0;0;1;1;0;0"/>
+    <animateTransform attributeName="transform" type="translate" dur="14s" repeatCount="indefinite" keyTimes="0;0.35;0.375;1" values="0,0;0,0;42,0;42,0"/>
+  </circle>
+  <circle cx="578" cy="205" r="4.5" fill="#5B6BB5" opacity="0">
+    <animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0;0.4286;0.4321;0.45;0.4536;1" values="0;0;1;1;0;0"/>
+    <animateTransform attributeName="transform" type="translate" dur="14s" repeatCount="indefinite" keyTimes="0;0.4286;0.4536;1" values="0,0;0,0;42,0;42,0"/>
+  </circle>
+  <circle cx="578" cy="205" r="4.5" fill="#5B6BB5" opacity="0">
+    <animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0;0.5071;0.5107;0.5286;0.5321;1" values="0;0;1;1;0;0"/>
+    <animateTransform attributeName="transform" type="translate" dur="14s" repeatCount="indefinite" keyTimes="0;0.5071;0.5321;1" values="0,0;0,0;42,0;42,0"/>
+  </circle>
+  <circle cx="578" cy="205" r="4.5" fill="#5B6BB5" opacity="0">
+    <animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0;0.5857;0.5893;0.6071;0.6107;1" values="0;0;1;1;0;0"/>
+    <animateTransform attributeName="transform" type="translate" dur="14s" repeatCount="indefinite" keyTimes="0;0.5857;0.6107;1" values="0,0;0,0;42,0;42,0"/>
+  </circle>
+  <circle cx="578" cy="205" r="4.5" fill="#5B6BB5" opacity="0">
+    <animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0;0.6643;0.6679;0.6857;0.6893;1" values="0;0;1;1;0;0"/>
+    <animateTransform attributeName="transform" type="translate" dur="14s" repeatCount="indefinite" keyTimes="0;0.6643;0.6893;1" values="0,0;0,0;42,0;42,0"/>
+  </circle>
+
+  <!-- scraps: written into the inbox, then organized -->
+  <g transform="translate(236,184)">
+    <g>
+      <animateTransform attributeName="transform" type="translate" dur="14s" repeatCount="indefinite" keyTimes="0;0.0214;0.0607;0.4643;0.5071;1" values="-116,-67;-116,-67;0,0;0,0;264,12;264,12" calcMode="spline" keySplines="0 0 1 1;.2 .7 .3 1;0 0 1 1;.45 0 .55 1;0 0 1 1"/>
+      <animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0;0.0214;0.0321;0.4857;0.5071;1" values="0;0;1;1;0;0"/>
+      <g>
+        <animateTransform attributeName="transform" type="scale" dur="14s" repeatCount="indefinite" keyTimes="0;0.0214;0.0607;0.4643;0.5071;1" values="0.4;0.4;1;1;0.35;0.35" calcMode="spline" keySplines="0 0 1 1;.2 .7 .3 1;0 0 1 1;.7 0 1 .7;0 0 1 1"/>
+        <g transform="rotate(-3)">
+          <rect x="-39" y="-17" width="78" height="34" rx="3" fill="#FFFCF2" stroke="#D6A22E" stroke-width="1.2"/>
+          <rect x="-9" y="-20.5" width="18" height="6" fill="#F3DFA8"/>
+          <g font-size="9" font-family="'SFMono-Regular',Menlo,Consolas,monospace" fill="#6b5310" text-anchor="middle">
+            <text y="-2">call anna</text><text y="10">re budget</text>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(324,184)">
+    <g>
+      <animateTransform attributeName="transform" type="translate" dur="14s" repeatCount="indefinite" keyTimes="0;0.0679;0.1071;0.3071;0.35;1" values="-204,-23;-204,-23;0,0;0,0;176,12;176,12" calcMode="spline" keySplines="0 0 1 1;.2 .7 .3 1;0 0 1 1;.45 0 .55 1;0 0 1 1"/>
+      <animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0;0.0679;0.0786;0.3286;0.35;1" values="0;0;1;1;0;0"/>
+      <g>
+        <animateTransform attributeName="transform" type="scale" dur="14s" repeatCount="indefinite" keyTimes="0;0.0679;0.1071;0.3071;0.35;1" values="0.4;0.4;1;1;0.35;0.35" calcMode="spline" keySplines="0 0 1 1;.2 .7 .3 1;0 0 1 1;.7 0 1 .7;0 0 1 1"/>
+        <g transform="rotate(3)">
+          <rect x="-39" y="-17" width="78" height="34" rx="3" fill="#FFFCF2" stroke="#D6A22E" stroke-width="1.2"/>
+          <rect x="-9" y="-20.5" width="18" height="6" fill="#F3DFA8"/>
+          <g font-size="9" font-family="'SFMono-Regular',Menlo,Consolas,monospace" fill="#6b5310" text-anchor="middle">
+            <text y="-2">https://…</text><text y="10">/p/8123</text>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(236,228)">
+    <g>
+      <animateTransform attributeName="transform" type="translate" dur="14s" repeatCount="indefinite" keyTimes="0;0.1143;0.1536;0.5429;0.5857;1" values="-116,-23;-116,-23;0,0;0,0;264,-32;264,-32" calcMode="spline" keySplines="0 0 1 1;.2 .7 .3 1;0 0 1 1;.45 0 .55 1;0 0 1 1"/>
+      <animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0;0.1143;0.125;0.5643;0.5857;1" values="0;0;1;1;0;0"/>
+      <g>
+        <animateTransform attributeName="transform" type="scale" dur="14s" repeatCount="indefinite" keyTimes="0;0.1143;0.1536;0.5429;0.5857;1" values="0.4;0.4;1;1;0.35;0.35" calcMode="spline" keySplines="0 0 1 1;.2 .7 .3 1;0 0 1 1;.7 0 1 .7;0 0 1 1"/>
+        <g transform="rotate(2)">
+          <rect x="-39" y="-17" width="78" height="34" rx="3" fill="#FFFCF2" stroke="#D6A22E" stroke-width="1.2"/>
+          <rect x="-9" y="-20.5" width="18" height="6" fill="#F3DFA8"/>
+          <g font-size="9" font-family="'SFMono-Regular',Menlo,Consolas,monospace" fill="#6b5310" text-anchor="middle">
+            <text y="-2">idea:</text><text y="10">dark mode?</text>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(324,228)">
+    <g>
+      <animateTransform attributeName="transform" type="translate" dur="14s" repeatCount="indefinite" keyTimes="0;0.1607;0.2;0.3857;0.4286;1" values="-204,21;-204,21;0,0;0,0;176,-32;176,-32" calcMode="spline" keySplines="0 0 1 1;.2 .7 .3 1;0 0 1 1;.45 0 .55 1;0 0 1 1"/>
+      <animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0;0.1607;0.1714;0.4071;0.4286;1" values="0;0;1;1;0;0"/>
+      <g>
+        <animateTransform attributeName="transform" type="scale" dur="14s" repeatCount="indefinite" keyTimes="0;0.1607;0.2;0.3857;0.4286;1" values="0.4;0.4;1;1;0.35;0.35" calcMode="spline" keySplines="0 0 1 1;.2 .7 .3 1;0 0 1 1;.7 0 1 .7;0 0 1 1"/>
+        <g transform="rotate(-2)">
+          <rect x="-39" y="-17" width="78" height="34" rx="3" fill="#FFFCF2" stroke="#D6A22E" stroke-width="1.2"/>
+          <rect x="-9" y="-20.5" width="18" height="6" fill="#F3DFA8"/>
+          <g font-size="9" font-family="'SFMono-Regular',Menlo,Consolas,monospace" fill="#6b5310" text-anchor="middle">
+            <text y="-2">book bike</text><text y="10">service!!</text>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(236,272)">
+    <g>
+      <animateTransform attributeName="transform" type="translate" dur="14s" repeatCount="indefinite" keyTimes="0;0.2071;0.2464;0.6214;0.6643;1" values="-116,21;-116,21;0,0;0,0;264,-76;264,-76" calcMode="spline" keySplines="0 0 1 1;.2 .7 .3 1;0 0 1 1;.45 0 .55 1;0 0 1 1"/>
+      <animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0;0.2071;0.2179;0.6429;0.6643;1" values="0;0;1;1;0;0"/>
+      <g>
+        <animateTransform attributeName="transform" type="scale" dur="14s" repeatCount="indefinite" keyTimes="0;0.2071;0.2464;0.6214;0.6643;1" values="0.4;0.4;1;1;0.35;0.35" calcMode="spline" keySplines="0 0 1 1;.2 .7 .3 1;0 0 1 1;.7 0 1 .7;0 0 1 1"/>
+        <g transform="rotate(3)">
+          <rect x="-39" y="-17" width="78" height="34" rx="3" fill="#FFFCF2" stroke="#D6A22E" stroke-width="1.2"/>
+          <rect x="-9" y="-20.5" width="18" height="6" fill="#F3DFA8"/>
+          <g font-size="9" font-family="'SFMono-Regular',Menlo,Consolas,monospace" fill="#6b5310" text-anchor="middle">
+            <text y="-2">meeting</text><text y="10">notes.txt</text>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- inbox is empty again -->
+  <g opacity="0">
+    <animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0;0.6857;0.7071;0.9214;0.9429;1" values="0;0;1;1;0;0"/>
+    <circle cx="234" cy="228" r="10" fill="#3E9B6B"/>
+    <path d="M229.5,228 L232.5,231 L238.5,224.5" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="251" y="233" font-size="13" font-weight="700" fill="#2f7d55">all organized</text>
+  </g>
+
+  <text x="450" y="366" text-anchor="middle" font-size="13.5" fill="#41525E">People and AI agents drop things into the inbox, in any shape. On schedule,</text>
+  <text x="450" y="386" text-anchor="middle" font-size="13.5" fill="#41525E">an AI agent organizes them into structured data by rules we wrote once.</text>
+</svg>
