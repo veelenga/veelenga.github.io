@@ -60,7 +60,7 @@ The original inbox item is never edited, only marked as done. If the agent gets 
 
 ## Example: Memo
 
-Memo is my setup for personal notes in Notion, built on this pattern. The inbox is in Notion. The organizing is done by `memo-organize`, a [skill](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview) (a small instruction file an agent follows) that runs on a schedule.
+Memo is my setup for personal notes in Notion, built on this pattern. The inbox is in Notion. The organizing is done by `memo-organize`, a skill (a small instruction file an agent follows) that runs on a schedule.
 
 Saving to the inbox needs no special tool. Any AI chat connected to Notion can do it with a quick prompt:
 
