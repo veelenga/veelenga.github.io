@@ -8,6 +8,24 @@ wide: true
 <div class="projects-grid">
 
 {% include project_entry
+  ref='https://whatmakesittick.github.io/uk/'
+  name='What Makes It Tick'
+  description='Interactive 3D explainers of how things work'
+  sup='Each explainer takes a machine or a natural phenomenon apart, slows it down and lets the reader turn it around while the text walks through how it works. Engines, microscopes, gliders, oil rigs and more, in eight languages.'
+  logo_ref='/images/demo/whatmakesittick.png'
+  tech_stack='TypeScript, Three.js, 3D'
+%}
+
+{% include project_entry
+  ref='https://github.com/veelenga/strava-wind-overlay'
+  name='Strava Wind Overlay'
+  description='Windy-style wind layer on Strava maps'
+  sup='A Chrome extension that draws animated wind particles and a speed colour fill over Strava maps. A forecast timeline shows hourly wind, gusts and direction up to 6 days ahead, so a ride can be planned for the best conditions.'
+  logo_ref='/images/demo/strava-wind-overlay.png'
+  tech_stack='TypeScript, Chrome Extension'
+%}
+
+{% include project_entry
   ref='https://github.com/veelenga/insta360-go-ultra-transfer'
   name='igut'
   description='Browse and copy media from Insta360 GO Ultra over WiFi'
