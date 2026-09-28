@@ -22,7 +22,7 @@ wide: true
   description='Windy-style wind layer on Strava maps'
   sup='A Chrome extension that draws animated wind particles and a speed colour fill over Strava maps. A forecast timeline shows hourly wind, gusts and direction up to 6 days ahead, so a ride can be planned for the best conditions.'
   logo_ref='/images/demo/strava-wind-overlay.png'
-  tech_stack='TypeScript, Chrome Extension, Open-Meteo'
+  tech_stack='TypeScript, Chrome Extension'
 %}
 
 {% include project_entry
