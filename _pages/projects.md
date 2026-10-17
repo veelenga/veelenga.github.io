@@ -8,6 +8,15 @@ wide: true
 <div class="projects-grid">
 
 {% include project_entry
+  ref='https://veelenga.github.io/literkowo/'
+  name='Literkowo'
+  description='A typing adventure for kids in a blocky 3D world'
+  sup='A free browser game where children learn to touch type in Polish or English by beating word monsters. One new key per level, tricky enemies and bosses, an arena, a shop with pets and hats, and music generated live. No ads and no account.'
+  logo_ref='/images/demo/literkowo.jpg'
+  tech_stack='TypeScript, Three.js, Web Audio'
+%}
+
+{% include project_entry
   ref='https://whatmakesittick.github.io/uk/'
   name='What Makes It Tick'
   description='Interactive 3D explainers of how things work'
