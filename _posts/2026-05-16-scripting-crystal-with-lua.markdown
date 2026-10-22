@@ -9,7 +9,7 @@ tags:
 published: true
 ---
 
-This post walks through how Crystal and Lua run inside the same program and talk to each other. We'll use [lua.cr](https://github.com/veelenga/lua.cr), a Crystal shard I built that wraps the Lua 5.4 C API. The whole bridge between the two languages comes down to one small data structure: a stack.
+This post walks through how Crystal and Lua run inside the same program and talk to each other. We'll use [lua.cr](https://github.com/veelenga/lua.cr), a [Crystal shard](/make-your-own-shard-in-crystal-language/) I built that wraps the Lua 5.4 C API. The whole bridge between the two languages comes down to one small data structure: a stack.
 
 ## The Lua stack
 

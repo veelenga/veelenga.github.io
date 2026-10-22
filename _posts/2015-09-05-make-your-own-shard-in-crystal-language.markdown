@@ -308,3 +308,5 @@ Source code for this shard can be found [on Github](http://github.com/veelenga/h
 
 ### Available Shards
 The best place to learn how to create a new shard is to look at the existed ones. The list of all available shards you may find at [Crystalshards](http://crystalshards.xyz/) and the most popular and useful projects are at [Awesome Crystal](https://github.com/veelenga/awesome-crystal).
+
+For more on the language itself, there are posts on the [observer pattern](/observer-design-pattern-in-crystal-language/), the [tap and itself methods](/tap-and-itself-methods-in-crystal/) and [benchmarking](/benchmarking-in-crystal/) in Crystal.

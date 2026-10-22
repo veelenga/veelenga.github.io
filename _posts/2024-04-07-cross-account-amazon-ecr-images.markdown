@@ -50,6 +50,8 @@ Resources:
               - ecr:BatchCheckLayerAvailability
 ```
 
+S3 uses the same pattern for [cross-account bucket replication](/aws-s3-replication/), where the destination bucket policy lets a role from the source account write to it.
+
 ## Lambda function resource-based policy
 
 If you need to pull the ECR to production account to deploy the Lambda function, you can use the following policy:

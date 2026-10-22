@@ -127,6 +127,8 @@ The magic happens in the coordination: the form submits asynchronously via fetch
 
 This pattern eliminates the jarring experience of traditional form submissions while maintaining Rails' server-side processing model. Users can type and send messages in rapid succession, creating the fluid experience expected in modern chat applications.
 
+When a page needs a richer widget than plain HTML can offer, a Stimulus controller can also [mount an existing React component](/using-react-components-in-stimulus-controllers/).
+
 ## WebSocket infrastructure with Action Cable
 
 Action Cable provides the real-time communication layer with minimal configuration. The channel setup includes authorization logic to ensure users only access conversations they're permitted to see, and connection management handles authentication seamlessly.

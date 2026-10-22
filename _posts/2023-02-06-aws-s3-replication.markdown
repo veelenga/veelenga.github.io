@@ -86,7 +86,7 @@ In the snippet below we create IAM policy with the following statements:
 This is obviously needed to read the replication configuration and list the bucket in order to replicate it somewhere.
 
 2. Allow performing `s3:GetObjectVersion` and `s3:GetObjectVersionAcl`.
-Replication requires versioning to be enabled.
+Replication requires versioning to be enabled, the same setting that [MFA delete](/configuring-mfa-delete-on-s3-bucket/) builds on.
 
 3. Allow performing `s3:ReplicateObject` and `s3:ReplicateDelete` on `DestinationBucket`.
 Obviously, `SourceBucket` must be allowed to create and delete objects during replication on `DestinationBucket`.

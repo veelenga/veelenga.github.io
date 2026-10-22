@@ -65,6 +65,8 @@ Instead of polling every second to check for due jobs, the cron service calculat
 
 When the timer fires, it finds all due jobs, executes them, saves state, and re-arms for the next batch. A background fiber also checks the store file every 60 seconds for external modifications, like jobs added via CLI while the gateway is running.
 
+A related post applies the same idea to the agent itself: [autonomous agents that sleep](/autonomous-agents-that-sleep/) between short turns instead of looping while they wait.
+
 ## Where cron meets the agent loop
 
 This is where the design gets interesting. When a cron job fires, it doesn't call the LLM directly. It publishes a message to the same bus that chat channels use, with a special `cron:` prefix in the sender ID. The agent loop detects this prefix and routes it to a specialized handler.

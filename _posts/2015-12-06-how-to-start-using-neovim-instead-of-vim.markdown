@@ -52,6 +52,8 @@ If something fails, you will need to temporary disable it (unload a plugin or co
 
 A full set of differences between Vim and Neovim features you can find [here](https://neovim.io/doc/user/vim_diff.html#vim-differences).
 
+Plugins come along with the configuration, so a setup like [Unite.vim](/editors/getting-started-with-unite-vim/) keeps working in Neovim as is.
+
 ## Python support
 
 If you want support for Python plugins such as [YouCompleteMe](https://github.com/Valloric/YouCompleteMe),

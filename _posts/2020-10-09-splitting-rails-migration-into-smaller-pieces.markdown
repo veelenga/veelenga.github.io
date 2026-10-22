@@ -100,6 +100,8 @@ We know we need to add a reference to the `payments` table and it will take a lo
 the production database because of the table size. However, as we can see we can split this
 migration into three parts, which are backward compatible and safely can be run as
 [Online DDL](https://dev.mysql.com/doc/refman/8.0/en/innodb-online-ddl.html) without downtime.
+Avoiding locks matters a lot on a live server, where even two concurrent inserts can
+[end in a deadlock](/how-mysql-gap-lock-leads-to-deadlock/).
 
 Obviously, each query will take less time than running all of them. So our plan could
 be to run each SQL query manually as a non-blocking step on the live server. Often the migration

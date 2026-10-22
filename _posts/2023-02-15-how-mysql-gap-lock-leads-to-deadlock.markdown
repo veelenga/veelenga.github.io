@@ -42,6 +42,8 @@ The following `products` table has only two columns:
 * `id` column: A bigint(20) data type column which is the primary key of the table, with auto-increment enabled.
 * `code` column: A varchar(255) data type column which is set to not allow null values and has a unique constraint. This column is used to store the code of the product and ensures that each product code is unique.
 
+On a big existing table, adding such a unique index is a slow migration of its own, and a related post shows how to [split it into smaller pieces](/splitting-rails-migration-into-smaller-pieces/).
+
 ## Concurrent inserts and gap lock
 
 Gap locks can result in a situation called a gap lock wait, where one transaction waits for another transaction holding a gap lock to release it.

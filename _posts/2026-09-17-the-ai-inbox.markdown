@@ -98,6 +98,8 @@ The same idea works anywhere things arrive faster than we can organize them:
 | Bug reports and feedback | Labeled issues with duplicates merged |
 | Agent chat logs | What the agent should remember about the user |
 
+Notes from the [learning loop](/the-learning-loop/) fit too: rough thoughts from practice go in, and organized notes come out when it's time to share them.
+
 ## Why this works
 
 - **Saving is effortless.** There's nothing to decide in the moment, so fewer thoughts get lost.

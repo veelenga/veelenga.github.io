@@ -94,6 +94,9 @@ class SaveRequest < ApplicationRecord
 end
 ```
 
+Each version already points to the record it tracks through a polymorphic `item` association,
+which has its own quirks when [joining polymorphic associations](/joining-polymorphic-associations/).
+
 At this point we have a relationship between the save request and the versions, but how do we actually
 associate these records properly? The solution is not really straightforward and depends on the
 [PaperTrail's metadata](https://github.com/paper-trail-gem/paper_trail/blob/a2bf2ffc9ccbfb5e28a395da0953104af2b006e5/README.md#metadata-from-controllers)

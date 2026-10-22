@@ -201,6 +201,8 @@ const response = await client.invokeAgent({
 });
 ```
 
+A related post walks through [putting this agent behind a Slack bot](/slack-meets-bedrock-building-the-gateway/), where each Slack thread maps to one `sessionId`.
+
 ## Updating the Agent
 
 To change the agent's behavior, update the `Instruction` field in the template and redeploy:

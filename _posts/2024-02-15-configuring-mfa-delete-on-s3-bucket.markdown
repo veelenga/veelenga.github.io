@@ -60,3 +60,5 @@ aws s3api put-bucket-versioning --bucket my_unique_bucket \
 In this example, `my_unique_bucket` is the name of the S3 bucket, `arn:aws:iam::1231234322:mfa/GoogleAuthenticator` represents the ARN of the authenticator app associated with the IAM user, and `352818` is the generated PIN for MFA authentication.
 
 By executing this command, we enable versioning and MFA delete for the specified S3 bucket, ensuring an added layer of security to prevent unauthorized deletions of objects. This streamlined approach via the AWS CLI simplifies the process of configuring MFA delete, enhancing the protection of your data stored in Amazon S3.
+
+The same versioning also powers [cross-account S3 replication](/aws-s3-replication/), which keeps a second copy of the data in another account.

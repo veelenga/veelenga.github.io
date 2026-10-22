@@ -30,6 +30,8 @@ end
 So the payment can belong to multiple type of models marked as `subject` and to distinguish 
 them by `subject_id` and `subject_type` columns at the database level. In our simple example,
 we have two different entities who can create multiple payments: User and Artist.
+PaperTrail uses the same trick for its `versions` table: each version belongs to the record it tracks.
+A related post shows how to [group those versions by request](/tracking-paper-trail-versions/).
 
 <img src='/images/joining-polymorphic-associations/schema.png' alt='db-schema'>
 

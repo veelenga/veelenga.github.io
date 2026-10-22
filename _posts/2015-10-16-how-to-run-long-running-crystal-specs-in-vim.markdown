@@ -25,4 +25,5 @@ Here is an example of running specs in Crystal sources:
 </figure>
 
 And if you want to run long specs for your Crystal project with standard structure, just type `:Dispatch crystal spec`.
+Neovim also runs jobs in the background out of the box, and a related post shows [how to switch to it from Vim](/editors/how-to-start-using-neovim-instead-of-vim/).
 Cheers!

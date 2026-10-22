@@ -62,6 +62,8 @@ In practice the rule lives in the agent's own instructions, in plain words:
 
 A good teammate works the same way. They don't stand around watching a progress bar fill; they push the change, say "I'll pick it back up when CI's done," and move on to something else. A notification brings them back. The agent's notification is an event landing at the controller, which starts a fresh turn. The build it was "waiting" for cost nothing, because nobody was waiting.
 
+Autobot uses a similar trick for scheduled work, where [a cron job is just another message](/how-agent-loop-and-cron-work-together-inside-autobot/) that wakes the agent loop.
+
 ## How a turn says what happened
 
 If a turn just ends, the controller needs to know what it accomplished and what to watch next. Reading the agent's prose reply and guessing is fragile. So every turn ends with one machine-readable line: a small, fixed contract the controller can parse without interpreting English.

@@ -70,3 +70,4 @@ It is awesome!
 
 Unite.vim is very powerful. It is able to do a lot of stuff for everyday usage.
 And with a proper configuration it becomes an indispensable plugin.
+It works the same way in Neovim, and a related post shows how to [move an existing Vim setup to Neovim](/editors/how-to-start-using-neovim-instead-of-vim/).

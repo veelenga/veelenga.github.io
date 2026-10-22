@@ -106,6 +106,9 @@ In this code snippet, we iterate through an array containing the actions (`users
 For each action, we create a Turbo Frame with a unique identifier (action) and specify the endpoint using `url_for(action: action)`.
 Additionally, we include the loading: :lazy parameter to enable lazy-loading, ensuring that the frames are fetched lazily.
 
+Turbo Frames load content when the page asks for it.
+For updates pushed from the server, Turbo Streams are the next step, and a related post uses them to [build a real-time chat](/building-real-time-chat-with-hotwire/).
+
 ## Elevate the visual with a chartkick
 
 To visualize the data with Chartkick, we first need to retrieve it from the database using ActiveRecord and then pass it to our views.

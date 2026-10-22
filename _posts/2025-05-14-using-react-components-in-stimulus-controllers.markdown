@@ -18,7 +18,7 @@ But what if we need the power of React components for specific complex UI elemen
 
 Modern Rails applications often utilize Stimulus as their primary JavaScript framework. It's lightweight, follows Rails' conventions, and focuses on enhancing existing HTML rather than replacing it. However, there are scenarios where more complex UI components with rich interactions and state management are needed.
 
-This is where React shines. But switching our entire frontend to React would be overkill when most of our application works perfectly with Stimulus. The ideal solution is to combine both frameworks strategically.
+This is where React shines. But switching our entire frontend to React would be overkill when most of our application works perfectly with Stimulus. Even a [real-time chat](/building-real-time-chat-with-hotwire/) needs nothing beyond Hotwire. The ideal solution is to combine both frameworks strategically.
 
 ## Architecture Overview
 

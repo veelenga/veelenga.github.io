@@ -327,6 +327,8 @@ This pattern allows Claude to:
 
 Separating preview from save gives users control. They can experiment freely with previews, and only commit to disk when ready. This separation of concerns makes each tool simpler and more focused.
 
+For a lighter option with no server at all, [preview skills](/introducing-preview-skills/) render Mermaid diagrams, JSON, and CSV straight in the browser.
+
 ## Debugging MCP Servers
 
 Debugging MCP servers is tricky because they communicate through stdin/stdout, so `console.log()` cannot be used normally.

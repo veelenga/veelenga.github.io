@@ -212,6 +212,8 @@ The ECS task role needs exactly two permissions:
     - !Sub 'arn:aws:bedrock:${AWS::Region}:${AWS::AccountId}:agent-alias/${AgentId}/*'
 ```
 
+The `BedrockAgent` and `BedrockAgentAlias` resources come from a separate template, and a related post walks through [setting up a Bedrock agent with CloudFormation](/configuring-aws-bedrock-cloudformation/).
+
 ## Wrap-up
 
 The gateway is a protocol translator with three jobs: connect to Slack via Socket Mode, manage sessions by mapping threads to Bedrock sessions, and control concurrency so slow agent calls don't block the system.

@@ -285,6 +285,9 @@ To https://prince-slack-bot.herokuapp.com.git
 As we can see, it was successfully deployed and we can check our app
 availability at https://prince-slack-bot.herokuapp.com.
 
+A newer post skips the public server with Slack's Socket Mode and
+[builds a Crystal gateway for a Bedrock-powered bot](/slack-meets-bedrock-building-the-gateway/).
+
 ## Configure Slack APP
 
 Our bot is ready to handle Slack requests. However, Slack should know about it.

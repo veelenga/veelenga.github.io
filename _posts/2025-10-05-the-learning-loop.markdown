@@ -46,6 +46,8 @@ Sharing isn't just being nice. It's the best way to learn. Teaching forces messy
 - Teach teammates through code reviews, pair programming, or presentations.
 - Share the journey with both wins and failures. Start simple, go deeper over time.
 
+Sharing gets easier with notes taken along the way, and [an AI inbox](/the-ai-inbox/) keeps those notes organized without extra effort.
+
 ## Why This Loop Works
 
 Each time through the cycle makes us stronger:
