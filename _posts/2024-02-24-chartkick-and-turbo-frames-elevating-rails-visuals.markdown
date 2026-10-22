@@ -1,13 +1,12 @@
 ---
-title: Chartkick and turbo frames - elevating rails visuals
+title: "Lazy-loading Chartkick charts with Turbo Frames in Rails"
 description: "How to build a Rails dashboard with Chartkick charts loaded lazily through Turbo Frames, so each chart renders on its own without a full page reload."
 date: 2024-02-26T12:14:57+02:00
 categories:
 excerpt:
 tags:
-  - ruby on rails
-  - chartkick
-  - turbo
+  - rails
+  - hotwire
 published: true
 ---
 

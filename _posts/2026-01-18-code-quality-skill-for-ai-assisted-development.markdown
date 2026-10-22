@@ -4,10 +4,7 @@ description: "How a code quality skill for Claude Code keeps AI-generated code m
 date: 2026-01-18T14:00:00+02:00
 excerpt: "How a code-quality skill transforms AI-generated code from functional to maintainable by enforcing SOLID principles, eliminating magic numbers, and keeping changes focused on the task at hand."
 tags:
-  - ai
-  - code-quality
-  - development
-  - best-practices
+  - claude-code
 published: true
 ---
 

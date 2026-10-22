@@ -6,8 +6,6 @@ categories:
 excerpt:
 tags:
   - aws
-  - ecr
-  - infrastructure
 published: true
 ---
 

@@ -5,9 +5,8 @@ date: 2026-06-05T10:00:00+02:00
 excerpt: "The obvious way to build an autonomous agent is a loop that runs until the work is done. It demos beautifully and falls apart the moment the agent has to wait. The fix is to turn the loop inside-out, and what's left looks a lot more like sleep."
 tags:
   - ai
-  - agents
-  - claude
-  - system design
+  - claude-code
+  - system-design
 published: true
 ---
 

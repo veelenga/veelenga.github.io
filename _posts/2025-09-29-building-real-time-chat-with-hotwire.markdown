@@ -5,11 +5,8 @@ date: 2025-09-29T11:49:47+02:00
 categories:
 excerpt: Learn how to build a sophisticated real-time chat system using Hotwire. We'll create a complete implementation featuring instant message delivery, background processing, and seamless user experience using Turbo Streams, Action Cable, and Stimulus.
 tags:
-  - ruby on rails
+  - rails
   - hotwire
-  - turbo
-  - action cable
-  - stimulus
 published: true
 ---
 

@@ -6,9 +6,6 @@ excerpt: "A knowledge base per vendor is expensive. One shared pile leaks. Metad
 tags:
   - aws
   - bedrock
-  - rag
-  - multi-vendor
-  - system design
 published: true
 ---
 

@@ -6,8 +6,6 @@ categories:
 excerpt:
 tags:
   - aws
-  - s3
-  - infrastructure
 published: true
 ---
 

@@ -6,7 +6,6 @@ categories:
 excerpt:
 tags:
   - mysql
-  - deadlock
 published: true
 ---
 

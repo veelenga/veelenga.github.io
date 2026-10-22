@@ -6,8 +6,6 @@ categories:
 excerpt:
 tags:
   - aws
-  - infrastructure
-  - cloudformation
 published: true
 ---
 

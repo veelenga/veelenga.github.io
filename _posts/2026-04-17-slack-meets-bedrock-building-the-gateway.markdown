@@ -7,8 +7,7 @@ tags:
   - aws
   - bedrock
   - slack
-  - system design
-  - development
+  - system-design
 published: true
 ---
 
