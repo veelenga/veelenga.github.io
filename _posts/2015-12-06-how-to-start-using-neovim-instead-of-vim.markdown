@@ -1,15 +1,13 @@
 ---
 title: "How to start using Neovim instead of Vim"
 description: "How to install Neovim on macOS with Homebrew, migrate an existing Vim config, set up the Python provider, and fix common compatibility issues."
-modified:
 categories: [editors]
 excerpt: Step by step tutorial how to start using Neovim with Vim's config.
 tags:
   - neovim
-  - infrastructure
 image: /images/logos/neovim.png
 date: 2015-12-06T17:05:49+02:00
-modified: 2016-01-03
+last_modified_at: 2026-10-22
 ---
 
 In this article I want to show you how to start using [Neovim](https://neovim.io/) instead of Vim with a minimum effort.
@@ -53,6 +51,8 @@ At this point you have to try to run Neovim again to be sure that it is compatib
 If something fails, you will need to temporary disable it (unload a plugin or comment an option) to prevent any errors.
 
 A full set of differences between Vim and Neovim features you can find [here](https://neovim.io/doc/user/vim_diff.html#vim-differences).
+
+Plugins come along with the configuration, so a setup like [Unite.vim](/editors/getting-started-with-unite-vim/) keeps working in Neovim as is.
 
 ## Python support
 

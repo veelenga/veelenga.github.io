@@ -1,11 +1,11 @@
 ---
-title: Writing Slack bot in Crystal programming language
+title: "Writing a Slack bot in Crystal with Kemal"
 description: "A tutorial on writing a Slack bot in Crystal with the Kemal web framework: handle a custom slash command, deploy to Heroku and add it to a workspace."
 date: 2020-06-08T15:14:57+02:00
 categories:
 excerpt: Small tutorial that shows how to quickly create a slack bot using Crystal programming language
 tags:
-  - crystal-lang
+  - crystal
   - slack
 published: true
 ---
@@ -284,6 +284,9 @@ To https://prince-slack-bot.herokuapp.com.git
 
 As we can see, it was successfully deployed and we can check our app
 availability at https://prince-slack-bot.herokuapp.com.
+
+A newer post skips the public server with Slack's Socket Mode and
+[builds a Crystal gateway for a Bedrock-powered bot](/slack-meets-bedrock-building-the-gateway/).
 
 ## Configure Slack APP
 

@@ -4,10 +4,9 @@ description: "How Autobot, an AI agent framework in Crystal, connects a ReAct to
 date: 2026-03-06T10:00:00+02:00
 excerpt: "Building an AI agent that runs autonomously on a schedule requires more than just calling an LLM. This post explores how autobot, a Crystal-based AI agent framework, wires together a ReAct-style tool loop, a fiber-based cron scheduler, and a message bus into a system that fits in 2MB."
 tags:
-  - crystal-lang
   - ai
-  - system design
-  - development
+  - crystal
+  - system-design
 published: true
 ---
 
@@ -65,6 +64,8 @@ The cron service manages scheduled jobs persisted as JSON and executed via Cryst
 Instead of polling every second to check for due jobs, the cron service calculates the next wake time and sleeps until then using a Crystal fiber. A generation counter prevents stale fibers from executing. When a new job is added, the generation increments and any sleeping fiber from the previous generation exits silently on wake.
 
 When the timer fires, it finds all due jobs, executes them, saves state, and re-arms for the next batch. A background fiber also checks the store file every 60 seconds for external modifications, like jobs added via CLI while the gateway is running.
+
+A related post applies the same idea to the agent itself: [autonomous agents that sleep](/autonomous-agents-that-sleep/) between short turns instead of looping while they wait.
 
 ## Where cron meets the agent loop
 

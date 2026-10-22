@@ -5,11 +5,8 @@ date: 2025-09-29T11:49:47+02:00
 categories:
 excerpt: Learn how to build a sophisticated real-time chat system using Hotwire. We'll create a complete implementation featuring instant message delivery, background processing, and seamless user experience using Turbo Streams, Action Cable, and Stimulus.
 tags:
-  - ruby on rails
+  - rails
   - hotwire
-  - turbo
-  - action cable
-  - stimulus
 published: true
 ---
 
@@ -129,6 +126,8 @@ async submitForm(event) {
 The magic happens in the coordination: the form submits asynchronously via fetch, the server processes the message and triggers a Turbo Stream broadcast, and the new message appears in the interface without any page navigation. The user sees their message immediately (via the broadcast callback), while the form resets and prepares for the next message.
 
 This pattern eliminates the jarring experience of traditional form submissions while maintaining Rails' server-side processing model. Users can type and send messages in rapid succession, creating the fluid experience expected in modern chat applications.
+
+When a page needs a richer widget than plain HTML can offer, a Stimulus controller can also [mount an existing React component](/using-react-components-in-stimulus-controllers/).
 
 ## WebSocket infrastructure with Action Cable
 

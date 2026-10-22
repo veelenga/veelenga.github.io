@@ -1,11 +1,10 @@
 ---
-title: "The AI inbox"
+title: "The AI inbox: save now, organize later"
 description: "A save now, organize later pattern for notes: anything goes into a Notion inbox, and an AI agent sorts it on a schedule using rules written once."
 date: 2026-09-17T08:30:00+02:00
 excerpt: "Saving things takes seconds, organizing them takes minutes, so the pile grows until nothing in it can be found. A pattern that works for me: anyone writes to an inbox, and an AI agent organizes it later, on a schedule."
 tags:
   - ai
-  - agents
   - productivity
 published: true
 ---
@@ -98,6 +97,8 @@ The same idea works anywhere things arrive faster than we can organize them:
 | Project and documentation changes | A list of changes and a current project summary |
 | Bug reports and feedback | Labeled issues with duplicates merged |
 | Agent chat logs | What the agent should remember about the user |
+
+Notes from the [learning loop](/the-learning-loop/) fit too: rough thoughts from practice go in, and organized notes come out when it's time to share them.
 
 ## Why this works
 

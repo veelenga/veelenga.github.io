@@ -1,11 +1,10 @@
 ---
-title: "How to Run Long Running Crystal Specs in Vim"
+title: "How to run long-running Crystal specs in Vim"
 description: "How to run long-running Crystal specs in Vim without freezing the editor, using the vim-crystal and vim-dispatch plugins and the :Dispatch command."
-modified:
 excerpt: Running long specs for your project within Vim? Then this short article is for you.
-tags: 
-  - crystal-lang
-  - vim
+tags:
+  - crystal
+  - neovim
 date: 2015-10-16T07:42:00+03:00
 ---
 
@@ -26,4 +25,5 @@ Here is an example of running specs in Crystal sources:
 </figure>
 
 And if you want to run long specs for your Crystal project with standard structure, just type `:Dispatch crystal spec`.
+Neovim also runs jobs in the background out of the box, and a related post shows [how to switch to it from Vim](/editors/how-to-start-using-neovim-instead-of-vim/).
 Cheers!

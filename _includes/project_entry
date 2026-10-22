@@ -19,6 +19,10 @@
     <p class="project-description">{{ include.sup }}</p>
   {% endif %}
 
+  {% if include.post %}
+    <p class="project-post"><a href="{{ include.post }}">Read the post &rarr;</a></p>
+  {% endif %}
+
   {% if include.logo_ref %}
     <div class="project-image">
       <a href="{{include.ref}}">

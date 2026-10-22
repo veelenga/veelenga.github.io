@@ -1,13 +1,12 @@
 ---
-title: Using React Components in Stimulus Controllers
+title: "Using React components in Stimulus controllers"
 description: "How to mount React components inside Stimulus controllers in a Rails app with Hotwire, pass data between them, and keep them working with Turbo."
 date: 2025-05-14T13:06:00+0200
 categories:
 excerpt: A simple tutorial explaining how to integrate existed React components into your modern Rails app powered by Hotwire.
 tags:
-  - ruby on rails
-  - stimulus
-  - react
+  - rails
+  - hotwire
 published: true
 ---
 
@@ -19,7 +18,7 @@ But what if we need the power of React components for specific complex UI elemen
 
 Modern Rails applications often utilize Stimulus as their primary JavaScript framework. It's lightweight, follows Rails' conventions, and focuses on enhancing existing HTML rather than replacing it. However, there are scenarios where more complex UI components with rich interactions and state management are needed.
 
-This is where React shines. But switching our entire frontend to React would be overkill when most of our application works perfectly with Stimulus. The ideal solution is to combine both frameworks strategically.
+This is where React shines. But switching our entire frontend to React would be overkill when most of our application works perfectly with Stimulus. Even a [real-time chat](/building-real-time-chat-with-hotwire/) needs nothing beyond Hotwire. The ideal solution is to combine both frameworks strategically.
 
 ## Architecture Overview
 

@@ -6,8 +6,6 @@ categories:
 excerpt:
 tags:
   - aws
-  - ecr
-  - infrastructure
 published: true
 ---
 
@@ -51,6 +49,8 @@ Resources:
               - ecr:GetDownloadUrlForLayer
               - ecr:BatchCheckLayerAvailability
 ```
+
+S3 uses the same pattern for [cross-account bucket replication](/aws-s3-replication/), where the destination bucket policy lets a role from the source account write to it.
 
 ## Lambda function resource-based policy
 

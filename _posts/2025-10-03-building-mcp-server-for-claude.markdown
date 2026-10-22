@@ -5,10 +5,7 @@ date: 2025-10-03T08:51:00+02:00
 categories:
 excerpt: Learn how to build a custom Model Context Protocol server for Claude Code. Master the fundamentals of MCP protocol, tool definitions, and argument handling using a real-world Mermaid diagram rendering example.
 tags:
-  - claude
-  - mcp
-  - typescript
-  - ai
+  - claude-code
 published: true
 ---
 
@@ -329,6 +326,8 @@ This pattern allows Claude to:
 3. Save the final version with `mermaid_save` when satisfied
 
 Separating preview from save gives users control. They can experiment freely with previews, and only commit to disk when ready. This separation of concerns makes each tool simpler and more focused.
+
+For a lighter option with no server at all, [preview skills](/introducing-preview-skills/) render Mermaid diagrams, JSON, and CSV straight in the browser.
 
 ## Debugging MCP Servers
 

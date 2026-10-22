@@ -7,8 +7,7 @@ tags:
   - aws
   - bedrock
   - slack
-  - system design
-  - development
+  - system-design
 published: true
 ---
 
@@ -111,6 +110,8 @@ For questions about internal policies, use the security policies knowledge base.
 For questions about laws and regulations, use the legal knowledge base.
 For product questions, use the product knowledge base.
 ```
+
+When the split is by customer rather than by topic, [one knowledge base with metadata filters](/one-bedrock-knowledge-base-many-vendors/) scales better than one per customer.
 
 ## Action groups: giving the agent hands
 

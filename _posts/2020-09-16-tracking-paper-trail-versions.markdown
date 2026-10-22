@@ -5,9 +5,7 @@ date: 2020-09-16T15:14:57+02:00
 categories:
 excerpt: Article explains how to efficiently group and query model versions with PaperTrail in Ruby on Rails application while saving multiple records in batches.
 tags:
-  - paper trail
-  - ruby-lang
-  - ruby on rails
+  - rails
 published: true
 ---
 
@@ -95,6 +93,9 @@ class SaveRequest < ApplicationRecord
 + has_many :request_versions, class_name: 'PaperTrail::Version', foreign_key: :save_request_id
 end
 ```
+
+Each version already points to the record it tracks through a polymorphic `item` association,
+which has its own quirks when [joining polymorphic associations](/joining-polymorphic-associations/).
 
 At this point we have a relationship between the save request and the versions, but how do we actually
 associate these records properly? The solution is not really straightforward and depends on the

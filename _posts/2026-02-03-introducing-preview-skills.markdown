@@ -4,10 +4,7 @@ description: "Preview skills for Claude Code render JSON, CSV, Mermaid diagrams,
 date: 2026-02-03T14:00:00+02:00
 excerpt: "Reviewing raw JSON, CSV, or Mermaid diagrams in the terminal is a cognitive burden. Preview skills solve this by rendering visual previews directly in the browser — no servers, no dependencies."
 tags:
-  - ai
-  - skills
-  - development
-  - visualization
+  - claude-code
 published: true
 ---
 
@@ -33,6 +30,7 @@ The data is there. The tooling to view it isn't.
 
 [Preview skills](https://github.com/veelenga/preview-skills) are standalone tools that render visual previews directly in the browser.
 No servers. No external dependencies. Just self-contained HTML files that open instantly.
+Where a [code quality skill](/code-quality-skill-for-ai-assisted-development/) changes how the agent writes code, these skills change how we review what it produces.
 
 Each skill takes a file or piped input and generates an interactive preview:
 
@@ -101,6 +99,7 @@ Expand only the sections that matter, collapse the rest.
 Ask the agent to create a Mermaid diagram, then `/preview-mermaid diagram.mmd`.
 The actual flowchart renders instantly — not the code that describes it.
 Iterate on the diagram without leaving the terminal.
+An earlier post took a different route to the same goal and [built an MCP server that renders Mermaid diagrams](/building-mcp-server-for-claude/).
 
 ### Git Diffs
 

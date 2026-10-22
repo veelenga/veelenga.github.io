@@ -5,9 +5,8 @@ date: 2026-06-05T10:00:00+02:00
 excerpt: "The obvious way to build an autonomous agent is a loop that runs until the work is done. It demos beautifully and falls apart the moment the agent has to wait. The fix is to turn the loop inside-out, and what's left looks a lot more like sleep."
 tags:
   - ai
-  - agents
-  - claude
-  - system design
+  - claude-code
+  - system-design
 published: true
 ---
 
@@ -62,6 +61,8 @@ In practice the rule lives in the agent's own instructions, in plain words:
 > After pushing or opening a pull request, end the turn. Never wait, sleep, or poll for CI. Results and review comments arrive as new events that wake the next turn.
 
 A good teammate works the same way. They don't stand around watching a progress bar fill; they push the change, say "I'll pick it back up when CI's done," and move on to something else. A notification brings them back. The agent's notification is an event landing at the controller, which starts a fresh turn. The build it was "waiting" for cost nothing, because nobody was waiting.
+
+Autobot uses a similar trick for scheduled work, where [a cron job is just another message](/how-agent-loop-and-cron-work-together-inside-autobot/) that wakes the agent loop.
 
 ## How a turn says what happened
 

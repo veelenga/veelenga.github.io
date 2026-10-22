@@ -5,9 +5,7 @@ date: 2020-09-30T15:14:57+02:00
 categories:
 excerpt: Short list of thoughts on how to join polymorphic associations in ActiveRecord and why it cannot be loaded eagerly.
 tags:
-  - polymorphism
-  - active record
-  - ruby on rails
+  - rails
 published: true
 ---
 
@@ -32,6 +30,8 @@ end
 So the payment can belong to multiple type of models marked as `subject` and to distinguish 
 them by `subject_id` and `subject_type` columns at the database level. In our simple example,
 we have two different entities who can create multiple payments: User and Artist.
+PaperTrail uses the same trick for its `versions` table: each version belongs to the record it tracks.
+A related post shows how to [group those versions by request](/tracking-paper-trail-versions/).
 
 <img src='/images/joining-polymorphic-associations/schema.png' alt='db-schema'>
 

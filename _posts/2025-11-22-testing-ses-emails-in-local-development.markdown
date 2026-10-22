@@ -1,15 +1,12 @@
 ---
-title: Testing SES Emails in Local Development
+title: "Testing SES emails in local development with LocalStack"
 description: "How to test AWS SES emails in local development with LocalStack, comparing the LocalStack web UI, Mailpit, and a lightweight SES email viewer."
 date: 2025-11-22T14:40:00+02:00
 categories:
 excerpt: Learn how to effectively test AWS SES emails locally using LocalStack. Compare different email viewers including the built-in LocalStack UI, Mailpit, and a lightweight custom viewer designed specifically for development workflows.
 tags:
   - aws
-  - ses
-  - localstack
-  - testing
-  - development
+  - rails
 published: true
 ---
 

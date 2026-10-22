@@ -6,15 +6,12 @@ excerpt: "A knowledge base per vendor is expensive. One shared pile leaks. Metad
 tags:
   - aws
   - bedrock
-  - rag
-  - multi-vendor
-  - system design
 published: true
 ---
 
 SaaS products rarely serve a single customer.
 They serve many, each with their own data, their own rules, their own boundaries.
-Add a RAG-powered AI assistant on top and a new question shows up: how do we keep all that data separated inside one knowledge base?
+Add a [RAG-powered AI assistant](/slack-meets-bedrock-knowledge-bases-tools-action-groups/) on top and a new question shows up: how do we keep all that data separated inside one knowledge base?
 
 ## The problem
 
