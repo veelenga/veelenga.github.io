@@ -1,8 +1,9 @@
-{% assign seo_title = page.title | default: site.title %}
-{% assign seo_description = page.description | default: page.excerpt | default: site.description | strip_html | strip_newlines | truncate: 160 %}
+{% assign seo_title = page.title | default: site.title | escape %}
+{% if page.description %}{% assign seo_description = page.description %}{% else %}{% assign seo_description = page.excerpt | default: site.description | strip_html | normalize_whitespace | truncatewords: 25, "" %}{% endif %}
+{% assign seo_description = seo_description | escape %}
 {% assign canonical_url = page.url | replace: "index.html", "" | prepend: site.url %}
 
-<title>{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+<title>{% if page.title %}{{ page.title | escape }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
 <meta name="description" content="{{ seo_description }}">
 <link rel="canonical" href="{{ canonical_url }}">
 
@@ -14,7 +15,7 @@
 <meta property="og:url" content="{{ canonical_url }}">
 {% assign og_image = page.image | default: "/images/og-preview.png" %}
 {% unless og_image contains "http" %}{% assign og_image = og_image | prepend: site.url %}{% endunless %}
-<meta property="og:image" content="{{ og_image }}">
+<meta property="og:image" content="{{ og_image | escape }}">
 {% if page.date %}
   <meta property="og:type" content="article">
   <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
@@ -27,7 +28,7 @@
 <meta name="twitter:site" content="@{{ site.author.twitter }}">
 <meta name="twitter:title" content="{{ seo_title }}">
 <meta name="twitter:description" content="{{ seo_description }}">
-<meta name="twitter:image" content="{{ og_image }}">
+<meta name="twitter:image" content="{{ og_image | escape }}">
 
 <!-- JSON-LD -->
 <script type="application/ld+json">
