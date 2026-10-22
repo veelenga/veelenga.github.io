@@ -1,0 +1,29 @@
+{% assign three_shared = "" | split: "" %}
+{% assign two_shared = "" | split: "" %}
+{% assign one_shared = "" | split: "" %}
+{% for post in site.posts %}
+  {% if post.url == page.url %}{% continue %}{% endif %}
+  {% assign union = page.tags | concat: post.tags | uniq %}
+  {% assign shared = page.tags.size | plus: post.tags.size | minus: union.size %}
+  {% if shared >= 3 %}
+    {% assign three_shared = three_shared | push: post %}
+  {% elsif shared == 2 %}
+    {% assign two_shared = two_shared | push: post %}
+  {% elsif shared == 1 %}
+    {% assign one_shared = one_shared | push: post %}
+  {% endif %}
+{% endfor %}
+{% assign related = three_shared | concat: two_shared | concat: one_shared %}
+{% if related.size > 0 %}
+<section class="related">
+  <h2 class="related__title">Related posts</h2>
+  <ul class="related__list">
+    {% for post in related limit: 3 %}
+      <li class="related__item">
+        <a href="{{ post.url }}" class="related__link">{{ post.title }}</a>
+        <time class="related__date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %Y" }}</time>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}

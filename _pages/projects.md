@@ -47,6 +47,7 @@ wide: true
 {% include project_entry
   ref='https://github.com/crystal-autobot/autobot'
   name='Autobot'
+  post='/how-agent-loop-and-cron-work-together-inside-autobot/'
   description='Ultra-lightweight personal AI assistant framework'
   sup="A fast, secure, and efficient AI automation tool built in Crystal. 2MB binary, ~5MB RAM, <20ms startup. Supports multiple LLM providers, chat channels, vision, voice, and kernel-level sandboxing."
   logo_ref='/images/demo/autobot.png'
@@ -56,6 +57,7 @@ wide: true
 {% include project_entry
   ref='https://github.com/veelenga/preview-skills'
   name='Preview Skills'
+  post='/introducing-preview-skills/'
   description='Reduce cognitive load when reviewing AI agent work'
   sup="Standalone preview skills for visualizing files in the browser. Transform plans, diffs, and data into navigable previews. Zero dependencies, self-contained, works with any AI coding agent."
   logo_ref='/images/demo/preview-skills.png'
@@ -65,6 +67,7 @@ wide: true
 {% include project_entry
   ref='https://github.com/veelenga/claude-mermaid'
   name='Claude Mermaid'
+  post='/building-mcp-server-for-claude/'
   description='MCP server for rendering Mermaid diagrams in Claude Code'
   sup="An MCP server that enables Claude to render and preview Mermaid diagrams with live browser updates."
   logo_ref='/images/claude-mcp/claude-code.png'
@@ -74,6 +77,7 @@ wide: true
 {% include project_entry
   ref='https://veelenga.github.io/zwo-generator/'
   name='Zwift Workout Generator'
+  post='/building-an-ai-powered-zwift-workout-generator/'
   description='Generate Zwift workouts using natural language'
   sup="An AI-powered tool that lets you create structured Zwift workouts by describing them in plain English. Combines AI generation with direct manipulation for precise control."
   logo_ref='/images/demo/zwift-workout-generator.png'

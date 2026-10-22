@@ -6,7 +6,13 @@ layout: default
   <header class="post__header">
     <h1 class="post__title">{{ page.title }}</h1>
     <div class="post__meta">
+      <span class="post__author">By <a href="https://github.com/{{ site.author.github }}" rel="author">{{ site.author.name }}</a></span>
+      <span class="post__meta-sep">&middot;</span>
       <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time>
+      {% if page.last_modified_at %}
+        <span class="post__meta-sep">&middot;</span>
+        <span>Updated <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">{{ page.last_modified_at | date: "%b %-d, %Y" }}</time></span>
+      {% endif %}
       {% assign words = page.content | strip_html | number_of_words %}
       {% if words >= 180 %}
         <span class="post__meta-sep">&middot;</span>
@@ -18,6 +24,10 @@ layout: default
   <div class="post__content">
     {{ content }}
   </div>
+
+  {% include author-box.html %}
+
+  {% include related-posts.html %}
 
   <nav class="post__nav">
     {% if page.previous %}
