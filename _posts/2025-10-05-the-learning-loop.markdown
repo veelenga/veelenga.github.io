@@ -1,5 +1,6 @@
 ---
 title: "The learning loop: how developers pick up new technologies"
+image: /images/og/the-learning-loop.png
 description: "A look at the Learn, Practice, Share loop that helps developers pick up new technologies, and why AI makes Reflect the key fourth step."
 date: 2025-10-05T08:51:00+02:00
 categories:
@@ -16,7 +17,7 @@ The answer is a simple learning cycle that's worked for decades and still works 
 Fast learning engineers follow a three-step cycle: **Learn → Practice → Share** (or its variations).
 This is how our brains naturally and effectively build skills.
 
-![Learning Loop Diagram](/images/learning-loop/diagram.svg)
+![Learning Loop Diagram](/images/learning-loop/diagram.svg){: width="481" height="135"}
 
 ### Learn
 

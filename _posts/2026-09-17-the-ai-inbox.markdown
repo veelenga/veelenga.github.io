@@ -1,5 +1,6 @@
 ---
 title: "The AI inbox: save now, organize later"
+image: /images/og/the-ai-inbox.png
 description: "A save now, organize later pattern for notes: anything goes into a Notion inbox, and an AI agent sorts it on a schedule using rules written once."
 date: 2026-09-17T08:30:00+02:00
 excerpt: "Saving things takes seconds, organizing them takes minutes, so the pile grows until nothing in it can be found. A pattern that works for me: anyone writes to an inbox, and an AI agent organizes it later, on a schedule."
@@ -21,7 +22,7 @@ Saving a note and organizing it look like one job, but they need opposite things
 
 When we try to do both at once, we lose either way.
 
-![One new thought, two paths. Organizing it now turns every note into a form. That is too slow, so we stop writing things down. Organizing it later never happens, so the inbox becomes a junk drawer where nothing can be found.](/images/the-ai-inbox/problem.svg)
+![One new thought, two paths. Organizing it now turns every note into a form. That is too slow, so we stop writing things down. Organizing it later never happens, so the inbox becomes a junk drawer where nothing can be found.](/images/the-ai-inbox/problem.svg){: width="900" height="425"}
 
 If we **organize it now**, every note turns into a small form: a title, a folder, a few tags. That's too slow, so we stop writing things down. If we **organize it later**, later rarely comes. The inbox turns into a junk drawer: everything is kept, and nothing can be found.
 
@@ -31,7 +32,7 @@ This isn't about discipline. The two jobs just don't fit into the same moment.
 
 So we split them, and hand the slow job to something that doesn't mind doing it: an AI agent. Anyone can write anything to an inbox, a person or another AI. Later, on a schedule, the agent organizes it all, following rules we write once.
 
-![ChatGPT, Claude, Grok, a human and any other writer drop rough notes into one inbox. On a schedule, an AI agent organizes them one by one into clean rows with a type, a title and a project.](/images/the-ai-inbox/inbox.svg)
+![ChatGPT, Claude, Grok, a human and any other writer drop rough notes into one inbox. On a schedule, an AI agent organizes them one by one into clean rows with a type, a title and a project.](/images/the-ai-inbox/inbox.svg){: width="900" height="410" loading="lazy"}
 
 The pattern has three parts, one for each box in the diagram.
 

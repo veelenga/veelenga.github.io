@@ -1,5 +1,6 @@
 ---
 title: "Slack meets Bedrock: building the gateway"
+image: /images/og/slack-meets-bedrock-building-the-gateway.png
 description: "Part 1 of building a Slack bot on Amazon Bedrock Agents: a Crystal gateway with Socket Mode, thread-based sessions, concurrency control, and formatting."
 date: 2026-04-17T10:00:00+02:00
 excerpt: "AWS Bedrock Agents speak HTTP. Slack speaks WebSocket. This post covers how to build the gateway that bridges them: Socket Mode, session management, concurrency control, and message formatting."
@@ -27,7 +28,7 @@ Everything described in this series is implemented in [ark](https://github.com/c
 
 ## Architecture
 
-![Architecture](/images/slack-meets-bedrock/architecture.svg)
+![Architecture](/images/slack-meets-bedrock/architecture.svg){: width="1405" height="380"}
 
 The gateway sits between Slack and Bedrock. It connects to Slack via Socket Mode (a persistent WebSocket), receives events, calls the Bedrock Agent API over signed HTTP, and posts formatted responses back.
 
@@ -84,7 +85,7 @@ A few edge cases to handle:
 
 Bedrock Agents maintain conversation history per session. The natural mapping: one Slack thread = one Bedrock session. The thread timestamp (`thread_ts`) serves as the session ID.
 
-![Session flow](/images/slack-meets-bedrock/sessions.svg)
+![Session flow](/images/slack-meets-bedrock/sessions.svg){: width="922" height="889" loading="lazy"}
 
 There is a catch. Bedrock Agent sessions expire. The default TTL varies, and your gateway might restart, losing the session on the Bedrock side. When a user continues a thread after the session has gone stale, Bedrock starts fresh with no context.
 

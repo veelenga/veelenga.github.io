@@ -44,6 +44,8 @@ exclude:
   - node_modules
   - vendor
   - README.md
+  - CLAUDE.md
+  - LICENSE
 
 # Defaults
 defaults:

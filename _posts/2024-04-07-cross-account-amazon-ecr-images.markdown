@@ -1,5 +1,6 @@
 ---
 title: Cross account Amazon ECR images
+image: /images/og/cross-account-amazon-ecr-images.png
 description: "Ways to share Amazon ECR images across AWS accounts, with their pros and cons and resource-based policy examples for ECS, Lambda, and the root account."
 date: 2024-04-07T12:14:57+02:00
 categories:

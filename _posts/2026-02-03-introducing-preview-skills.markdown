@@ -1,5 +1,6 @@
 ---
 title: "Preview skills: visualizations for AI-assisted development"
+image: /images/og/introducing-preview-skills.png
 description: "Preview skills for Claude Code render JSON, CSV, Mermaid diagrams, and diffs as interactive pages in the browser, with no servers or dependencies."
 date: 2026-02-03T14:00:00+02:00
 excerpt: "Reviewing raw JSON, CSV, or Mermaid diagrams in the terminal is a cognitive burden. Preview skills solve this by rendering visual previews directly in the browser — no servers, no dependencies."

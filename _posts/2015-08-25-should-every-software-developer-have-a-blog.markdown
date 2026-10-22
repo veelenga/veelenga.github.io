@@ -1,5 +1,6 @@
 ---
 title: "Should every software developer have a blog?"
+image: /images/og/should-every-software-developer-have-a-blog.png
 description: "Why every software developer should have a blog, and how the book Soft Skills by John Sonmez inspired this first post on starting a developer blog."
 date: 2015-08-26T22:53:28+03:00
 excerpt: "A post where I want to describe what made me start blogging."
@@ -15,7 +16,7 @@ The idea to have a personal blog was conceived by me a year or less ago. I start
 That continued until I started to read a book **"Soft Skills: The Software Developer's Life Manual"** by John Sonmez. This book is amazing, inspirational and very motivational, full of tips, ideas and experienced pieces of advice I think every Software Developer should know. That book has changed my views on the development in general and as a quick achievement I am writing this post now.
 
 <figure>
-  <img src="/images/should-every-software-developer-have-a-blog-1.jpg" alt="cover">
+  <img src="/images/should-every-software-developer-have-a-blog-1.jpg" alt="Cover of Soft Skills: The Software Developer's Life Manual by John Sonmez" width="399" height="399">
   <figcaption>
     <a href="http://www.amazon.com/gp/product/1617292397/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1617292397&linkCode=as2&tag=makithecompsi-20&linkId=SCOXESIAFBLHJ7XU">Soft Skills: The Software Developer's Life Manual by John Sonmez</a>
   </figcaption>

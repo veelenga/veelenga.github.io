@@ -1,5 +1,6 @@
 ---
 title: "Building an AI-powered Zwift workout generator"
+image: /images/og/building-an-ai-powered-zwift-workout-generator.png
 description: "UX and validation patterns behind an AI Zwift workout generator that turns plain-English descriptions into .zwo files using OpenAI in the browser."
 date: 2026-01-01T10:00:00+02:00
 excerpt: "UX patterns for building an AI workout generator for Zwift, combining generative AI with direct manipulation and multi-layer validation."
@@ -18,7 +19,7 @@ The platform has a built-in workout builder, but it's tedious to use. Each segme
 That's 60 individual intervals plus 5 recovery segments, each requiring multiple clicks and inputs. What should take seconds to describe takes minutes to build.
 I built [ZWO Generator](/zwo-generator/) to solve this. Describe a workout in plain English, and AI generates a complete Zwift-compatible `.zwo` file:
 
-![ZWO Generator](/images/zwo-generator/zwo-generator.jpg)
+![ZWO Generator](/images/zwo-generator/zwo-generator.webp){: width="1720" height="1752"}
 
 In this post, I'll share the key UX decisions and technical patterns that made this application work.
 

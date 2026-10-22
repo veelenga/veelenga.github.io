@@ -1,5 +1,6 @@
 ---
 title: "Getting started with Unite.vim"
+image: /images/og/getting-started-with-unite-vim.png
 description: "Initial Unite.vim configuration for Neovim: key mappings for file search, grep and buffers, plus notes on the modern plugins that replaced it."
 categories:
   - editors

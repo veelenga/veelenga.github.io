@@ -1,5 +1,6 @@
 ---
 title: "How the agent loop and cron work together inside Autobot"
+image: /images/og/how-agent-loop-and-cron-work-together-inside-autobot.png
 description: "How Autobot, an AI agent framework in Crystal, connects a ReAct tool loop, a fiber-based cron scheduler, and a message bus inside one small binary."
 date: 2026-03-06T10:00:00+02:00
 excerpt: "Building an AI agent that runs autonomously on a schedule requires more than just calling an LLM. This post explores how autobot, a Crystal-based AI agent framework, wires together a ReAct-style tool loop, a fiber-based cron scheduler, and a message bus into a system that fits in 2MB."
@@ -16,7 +17,7 @@ Most AI agent tutorials end at "call the LLM in a loop." The interesting part, m
 
 ## The big picture
 
-![Autobot architecture](/images/autobot-agent-loop/architecture.svg)
+![Autobot architecture](/images/autobot-agent-loop/architecture.svg){: width="1739" height="1003"}
 
 Messages flow in from chat channels, get processed by the agent loop, and flow back out. The cron service injects its own messages into the same bus, reusing the entire agent pipeline. This is the key design decision: cron doesn't bypass the agent, it talks through it.
 

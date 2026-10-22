@@ -1,12 +1,12 @@
 ---
 title: "Creating custom fields in Avo for Rails"
+image: /images/og/avohq-custom-fields.png
 description: "How to create a custom field in Avo for Ruby on Rails, walking through a copyable text field that adds a copy-to-clipboard button to the show view."
 date: 2024-04-20T12:14:57+02:00
 categories:
 excerpt:
 tags:
   - rails
-image: /images/avo-custom-fields/header.jpeg
 published: true
 twitter:
   image: /avo-custom-fields/header.jpeg
@@ -32,7 +32,7 @@ end
 Once the resource is defined, Avo automatically generates the user interface to manage the `User` resource.
 It creates a table view to list all users, a form to create and edit users, and a detail view to show the user details.
 
-![](/images/avo-custom-fields/users.png)
+![Avo admin users table listing IDs, emails and names](/images/avo-custom-fields/users.png){: width="1942" height="664"}
 
 The key role here is played by the `fields` method, which defines the fields that are displayed in the user interface.
 In many cases, the default field types provided by Avo are sufficient to cover the needs of the application.
@@ -161,8 +161,8 @@ end
 
 Now we are ready to check the results in the Avo interface:
 
-<video controls="controls" width="100%" name="Copyable Text Field">
-  <source src="/images/avo-custom-fields/copyable_text.mov">
+<video controls preload="metadata" playsinline width="1720" height="570" poster="/images/avo-custom-fields/copyable_text-poster.jpg" aria-label="Demo of the copyable text field in Avo">
+  <source src="/images/avo-custom-fields/copyable_text.mp4" type="video/mp4">
 </video>
 
 ## Wrap-up

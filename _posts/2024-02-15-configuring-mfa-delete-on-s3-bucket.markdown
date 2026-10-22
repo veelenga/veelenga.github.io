@@ -1,5 +1,6 @@
 ---
 title: Configuring MFA delete on S3 bucket
+image: /images/og/configuring-mfa-delete-on-s3-bucket.png
 description: "How to enable MFA delete on an AWS S3 bucket with the AWS CLI, from setting up an MFA device to protecting versioned objects from permanent deletion."
 date: 2024-02-15T12:14:57+02:00
 categories:

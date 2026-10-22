@@ -1,5 +1,6 @@
 ---
 title: "Slack meets Bedrock: analytics, monitoring, and production"
+image: /images/og/slack-meets-bedrock-analytics-monitoring-production.png
 description: "Part 3 of the Slack and Amazon Bedrock series: an analytics pipeline with Firehose, Glue, and Athena, plus ECS deployment, CloudWatch alarms, and costs."
 date: 2026-04-19T10:00:00+02:00
 excerpt: "Deploying an AI bot is the easy part. Knowing whether it's helping anyone, catching failures before users report them, and keeping costs under control is where the real engineering happens."
@@ -29,7 +30,7 @@ Deploying an AI bot is the easy part. Understanding its behavior in production i
 
 The goal: capture every conversation event, store it cheaply, and make it queryable without running a database.
 
-![Analytics pipeline](/images/slack-meets-bedrock/analytics.svg)
+![Analytics pipeline](/images/slack-meets-bedrock/analytics.svg){: width="1799" height="452"}
 
 The pipeline uses four AWS services:
 
@@ -204,7 +205,7 @@ Source extraction from knowledge base lookups also matters for the user experien
 
 ## Deployment
 
-![Deployment architecture](/images/slack-meets-bedrock/deployment.svg)
+![Deployment architecture](/images/slack-meets-bedrock/deployment.svg){: width="898" height="1115" loading="lazy"}
 
 ### ECS task
 

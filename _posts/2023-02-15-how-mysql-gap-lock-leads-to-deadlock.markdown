@@ -1,5 +1,6 @@
 ---
 title: How MySQL gap lock can lead to deadlock
+image: /images/og/how-mysql-gap-lock-leads-to-deadlock.png
 description: "A step-by-step look at how MySQL gap locks work during concurrent inserts on a unique key, and how two transactions can end up in a deadlock."
 date: 2023-02-15T12:14:57+02:00
 categories:
@@ -16,8 +17,8 @@ This can be useful for enforcing unique constraints or ensuring consistency when
 However, a gap lock can lead to a deadlock when two or more transactions try to lock the same gap simultaneously, and each transaction is waiting for the other to release the lock.
 This results in a circular wait, where each transaction is waiting for the lock held by the other, and neither transaction can proceed.
 
-<video controls="controls" width="100%" name="MySQL Deadlock">
-  <source src="/images/mysql-deadlock/demo.mp4">
+<video controls preload="metadata" playsinline width="1720" height="410" poster="/images/mysql-deadlock/demo-poster.jpg" aria-label="Two MySQL sessions running inserts until a deadlock occurs">
+  <source src="/images/mysql-deadlock/demo.mp4" type="video/mp4">
 </video>
 
 Let's find out how gap locking works and what actually triggers a deadlock.

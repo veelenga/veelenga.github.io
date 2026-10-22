@@ -1,5 +1,6 @@
 ---
 title: "New Year countdown with FlipClock.js"
+image: /images/og/new-year-countdown-with-flipclock-js.png
 description: "How to build a New Year countdown timer with FlipClock.js: add a clock element, count the seconds left until January 1st and start the flip clock."
 categories:
 excerpt: Just a quick way to create awesome New Year Countdown.

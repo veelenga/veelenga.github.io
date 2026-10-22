@@ -1,0 +1,17 @@
+---
+layout: page
+title: "Page not found"
+description: "The page does not exist or has moved. Browse the blog or the projects instead."
+permalink: /404.html
+sitemap: false
+---
+
+<p>The address does not match anything here. The page may have moved, or the link has a typo.</p>
+
+<p>Try the <a href="/blog/">blog</a> or the <a href="/projects/">projects</a> page, or start with a recent post:</p>
+
+<ul>
+  {% for post in site.posts limit: 5 %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>

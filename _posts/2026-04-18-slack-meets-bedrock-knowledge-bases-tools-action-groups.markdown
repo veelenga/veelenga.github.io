@@ -1,5 +1,6 @@
 ---
 title: "Slack meets Bedrock: knowledge bases, tools, and action groups"
+image: /images/og/slack-meets-bedrock-knowledge-bases-tools-action-groups.png
 description: "Part 2 of the Slack and Amazon Bedrock series: giving a Bedrock Agent knowledge bases with RAG, Lambda action groups, and a code interpreter."
 date: 2026-04-18T10:00:00+02:00
 excerpt: "A chatbot that only answers general questions is a worse Google. This post covers how to give a Bedrock Agent domain-specific intelligence through knowledge bases, Lambda-backed action groups, and a code interpreter."
@@ -41,7 +42,7 @@ This is the key insight: **you describe capabilities, the model routes to them.*
 
 RAG (Retrieval-Augmented Generation) is the pattern that lets an LLM answer questions about documents it was never trained on. Instead of fine-tuning the model, you retrieve relevant chunks at query time and include them in the context.
 
-![RAG pipeline](/images/slack-meets-bedrock/rag-pipeline.svg)
+![RAG pipeline](/images/slack-meets-bedrock/rag-pipeline.svg){: width="1238" height="605"}
 
 The pipeline has two phases:
 
@@ -117,7 +118,7 @@ When the split is by customer rather than by topic, [one knowledge base with met
 
 Knowledge bases give the agent eyes. It can read your documents. Action groups give it hands. It can take actions in external systems.
 
-![Agent routing](/images/slack-meets-bedrock/agent-routing.svg)
+![Agent routing](/images/slack-meets-bedrock/agent-routing.svg){: width="1542" height="636" loading="lazy"}
 
 An action group is a Lambda function with a function schema. You define what the function does, what parameters it accepts, and the agent decides when to call it. The interaction:
 
