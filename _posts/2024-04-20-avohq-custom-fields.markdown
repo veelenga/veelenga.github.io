@@ -1,5 +1,6 @@
 ---
 title: "Creating custom fields in Avo for Rails"
+image: /images/og/avohq-custom-fields.png
 description: "How to create a custom field in Avo for Ruby on Rails, walking through a copyable text field that adds a copy-to-clipboard button to the show view."
 date: 2024-04-20T12:14:57+02:00
 categories:

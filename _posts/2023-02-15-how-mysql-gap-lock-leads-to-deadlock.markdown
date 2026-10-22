@@ -1,5 +1,6 @@
 ---
 title: How MySQL gap lock can lead to deadlock
+image: /images/og/how-mysql-gap-lock-leads-to-deadlock.png
 description: "A step-by-step look at how MySQL gap locks work during concurrent inserts on a unique key, and how two transactions can end up in a deadlock."
 date: 2023-02-15T12:14:57+02:00
 categories:

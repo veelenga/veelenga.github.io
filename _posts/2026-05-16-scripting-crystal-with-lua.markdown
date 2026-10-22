@@ -1,5 +1,6 @@
 ---
 title: "Embedding Lua in Crystal with lua.cr"
+image: /images/og/scripting-crystal-with-lua.png
 description: "How Crystal and Lua call each other through the Lua C API stack, shown step by step with lua.cr, a Crystal shard for embedding Lua scripts."
 date: 2026-05-16T10:00:00+02:00
 categories:

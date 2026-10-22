@@ -1,5 +1,6 @@
 ---
 title: "The learning loop: how developers pick up new technologies"
+image: /images/og/the-learning-loop.png
 description: "A look at the Learn, Practice, Share loop that helps developers pick up new technologies, and why AI makes Reflect the key fourth step."
 date: 2025-10-05T08:51:00+02:00
 categories:

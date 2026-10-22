@@ -1,5 +1,6 @@
 ---
 title: Building real-time chat with Hotwire
+image: /images/og/building-real-time-chat-with-hotwire.png
 description: "How to build a real-time chat in Rails with Hotwire, using Turbo Streams, Action Cable, Stimulus, and background jobs for instant message delivery."
 date: 2025-09-29T11:49:47+02:00
 categories:

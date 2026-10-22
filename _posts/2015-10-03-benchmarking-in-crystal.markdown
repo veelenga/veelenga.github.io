@@ -1,5 +1,6 @@
 ---
 title: "Benchmarking in Crystal with Benchmark.ips"
+image: /images/og/benchmarking-in-crystal.png
 description: "How to benchmark code in Crystal with the built-in Benchmark module, using Benchmark.ips to compare arrays, strings and hashes in release mode."
 date: 2015-10-03T22:51:50+03:00
 excerpt: "Benchmarking in easy, benchmarking is existing, especially in Crystal! Checkout a quick overview with practical examples."

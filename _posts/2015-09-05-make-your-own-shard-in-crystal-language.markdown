@@ -1,5 +1,6 @@
 ---
 title: "Make your own Shard in Crystal language"
+image: /images/og/make-your-own-shard-in-crystal-language.png
 description: "A step-by-step tutorial on creating a shard in Crystal: generate a project with crystal init, add dependencies in shard.yml, write specs and docs."
 date: 2015-09-06T21:11:25+03:00
 last_modified_at: 2026-10-22

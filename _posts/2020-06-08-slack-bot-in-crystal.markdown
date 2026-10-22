@@ -1,5 +1,6 @@
 ---
 title: "Writing a Slack bot in Crystal with Kemal"
+image: /images/og/slack-bot-in-crystal.png
 description: "A tutorial on writing a Slack bot in Crystal with the Kemal web framework: handle a custom slash command, deploy to Heroku and add it to a workspace."
 date: 2020-06-08T15:14:57+02:00
 categories:

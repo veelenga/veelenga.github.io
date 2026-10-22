@@ -1,5 +1,6 @@
 ---
 title: "One Bedrock knowledge base, many vendors"
+image: /images/og/one-bedrock-knowledge-base-many-vendors.png
 description: "How to keep each vendor's data separate in one Amazon Bedrock knowledge base, using metadata sidecar files and query-time filters for multi-tenant RAG."
 date: 2026-05-13T10:00:00+02:00
 excerpt: "A knowledge base per vendor is expensive. One shared pile leaks. Metadata-tagged documents with a query-time filter sit in the middle, and that's the pattern that actually scales."

@@ -1,5 +1,6 @@
 ---
 title: "Slack meets Bedrock: building the gateway"
+image: /images/og/slack-meets-bedrock-building-the-gateway.png
 description: "Part 1 of building a Slack bot on Amazon Bedrock Agents: a Crystal gateway with Socket Mode, thread-based sessions, concurrency control, and formatting."
 date: 2026-04-17T10:00:00+02:00
 excerpt: "AWS Bedrock Agents speak HTTP. Slack speaks WebSocket. This post covers how to build the gateway that bridges them: Socket Mode, session management, concurrency control, and message formatting."

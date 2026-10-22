@@ -1,5 +1,6 @@
 ---
 title: Splitting Rails migration into smaller pieces
+image: /images/og/splitting-rails-migration-into-smaller-pieces.png
 description: "How to split a slow Rails migration on a huge table into smaller SQL steps: log ActiveRecord queries, then run them one by one from a rake task."
 date: 2020-10-09T15:14:57+02:00
 categories:

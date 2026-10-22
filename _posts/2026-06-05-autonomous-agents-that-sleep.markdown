@@ -1,5 +1,6 @@
 ---
 title: "Autonomous agents that sleep"
+image: /images/og/autonomous-agents-that-sleep.png
 description: "Why autonomous AI agents should not loop while they wait, and how a controller running short turns with the Claude Agent SDK handles CI and reviews."
 date: 2026-06-05T10:00:00+02:00
 excerpt: "The obvious way to build an autonomous agent is a loop that runs until the work is done. It demos beautifully and falls apart the moment the agent has to wait. The fix is to turn the loop inside-out, and what's left looks a lot more like sleep."

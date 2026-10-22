@@ -1,5 +1,6 @@
 ---
 title: "Object#tap and Object#itself in Crystal"
+image: /images/og/tap-and-itself-methods-in-crystal.png
 description: "What Object#tap and Object#itself do in Crystal, how they differ, and when to use each one to write cleaner method chains and more readable code."
 date: 2015-09-24T11:52:42+03:00
 excerpt: "After reading this post you will know why Object#tap and Object#itself methods are so useful in Crystal language and when to use them."

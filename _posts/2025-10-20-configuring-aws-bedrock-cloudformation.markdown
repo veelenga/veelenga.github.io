@@ -1,5 +1,6 @@
 ---
 title: "Configuring AWS Bedrock agents with CloudFormation"
+image: /images/og/configuring-aws-bedrock-cloudformation.png
 description: "How to set up an AWS Bedrock agent with CloudFormation using three core pieces: an IAM role, the agent, and an agent alias, then deploy and invoke it."
 date: 2025-10-20T10:30:00+02:00
 categories:
