@@ -6,8 +6,7 @@ excerpt: Step by step tutorial how to start using Neovim with Vim's config.
 tags:
   - neovim
   - infrastructure
-image:
-  thumb: logos/neovim.png
+image: /images/logos/neovim.png
 date: 2015-12-06T17:05:49+02:00
 modified: 2016-01-03
 ---

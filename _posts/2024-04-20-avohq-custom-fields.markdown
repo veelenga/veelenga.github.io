@@ -6,6 +6,7 @@ excerpt:
 tags:
   - ruby on rails
   - avo
+image: /images/avo-custom-fields/header.jpeg
 published: true
 twitter:
   image: /avo-custom-fields/header.jpeg

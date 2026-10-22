@@ -5,8 +5,7 @@ excerpt: "Benchmarking in easy, benchmarking is existing, especially in Crystal!
 tags:
   - crystal-lang
   - performance
-image:
-  thumb: speed-up.jpg
+image: /images/speed-up.jpg
 published: true
 ---
 

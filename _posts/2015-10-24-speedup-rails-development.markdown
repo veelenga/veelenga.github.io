@@ -6,8 +6,7 @@ excerpt: A quickest way to speed up your development with Rails 4.
 tags:
   - ruby on rails
   - infrastructure
-image:
-  thumb: logos/ruby.png
+image: /images/logos/ruby.png
 date: 2015-10-23T23:38:29+03:00
 ---
 

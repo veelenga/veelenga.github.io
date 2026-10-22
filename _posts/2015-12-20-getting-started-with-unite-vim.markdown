@@ -7,8 +7,6 @@ excerpt: Initial configuration of Unite.vim after installation.
 tags:
   - neovim
   - infrastructure
-image:
-  feature:
 date: 2015-12-15T10:16:04+02:00
 ---
 
