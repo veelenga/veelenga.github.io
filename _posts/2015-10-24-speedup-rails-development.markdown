@@ -1,5 +1,6 @@
 ---
 title: "Speed up Rails 4 in development mode"
+description: "How to speed up Rails 4 page rendering in development mode by turning off config.assets.debug, so Sprockets bundles assets into far fewer requests."
 modified:
 categories:
 excerpt: A quickest way to speed up your development with Rails 4.

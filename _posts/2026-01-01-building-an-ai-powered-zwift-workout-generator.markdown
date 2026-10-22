@@ -1,5 +1,6 @@
 ---
 title: "Generative Zwift Workouts"
+description: "UX and validation patterns behind an AI Zwift workout generator that turns plain-English descriptions into .zwo files using OpenAI in the browser."
 date: 2026-01-01T10:00:00+02:00
 excerpt: "UX patterns for building an AI workout generator for Zwift, combining generative AI with direct manipulation and multi-layer validation."
 tags:

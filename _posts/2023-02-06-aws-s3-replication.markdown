@@ -1,5 +1,6 @@
 ---
 title: AWS S3 replication across different accounts
+description: "How to set up AWS S3 bucket replication across different accounts with CloudFormation, including the replication rule, bucket policies, and replica owner."
 date: 2024-10-23T15:14:57+02:00
 categories:
 excerpt:

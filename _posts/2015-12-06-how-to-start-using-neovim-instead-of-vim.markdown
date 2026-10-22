@@ -1,5 +1,6 @@
 ---
 title: "How to start using Neovim instead of Vim"
+description: "How to install Neovim on macOS with Homebrew, migrate an existing Vim config, set up the Python provider, and fix common compatibility issues."
 modified:
 categories: [editors]
 excerpt: Step by step tutorial how to start using Neovim with Vim's config.

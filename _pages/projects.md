@@ -2,6 +2,7 @@
 permalink: /projects/
 layout: page
 title: "Projects"
+description: "Open source projects and small apps by Vitalii Elenhaupt: Crystal tooling, Claude Code skills, MCP servers, and endurance sport utilities."
 wide: true
 ---
 

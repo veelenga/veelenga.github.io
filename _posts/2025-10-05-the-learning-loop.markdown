@@ -1,5 +1,6 @@
 ---
 title: The learning loop
+description: "A look at the Learn, Practice, Share loop that helps developers pick up new technologies, and why AI makes Reflect the key fourth step."
 date: 2025-10-05T08:51:00+02:00
 categories:
 excerpt: Master the Learn → Practice → Share cycle that successful developers use to build skills. Discover why AI makes this loop faster and why Reflect is now the critical fourth step to turn speed into deep understanding.
