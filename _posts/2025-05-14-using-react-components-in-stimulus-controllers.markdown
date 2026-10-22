@@ -24,7 +24,7 @@ This is where React shines. But switching our entire frontend to React would be 
 
 Here's a high-level overview of how React and Stimulus can be integrated in a Rails application:
 
-![](/images/stimulus-react-components/architecture.png)
+![Flowchart of Rails rendering Stimulus controllers that mount React components and emit events](/images/stimulus-react-components/architecture.png){: width="1554" height="1382"}
 
 This architecture allows to:
 
@@ -279,8 +279,8 @@ This example demonstrates the full integration pattern:
 
 The result is a seamless user experience that leverages the strengths of both frameworks:
 
-<video controls="controls" width="100%" name="Copyable Text Field">
-  <source src="/images/stimulus-react-components/otp-component.mov">
+<video controls preload="metadata" playsinline width="874" height="388" poster="/images/stimulus-react-components/otp-component-poster.jpg" aria-label="Demo of the React OTP component inside a Stimulus controller">
+  <source src="/images/stimulus-react-components/otp-component.mp4" type="video/mp4">
 </video>
 
 ## Implementation Challenges and Solutions

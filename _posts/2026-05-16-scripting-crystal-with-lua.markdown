@@ -17,7 +17,7 @@ Lua is designed to be **embedded** in other programs, so those programs can be s
 
 So Lua picked the simplest thing that could work: **a stack**. The host puts values on it, Lua reads values off it, and function calls happen by leaving inputs and outputs on it. Here is an example:
 
-![Calling sum(3, 5) through the Lua stack](/images/lua-cr/stack-animation.svg)
+![Calling sum(3, 5) through the Lua stack](/images/lua-cr/stack-animation.svg){: width="900" height="470"}
 
 Watching the middle column reveals the whole conversation: things appear, the `CALL` happens, things rearrange, and a result pops out. Nothing else moves between Crystal and Lua. Just the stack.
 
@@ -25,7 +25,7 @@ Now let's slow that down and look at each step.
 
 ### Step 1. Crystal places things on the counter
 
-![Crystal has pushed the function and its arguments](/images/lua-cr/frame-1-push.svg)
+![Crystal has pushed the function and its arguments](/images/lua-cr/frame-1-push.svg){: width="900" height="400" loading="lazy"}
 
 Crystal wants to call `sum(3, 5)`. To set that up, it does three pushes, in order:
 
@@ -37,7 +37,7 @@ Notice we never said "this is a function call with two arguments." We didn't nee
 
 ### Step 2. The handoff
 
-![Lua takes the args off and runs](/images/lua-cr/frame-2-call.svg)
+![Lua takes the args off and runs](/images/lua-cr/frame-2-call.svg){: width="900" height="400" loading="lazy"}
 
 Crystal now says: **"call this, with 2 arguments."**
 
@@ -55,7 +55,7 @@ Lua computes `x + y = 8` and is about to return. But there's only one place wher
 
 ### Step 3. The result
 
-![Lua left 8 on the stack; Crystal pops it](/images/lua-cr/frame-3-result.svg)
+![Lua left 8 on the stack; Crystal pops it](/images/lua-cr/frame-3-result.svg){: width="900" height="400" loading="lazy"}
 
 Lua clears out the function and its two arguments — they've been consumed — and puts `8` where they used to be. The call is over. The stack is one item tall again. Crystal reads the top, sees `8`, and pops it off.
 

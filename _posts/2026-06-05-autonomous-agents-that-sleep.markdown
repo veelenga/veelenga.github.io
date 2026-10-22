@@ -14,7 +14,7 @@ The obvious way to build an autonomous agent is a loop: call the model, let it a
 
 There's a better shape. It looks less like a loop and more like sleep: do one short turn, report what happened, and stop. Something *outside* the agent holds the state, waits, and starts the next turn only when the world actually changes.
 
-![An autonomous agent's lifecycle: it does one turn, reports a status line, goes idle, and is woken by an event from the world, then repeats.](/images/autonomous-agents-that-sleep/lifecycle.svg)
+![An autonomous agent's lifecycle: it does one turn, reports a status line, goes idle, and is woken by an event from the world, then repeats.](/images/autonomous-agents-that-sleep/lifecycle.svg){: width="900" height="470"}
 
 The examples here use Anthropic's [Claude Agent SDK](https://docs.claude.com/en/api/agent-sdk/overview), which exposes a single `query()` call that runs a full agent turn for us. But the idea is the SDK-agnostic part. It's about where the loop lives, not which library runs it.
 
@@ -22,7 +22,7 @@ The examples here use Anthropic's [Claude Agent SDK](https://docs.claude.com/en/
 
 A loop is the first thing anyone reaches for, and for a one-shot task it's exactly right: keep going until the answer is good enough. The shape only breaks once the task crosses something the agent can't finish on its own, like opening a pull request and needing it to go green.
 
-![The naive loop: call the model, act, check if CI is green, and loop back to wait when it isn't. Three failure modes: it burns budget polling, it can't be steered mid-loop, and a crash loses all progress.](/images/autonomous-agents-that-sleep/naive-loop.svg)
+![The naive loop: call the model, act, check if CI is green, and loop back to wait when it isn't. Three failure modes: it burns budget polling, it can't be steered mid-loop, and a crash loses all progress.](/images/autonomous-agents-that-sleep/naive-loop.svg){: width="900" height="430" loading="lazy"}
 
 Now the loop has to wait for a build that takes twelve minutes, and three problems show up at once. It **burns budget** sitting in the loop, re-asking the model whether CI is done yet. It **can't be steered**: a new instruction has nowhere to land until the loop comes back around to check. And if the process dies, it suffers total **amnesia**, because the loop's progress lived in memory, so a restart begins from nothing.
 
@@ -32,7 +32,7 @@ The root cause is the same in all three. The durable, long-lived part of the sys
 
 So we move it out. The loop becomes a small, ordinary program (call it the **controller**) that lives outside the agent and owns everything durable: which session is in flight, which pull requests are open, what's still pending. The agent is no longer a long-running thing. It's a function the controller calls for one turn at a time.
 
-![The controller, an always-on process, holds the durable state and receives events from the world. For each event it spawns a single stateless agent turn, which does the work, returns a status line, and exits.](/images/autonomous-agents-that-sleep/architecture.svg)
+![The controller, an always-on process, holds the durable state and receives events from the world. For each event it spawns a single stateless agent turn, which does the work, returns a status line, and exits.](/images/autonomous-agents-that-sleep/architecture.svg){: width="900" height="470" loading="lazy"}
 
 Events from the world arrive at the controller, not the agent: a CI result, a review comment, a new ticket, a person stepping in to redirect. The controller decides what they mean, spawns a turn to handle them, records the outcome, and goes quiet again. A turn is genuinely short-lived. It spins up, does its work, and exits, leaving nothing running behind it.
 
@@ -68,7 +68,7 @@ Autobot uses a similar trick for scheduled work, where [a cron job is just anoth
 
 If a turn just ends, the controller needs to know what it accomplished and what to watch next. Reading the agent's prose reply and guessing is fragile. So every turn ends with one machine-readable line: a small, fixed contract the controller can parse without interpreting English.
 
-![The turn's reply has two readers: a human reads the prose at the top, while the controller reads only the final AGENT_STATUS line. From that line it learns which PRs to watch, what note to surface, and whether a human is needed.](/images/autonomous-agents-that-sleep/status-contract.svg)
+![The turn's reply has two readers: a human reads the prose at the top, while the controller reads only the final AGENT_STATUS line. From that line it learns which PRs to watch, what note to surface, and whether a human is needed.](/images/autonomous-agents-that-sleep/status-contract.svg){: width="900" height="440" loading="lazy"}
 
 The prose at the top is for the teammate reading along. The last line is for the code:
 

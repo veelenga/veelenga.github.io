@@ -14,8 +14,8 @@ Real-time features have become essential in modern web applications. Whether it'
 
 In this post, we'll explore how to build a sophisticated real-time chat system using Hotwire - Rails' answer to modern frontend development. We'll create a complete chat implementation featuring instant message delivery, background processing for AI responses, and seamless user experience without leaving the Rails ecosystem. This architecture is particularly powerful for AI assistants where response times are unpredictable and real-time feedback is crucial for user engagement.
 
-<video controls="controls" width="100%" name="Copyable Text Field">
-  <source src="/images/turbo-chat/demo.mov">
+<video controls preload="metadata" playsinline width="1720" height="1054" poster="/images/turbo-chat/demo-poster.jpg" aria-label="Demo of the real-time chat built with Hotwire">
+  <source src="/images/turbo-chat/demo.mp4" type="video/mp4">
 </video>
 
 ## The Hotwire advantage

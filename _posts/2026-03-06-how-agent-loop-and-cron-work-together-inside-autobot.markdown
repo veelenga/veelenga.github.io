@@ -16,7 +16,7 @@ Most AI agent tutorials end at "call the LLM in a loop." The interesting part, m
 
 ## The big picture
 
-![Autobot architecture](/images/autobot-agent-loop/architecture.svg)
+![Autobot architecture](/images/autobot-agent-loop/architecture.svg){: width="1739" height="1003"}
 
 Messages flow in from chat channels, get processed by the agent loop, and flow back out. The cron service injects its own messages into the same bus, reusing the entire agent pipeline. This is the key design decision: cron doesn't bypass the agent, it talks through it.
 

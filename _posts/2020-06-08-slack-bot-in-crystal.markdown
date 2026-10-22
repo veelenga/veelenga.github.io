@@ -28,7 +28,7 @@ bothering colleagues.
 In this article you will find how to write such a bot in Crystal,
 deploy it and install to your slack workspace.
 
-![](https://user-images.githubusercontent.com/3624712/76700932-2a26d580-66c5-11ea-85cf-48f565a73850.jpg)
+![Slack bot built with Crystal and Kemal](https://user-images.githubusercontent.com/3624712/76700932-2a26d580-66c5-11ea-85cf-48f565a73850.jpg)
 
 ## Bot definition
 
@@ -136,7 +136,7 @@ $ crystal src/app.cr
 
 And see whether it works in a browser:
 
-![](https://user-images.githubusercontent.com/3624712/76689770-edfe6100-6641-11ea-8ff6-61052db2907a.png)
+![Browser page at localhost:3000 showing Prince Slack Bot is alive](https://user-images.githubusercontent.com/3624712/76689770-edfe6100-6641-11ea-8ff6-61052db2907a.png)
 
 ## Process Slack requests
 
@@ -295,18 +295,18 @@ There are a couple of steps to do here.
 
 1. Create a new Slack app in the Slack workspace:
 
-![](https://user-images.githubusercontent.com/3624712/76696821-2e88c980-6698-11ea-8579-2379014ad425.png)
+![Slack dialog for creating a new app in the workspace](https://user-images.githubusercontent.com/3624712/76696821-2e88c980-6698-11ea-8579-2379014ad425.png)
 
 2. Define a Slack slash command filling a command name, request URL (the URL
    our bot is available at), description and some help information which will be
    shown to users:
 
-![](https://user-images.githubusercontent.com/3624712/76696839-77d91900-6698-11ea-9652-f2b2145c1f01.png)
+![Slack slash command form with command, request URL and description](https://user-images.githubusercontent.com/3624712/76696839-77d91900-6698-11ea-9652-f2b2145c1f01.png)
 
 3. Now, when the app is activated and becomes available as a slash command in
    our workspace, we can try typing `/prince`, hit enter and see the results.
 
-![](https://user-images.githubusercontent.com/3624712/76696876-fdf55f80-6698-11ea-8237-502535622bec.png)
+![Slack bot replying to /prince with usage and available commands](https://user-images.githubusercontent.com/3624712/76696876-fdf55f80-6698-11ea-8237-502535622bec.png)
 
 ## Wrap-up
 

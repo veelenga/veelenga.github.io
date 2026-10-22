@@ -5,7 +5,6 @@ categories:
 excerpt: A quickest way to speed up your development with Rails 4.
 tags:
   - rails
-image: /images/logos/ruby.png
 date: 2015-10-23T23:38:29+03:00
 ---
 
@@ -23,11 +22,11 @@ config.assets.debug = false
 
 With development tools in Safari browser we can notice the difference in both modes.
 
-<img src="/images/rails-speedup/debug_true.png" alt="debug_true">
+<img src="/images/rails-speedup/debug_true.png" alt="Safari network stats with asset debug on: 197 assets, 2.50 MB, 14.53 seconds" width="185" height="18">
 
 When debug mode is on, browser loads 197 assets (totally 2.50 MB) and renders a page in 14.53 seconds.
 
-<img src="/images/rails-speedup/debug_false.png" alt="debug_false">
+<img src="/images/rails-speedup/debug_false.png" alt="Safari network stats with asset debug off: 14 assets in 1.17 seconds" width="185" height="18" loading="lazy">
 
 But when debug mode is off, browser loads only 14 assets and renders the same page in 1.17 seconds, which almost 14 times faster. Wow!
 

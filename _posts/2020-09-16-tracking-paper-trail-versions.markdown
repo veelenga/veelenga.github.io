@@ -14,8 +14,6 @@ Whether it is a feature request or just some debugging purpose in mind
 when the complexity of the system grows it is natural to add the ability
 to quickly see the changes made by someone.
 
-![](https://media.giphy.com/media/l0HlCSRTZIlN2WJfW/giphy.gif)
-
 There are plenty of tools which allow to quickly add versions to the
 app and most of them have very nice DSL on top, which implies interaction
 with auditing to be very efficient.
@@ -75,7 +73,7 @@ However, how can we track the changes made during this call?
 To be able to solve this, the first step will be to add a reference between `SaveRequest`
 and `PaperTrail::Version` models so the db schema would look like this:
 
-<img src='/images/tracking-paper-trail-versions/db-schema.png' alt='db-schema'>
+<img src="/images/tracking-paper-trail-versions/db-schema.png" alt="Schema diagram: User has many Save Requests, each with many PaperTrail versions" width="873" height="112">
 
 A new migration just adds a new reference to versions table:
 

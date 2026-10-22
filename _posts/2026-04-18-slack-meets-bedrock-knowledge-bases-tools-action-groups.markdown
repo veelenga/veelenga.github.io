@@ -41,7 +41,7 @@ This is the key insight: **you describe capabilities, the model routes to them.*
 
 RAG (Retrieval-Augmented Generation) is the pattern that lets an LLM answer questions about documents it was never trained on. Instead of fine-tuning the model, you retrieve relevant chunks at query time and include them in the context.
 
-![RAG pipeline](/images/slack-meets-bedrock/rag-pipeline.svg)
+![RAG pipeline](/images/slack-meets-bedrock/rag-pipeline.svg){: width="1238" height="605"}
 
 The pipeline has two phases:
 
@@ -117,7 +117,7 @@ When the split is by customer rather than by topic, [one knowledge base with met
 
 Knowledge bases give the agent eyes. It can read your documents. Action groups give it hands. It can take actions in external systems.
 
-![Agent routing](/images/slack-meets-bedrock/agent-routing.svg)
+![Agent routing](/images/slack-meets-bedrock/agent-routing.svg){: width="1542" height="636" loading="lazy"}
 
 An action group is a Lambda function with a function schema. You define what the function does, what parameters it accepts, and the agent decides when to call it. The interaction:
 

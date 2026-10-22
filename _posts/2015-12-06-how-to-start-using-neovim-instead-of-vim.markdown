@@ -5,7 +5,6 @@ categories: [editors]
 excerpt: Step by step tutorial how to start using Neovim with Vim's config.
 tags:
   - neovim
-image: /images/logos/neovim.png
 date: 2015-12-06T17:05:49+02:00
 last_modified_at: 2026-10-22
 ---
@@ -17,7 +16,9 @@ If you haven't heard about Neovim or don't understand why it might be useful for
 Actually, Neovim is compatible with almost all Vim's features, so in most cases you will be able to use both editors with the same configuration.
 
 <figure>
-  <img src="/images/neovim-ui.gif" alt="neovim-ui">
+  <video autoplay muted loop playsinline width="746" height="564" poster="/images/neovim-ui-poster.jpg" aria-label="Neovim running in the terminal with the same look as Vim">
+  <source src="/images/neovim-ui.mp4" type="video/mp4">
+</video>
 </figure>
 
 ## Installation

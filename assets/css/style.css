@@ -924,3 +924,11 @@ code.highlighter-rouge {
     gap: 0.15rem;
   }
 }
+
+.post__content video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1.5rem auto;
+  border-radius: 8px;
+}

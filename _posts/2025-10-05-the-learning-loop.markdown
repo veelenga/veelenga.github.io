@@ -16,7 +16,7 @@ The answer is a simple learning cycle that's worked for decades and still works 
 Fast learning engineers follow a three-step cycle: **Learn → Practice → Share** (or its variations).
 This is how our brains naturally and effectively build skills.
 
-![Learning Loop Diagram](/images/learning-loop/diagram.svg)
+![Learning Loop Diagram](/images/learning-loop/diagram.svg){: width="481" height="135"}
 
 ### Learn
 

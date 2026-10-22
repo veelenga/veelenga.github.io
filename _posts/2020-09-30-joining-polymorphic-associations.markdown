@@ -33,7 +33,7 @@ we have two different entities who can create multiple payments: User and Artist
 PaperTrail uses the same trick for its `versions` table: each version belongs to the record it tracks.
 A related post shows how to [group those versions by request](/tracking-paper-trail-versions/).
 
-<img src='/images/joining-polymorphic-associations/schema.png' alt='db-schema'>
+<img src="/images/joining-polymorphic-associations/schema.png" alt="Schema diagram with User and Artist each having many Payments" width="772" height="82">
 
 Keep in mind, that this is not the payment between User and Artist, these are payments created
 by users or by artists. And such records are going to be stored in a single table `payments`.

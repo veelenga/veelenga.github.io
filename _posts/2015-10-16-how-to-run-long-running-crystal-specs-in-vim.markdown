@@ -21,7 +21,9 @@ Just use a `:Dispatch` command.
 Here is an example of running specs in Crystal sources:
 
 <figure>
-  <img src="/images/crystal-spec-dispatch.gif" alt="crystal-spec-dispatch">
+  <video autoplay muted loop playsinline width="796" height="574" poster="/images/crystal-spec-dispatch-poster.jpg" aria-label="Crystal specs running in the background from Vim with vim-dispatch">
+  <source src="/images/crystal-spec-dispatch.mp4" type="video/mp4">
+</video>
 </figure>
 
 And if you want to run long specs for your Crystal project with standard structure, just type `:Dispatch crystal spec`.

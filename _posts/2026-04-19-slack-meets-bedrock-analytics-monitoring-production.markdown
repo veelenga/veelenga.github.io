@@ -29,7 +29,7 @@ Deploying an AI bot is the easy part. Understanding its behavior in production i
 
 The goal: capture every conversation event, store it cheaply, and make it queryable without running a database.
 
-![Analytics pipeline](/images/slack-meets-bedrock/analytics.svg)
+![Analytics pipeline](/images/slack-meets-bedrock/analytics.svg){: width="1799" height="452"}
 
 The pipeline uses four AWS services:
 
@@ -204,7 +204,7 @@ Source extraction from knowledge base lookups also matters for the user experien
 
 ## Deployment
 
-![Deployment architecture](/images/slack-meets-bedrock/deployment.svg)
+![Deployment architecture](/images/slack-meets-bedrock/deployment.svg){: width="898" height="1115" loading="lazy"}
 
 ### ECS task
 

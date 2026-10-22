@@ -22,7 +22,7 @@ The catch is something we can't configure away.
 RAG retrieval has no concept of a "vendor".
 It returns whichever chunks score highest, and math beats business rules every time.
 
-![The agent retrieves mixed chunks and produces a contaminated answer](/images/bedrock-kb-multivendor/the-problem.svg)
+![The agent retrieves mixed chunks and produces a contaminated answer](/images/bedrock-kb-multivendor/the-problem.svg){: width="1428" height="532"}
 
 ## The solution
 
@@ -84,7 +84,7 @@ kb/
 Each vendor folder holds content specific to that vendor.
 `warranties.md` appearing in both Contoso and Fabrikam is fine. They're two unrelated documents that happen to share a name.
 
-![Knowledge base layout](/images/bedrock-kb-multivendor/kb-layout.svg)
+![Knowledge base layout](/images/bedrock-kb-multivendor/kb-layout.svg){: width="1197" height="608" loading="lazy"}
 
 ## Metadata sidecars
 
@@ -117,7 +117,7 @@ A document either belongs to one vendor or to everyone.
 
 ## The filter
 
-![Retrieval flow](/images/bedrock-kb-multivendor/retrieval-flow.svg)
+![Retrieval flow](/images/bedrock-kb-multivendor/retrieval-flow.svg){: width="1523" height="676" loading="lazy"}
 
 Every query carries a filter alongside it.
 That filter runs inside Bedrock, before any chunk reaches the model.
