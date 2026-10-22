@@ -1,5 +1,6 @@
 ---
 title: "Slack meets Bedrock: knowledge bases, tools, and action groups"
+description: "Part 2 of the Slack and Amazon Bedrock series: giving a Bedrock Agent knowledge bases with RAG, Lambda action groups, and a code interpreter."
 date: 2026-04-18T10:00:00+02:00
 excerpt: "A chatbot that only answers general questions is a worse Google. This post covers how to give a Bedrock Agent domain-specific intelligence through knowledge bases, Lambda-backed action groups, and a code interpreter."
 tags:

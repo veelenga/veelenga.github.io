@@ -1,5 +1,6 @@
 ---
 title: "Slack meets Bedrock: analytics, monitoring, and production"
+description: "Part 3 of the Slack and Amazon Bedrock series: an analytics pipeline with Firehose, Glue, and Athena, plus ECS deployment, CloudWatch alarms, and costs."
 date: 2026-04-19T10:00:00+02:00
 excerpt: "Deploying an AI bot is the easy part. Knowing whether it's helping anyone, catching failures before users report them, and keeping costs under control is where the real engineering happens."
 tags:

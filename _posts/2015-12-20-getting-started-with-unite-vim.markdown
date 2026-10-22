@@ -1,5 +1,6 @@
 ---
 title: "Getting started with Unite.vim"
+description: "Initial Unite.vim configuration for Neovim: key mappings for file search, grep and buffers, plus notes on the modern plugins that replaced it."
 modified:
 categories:
   - editors
@@ -7,10 +8,10 @@ excerpt: Initial configuration of Unite.vim after installation.
 tags:
   - neovim
   - infrastructure
-image:
-  feature:
 date: 2015-12-15T10:16:04+02:00
 ---
+
+> **Update (2026):** Unite.vim is no longer maintained. Its author replaced it with [ddu.vim](https://github.com/Shougo/ddu.vim), and [Telescope](https://github.com/nvim-telescope/telescope.nvim) or [fzf-lua](https://github.com/ibhagwan/fzf-lua) cover the same ground on modern Neovim. The ideas below still apply, but new setups should start with one of those.
 
 I found [Unite.vim](https://github.com/Shougo/unite.vim) as a very very powerful plugin.
 It has replaced few plugins I have been using before. Installation of the unite.vim does

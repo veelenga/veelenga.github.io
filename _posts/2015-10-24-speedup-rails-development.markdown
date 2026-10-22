@@ -1,19 +1,19 @@
 ---
 title: "Speed up Rails 4 in development mode"
+description: "How to speed up Rails 4 page rendering in development mode by turning off config.assets.debug, so Sprockets bundles assets into far fewer requests."
 modified:
 categories:
 excerpt: A quickest way to speed up your development with Rails 4.
 tags:
   - ruby on rails
   - infrastructure
-image:
-  thumb: logos/ruby.png
+image: /images/logos/ruby.png
 date: 2015-10-23T23:38:29+03:00
 ---
 
 Being working with a large Rails project you may face with a problem of a slow page rendering.
 One of the reasons why this might happen is that your particular page has a lot of assets and browser
-does huge amount of requests to download them. Fortunately, Rails 4 has a nice
+does huge amount of requests to download them. Fortunately, Rails with Sprockets has a nice
 feature for preprocessing those assets. You may find the following in `config/development.rb`:
 
 {% highlight ruby %}

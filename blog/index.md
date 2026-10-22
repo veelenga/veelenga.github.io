@@ -1,6 +1,7 @@
 ---
 layout: archive
 title: "Blog"
+description: "Articles on Ruby on Rails, Crystal, AWS infrastructure, and AI-assisted development, written from hands-on engineering work since 2015."
 ---
 
 {% assign sorted_posts = site.posts | sort: 'date' | reverse %}

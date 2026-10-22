@@ -1,5 +1,6 @@
 ---
 title: "Crystal to Lua bridge"
+description: "How Crystal and Lua call each other through the Lua C API stack, shown step by step with lua.cr, a Crystal shard for embedding Lua scripts."
 date: 2026-05-16T10:00:00+02:00
 categories:
 excerpt: A visual walkthrough of how Crystal and Lua work together — and the surprisingly small data structure that quietly makes it all possible.

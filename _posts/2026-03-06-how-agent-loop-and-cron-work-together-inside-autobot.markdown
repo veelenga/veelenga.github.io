@@ -1,5 +1,6 @@
 ---
 title: "How the agent loop and cron work together inside Autobot"
+description: "How Autobot, an AI agent framework in Crystal, connects a ReAct tool loop, a fiber-based cron scheduler, and a message bus inside one small binary."
 date: 2026-03-06T10:00:00+02:00
 excerpt: "Building an AI agent that runs autonomously on a schedule requires more than just calling an LLM. This post explores how autobot, a Crystal-based AI agent framework, wires together a ReAct-style tool loop, a fiber-based cron scheduler, and a message bus into a system that fits in 2MB."
 tags:

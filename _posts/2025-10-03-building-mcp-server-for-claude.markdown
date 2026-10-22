@@ -1,5 +1,6 @@
 ---
 title: Building an MCP Server for Claude Code
+description: "How to build a Model Context Protocol (MCP) server for Claude Code in TypeScript, from defining tools and handling requests to debugging and deployment."
 date: 2025-10-03T08:51:00+02:00
 categories:
 excerpt: Learn how to build a custom Model Context Protocol server for Claude Code. Master the fundamentals of MCP protocol, tool definitions, and argument handling using a real-world Mermaid diagram rendering example.

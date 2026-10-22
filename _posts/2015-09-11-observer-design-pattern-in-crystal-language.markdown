@@ -1,5 +1,6 @@
 ---
 title: "Observer design pattern in Crystal language"
+description: "How to implement the Observer design pattern in Crystal using modules, generics and abstract classes, shown through a small fighting game example."
 date: 2015-12-30T12:48:44+03:00
 excerpt: "A post where I want to share my thoughts regarding an implementation of an Observer design pattern in Crystal language."
 tags:
@@ -69,7 +70,7 @@ end
 
 We want to emphasize few points:
 
-1. This is a module (not a class) because we want to include all this functionality in our `Fighter` class and leave a way to inherit `Fighter` from another class in future. Crystal does not support multiple inheritance thus we can use the same approach as used by Ruby's built-in [Observer](https://github.com/ruby/ruby/blob/trunk/lib/observer.rb).
+1. This is a module (not a class) because we want to include all this functionality in our `Fighter` class and leave a way to inherit `Fighter` from another class in future. Crystal does not support multiple inheritance thus we can use the same approach as used by Ruby's built-in [Observer](https://github.com/ruby/observer/blob/master/lib/observer.rb).
 
 2. We used generics (type `T`) to define type of an observer. This makes our subject more general and it is not coupled with concrete class.
 

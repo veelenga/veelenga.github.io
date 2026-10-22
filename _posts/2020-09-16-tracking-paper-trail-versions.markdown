@@ -1,5 +1,6 @@
 ---
 title: Tracking PaperTrail versions while saving in batches
+description: "How to group and query PaperTrail versions created during one batch save request in Rails, using a SaveRequest model and PaperTrail controller metadata."
 date: 2020-09-16T15:14:57+02:00
 categories:
 excerpt: Article explains how to efficiently group and query model versions with PaperTrail in Ruby on Rails application while saving multiple records in batches.

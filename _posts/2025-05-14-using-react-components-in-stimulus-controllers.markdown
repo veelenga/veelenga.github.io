@@ -1,5 +1,6 @@
 ---
 title: Using React Components in Stimulus Controllers
+description: "How to mount React components inside Stimulus controllers in a Rails app with Hotwire, pass data between them, and keep them working with Turbo."
 date: 2025-05-14T13:06:00+0200
 categories:
 excerpt: A simple tutorial explaining how to integrate existed React components into your modern Rails app powered by Hotwire.

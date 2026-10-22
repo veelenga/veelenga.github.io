@@ -1,5 +1,6 @@
 ---
 title: "Should every Software Developer have a blog?"
+description: "Why every software developer should have a blog, and how the book Soft Skills by John Sonmez inspired this first post on starting a developer blog."
 date: 2015-08-26T22:53:28+03:00
 excerpt: "A post where I want to describe what made me start blogging."
 tags:

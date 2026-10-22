@@ -1,5 +1,6 @@
 ---
 title: Joining polymorphic associations in ActiveRecord
+description: "Why ActiveRecord cannot eager load polymorphic associations with joins, and three ways to fix it in Rails: includes, a scoped association or a self ref."
 date: 2020-09-30T15:14:57+02:00
 categories:
 excerpt: Short list of thoughts on how to join polymorphic associations in ActiveRecord and why it cannot be loaded eagerly.
