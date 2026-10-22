@@ -1,14 +1,28 @@
-{% assign seo_title = page.title | default: site.title | escape %}
+{% assign title_with_suffix = page.title | append: " — " | append: site.title %}
+{% if page.seo_title %}
+  {% assign seo_title = page.seo_title %}
+{% elsif page.title == nil %}
+  {% assign seo_title = site.title %}
+{% elsif title_with_suffix.size <= 60 %}
+  {% assign seo_title = title_with_suffix %}
+{% else %}
+  {% assign seo_title = page.title %}
+{% endif %}
+{% assign seo_title = seo_title | escape %}
 {% if page.description %}{% assign seo_description = page.description %}{% else %}{% assign seo_description = page.excerpt | default: site.description | strip_html | normalize_whitespace | truncatewords: 25, "" %}{% endif %}
 {% assign seo_description = seo_description | escape %}
 {% assign canonical_url = page.url | replace: "index.html", "" | prepend: site.url %}
+{% assign person_id = site.url | append: "/#person" %}
+{% assign author_url = "https://github.com/" | append: site.author.github %}
+{% assign modified_date = page.last_modified_at | default: page.date %}
 
-<title>{% if page.title %}{{ page.title | escape }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+<title>{{ seo_title }}</title>
 <meta name="description" content="{{ seo_description }}">
 <link rel="canonical" href="{{ canonical_url }}">
+<meta name="robots" content="max-image-preview:large">
 
 <!-- Open Graph -->
-<meta property="og:locale" content="{{ site.locale }}">
+<meta property="og:locale" content="{{ site.locale | replace: "-", "_" }}">
 <meta property="og:site_name" content="{{ site.title }}">
 <meta property="og:title" content="{{ seo_title }}">
 <meta property="og:description" content="{{ seo_description }}">
@@ -19,6 +33,8 @@
 {% if page.date %}
   <meta property="og:type" content="article">
   <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+  <meta property="article:modified_time" content="{{ modified_date | date_to_xmlschema }}">
+  <meta property="article:author" content="{{ author_url }}">
 {% else %}
   <meta property="og:type" content="website">
 {% endif %}
@@ -34,14 +50,44 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "{{ site.author.name }}",
-  "url": "{{ site.url }}",
-  "jobTitle": "Software Engineer",
-  "sameAs": [
-    "https://twitter.com/{{ site.author.twitter }}",
-    "https://github.com/{{ site.author.github }}",
-    "https://medium.com/@{{ site.author.medium }}"
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": {{ person_id | jsonify }},
+      "name": {{ site.author.name | jsonify }},
+      "url": {{ author_url | jsonify }},
+      "jobTitle": "Software Engineer",
+      "sameAs": [
+        "https://x.com/{{ site.author.twitter }}",
+        "https://github.com/{{ site.author.github }}",
+        "https://medium.com/@{{ site.author.medium }}",
+        "https://stackoverflow.com/users/{{ site.author.stackoverflow }}"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{ site.url }}/#website",
+      "name": {{ site.title | jsonify }},
+      "url": "{{ site.url }}/",
+      "description": {{ site.description | jsonify }},
+      "author": { "@id": {{ person_id | jsonify }} }
+    }{% if page.date %},
+    {
+      "@type": "BlogPosting",
+      "@id": "{{ canonical_url }}#article",
+      "headline": {{ page.title | jsonify }},
+      "description": {{ page.description | default: page.excerpt | strip_html | normalize_whitespace | jsonify }},
+      "image": {{ og_image | jsonify }},
+      "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+      "dateModified": {{ modified_date | date_to_xmlschema | jsonify }},
+      "keywords": {{ page.tags | join: ", " | jsonify }},
+      "inLanguage": "en",
+      "url": {{ canonical_url | jsonify }},
+      "mainEntityOfPage": { "@type": "WebPage", "@id": {{ canonical_url | jsonify }} },
+      "isPartOf": { "@id": "{{ site.url }}/#website" },
+      "author": { "@id": {{ person_id | jsonify }} },
+      "publisher": { "@id": {{ person_id | jsonify }} }
+    }{% endif %}
   ]
 }
 </script>
