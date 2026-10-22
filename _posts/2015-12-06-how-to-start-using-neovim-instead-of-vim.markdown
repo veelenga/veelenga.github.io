@@ -27,7 +27,7 @@ The easiest way to install Neovim on OS X is with `brew`:
 
 {% highlight sh %}
 
-$ brew install neovim/neovim/neovim
+$ brew install neovim
 
 {% endhighlight %}
 
@@ -62,7 +62,7 @@ Installation depends on which version of python you need. But, in general, it is
 
 {% highlight sh %}
 
-$ pip install neovim
+$ pip install pynvim
 
 {% endhighlight %}
 
@@ -72,15 +72,13 @@ If the problem with existed plugins was an absence of python, it's a time to re-
 
 ## Graphical Interface
 
-If you prefer using GVim instead of Vim, you would love [Neovim-dot-app](https://github.com/rogual/neovim-dot-app). It looks
-almost the same as Graphical Vim, but unfortunately, available only for OS X.
+If you prefer using GVim instead of Vim, [Neovide](https://neovide.dev) is the closest match. It is a cross-platform GUI for Neovim with smooth scrolling and cursor animations.
 
 Installation with `brew` is very simple:
 
 {% highlight sh %}
 
-$ brew tap rogual/neovim-dot-app
-$ brew install --HEAD neovim-dot-app
+$ brew install --cask neovide
 
 {% endhighlight %}
 

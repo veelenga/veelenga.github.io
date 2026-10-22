@@ -156,10 +156,10 @@ dependencies:
 ...
 {% endhighlight %}
 
-Secondly, we need to load our dependencies with `crystal deps` command:
+Secondly, we need to install our dependencies with the `shards install` command:
 
 {% highlight text %}
-$ crystal deps
+$ shards install
 Updating https://github.com/veelenga/emoji.cr.git
 Installing emoji (master)
 {% endhighlight %}
@@ -307,4 +307,4 @@ This tutorial was inspired by [Make your own gem](http://guides.rubygems.org/mak
 Source code for this shard can be found [on Github](http://github.com/veelenga/hallo).
 
 ### Available Shards
-The best place to learn how to create a new shard is to look at the existed ones. The list of all available shards you may find at [Crystalshards](http://crystalshards.xyz/) and the most popular and useful projects are at [Awesome Crystal](http://awesome-crystal.com).
+The best place to learn how to create a new shard is to look at the existed ones. The list of all available shards you may find at [Crystalshards](http://crystalshards.xyz/) and the most popular and useful projects are at [Awesome Crystal](https://github.com/veelenga/awesome-crystal).

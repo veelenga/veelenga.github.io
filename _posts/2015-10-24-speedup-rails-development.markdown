@@ -12,7 +12,7 @@ date: 2015-10-23T23:38:29+03:00
 
 Being working with a large Rails project you may face with a problem of a slow page rendering.
 One of the reasons why this might happen is that your particular page has a lot of assets and browser
-does huge amount of requests to download them. Fortunately, Rails 4 has a nice
+does huge amount of requests to download them. Fortunately, Rails with Sprockets has a nice
 feature for preprocessing those assets. You may find the following in `config/development.rb`:
 
 {% highlight ruby %}
